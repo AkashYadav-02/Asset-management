@@ -39,5 +39,7 @@ export class HomepageUpperComponent {
   @Output() newEvent = new EventEmitter<Event>()
   close(){
       this.Navbar.isExpand = false;
+      this.Navbar.isNotiExpand = false;
+      this.Navbar.isProfileExpand = false;
   }
 }
