@@ -28,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http'
 import { AgGridModule } from 'ag-grid-angular';
 import { HomepageUpperComponent } from './rm-homepage/homepage-upper/homepage-upper.component';
 import { FooterComponent } from './footer/footer.component';
+import { SpinnerComponent } from './spinner/spinner.component';
+import { Spinner1Component } from './spinner1/spinner1.component';
+import { Spinner2Component } from './spinner2/spinner2.component';
 
 
 import { HomeupperpageComponent } from './rm-homepage/homeupperpage/homeupperpage.component';
@@ -70,6 +73,9 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     NavBarAfterHomeProfileComponent,
     EditProfileComponent,
     ProfileSettingsComponent,
+    SpinnerComponent,
+    Spinner1Component,
+    Spinner2Component
 
   ],
   imports: [

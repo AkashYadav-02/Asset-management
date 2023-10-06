@@ -18,20 +18,20 @@ export class WorkspaceComponent {
 
   title = 'aggridpro';
   columnDefs: ColDef[] = [
-    { field: 'appID'},
-    { field: 'custName'},
-    { field: 'carSelection'},
-    { field: 'financing'},
-    { field: 'status',cellStyle: {'color': 'white', 'background-color': 'green', 'border-radius':'10px', 'text-align':'center'}},
-    { field: 'remark',cellStyle: {'margin-left':'20px'}},
+    { field: 'appID', cellStyle: {'font-family': 'Montserrat', 'font-weight':'bold'}},
+    { field: 'customerName', cellStyle: {'font-family': 'Montserrat', 'font-weight':'bold'}},
+    { field: 'carSelection', cellStyle: {'font-family': 'Montserrat', 'font-weight':'bold'}},
+    { field: 'financing' , cellStyle: {'font-family': 'Montserrat', 'font-weight':'bold'}},
+    { field: 'status', width: 100, cellStyle: {'color': 'black', 'text-align':'left'}}
   ];
 
   public defaultColDef: ColDef = {
     sortable:true,
     filter: true,
     // floatingFilter: true,
-    width: 158, 
-    maxWidth: 158
+    width: 210, 
+    maxWidth: 210, 
+    cellStyle: {'font-family': 'Montserrat', 'font-weight':'bold', 'font-size':'11px'}
   };
   public rowData$!: Observable<any[]>;
 }
