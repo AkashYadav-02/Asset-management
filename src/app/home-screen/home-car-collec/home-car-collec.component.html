@@ -1,0 +1,125 @@
+<div class="car-collec-main">
+    <div class="container text-center">
+        <h1 style="font-weight: bolder; font-size: 2.1rem; font-family: Inter;" class="py-3">Our Impressive Collection of Cars</h1>
+        <h6 style="font-family: Inter;">Ranging from elegant sedans to powerful sports cars, all carefully selected to provide our customers with the ultimate driving experience.</h6>
+    </div>
+    <div class="car-collec-nav">
+        <button style="font-family: Inter;" class="btn btn-white">Popular Car</button>
+        <button style="font-family: Inter;" class="btn btn-white">Luxury Car</button>
+        <button style="font-family: Inter;" class="btn btn-white">Vintage Car</button>
+        <button style="font-family: Inter;" class="btn btn-white">Family Car</button>
+        <button style="font-family: Inter;" class="btn btn-white">Off-Road Car</button>
+    </div>
+    <div class="home-card-sec">
+        <div class="long-card">
+            <div class="lc-top-card">
+                <p class="card-text discount-text">20%</p>
+                <p class="card-text week-deals-text">Week Deals!</p>
+                <p class="get-new-car">Get a new car discount valid this week</p>
+                <button class="btn btn-danger btn-sm see-details">Buy Now</button>
+            </div>
+            <p class="lc-head">Select Filters ( 2 Selected )</p>
+            <form class="d-flex" role="search">
+                <div class="input-group" style="border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+                    <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input class="form-control border border-0" type="search" placeholder="Search" aria-label="Search">
+                </div>
+            </form>
+            <hr>
+            <p class="lc-head">Locality / City / landmark</p>
+            <div class="lc-buttons">
+                <button class="btn">Delhi</button>
+                <button class="btn">Mumbai</button>
+                <button class="btn">Chennai</button>
+                <button class="btn">Sec -10 A</button>
+            </div>
+            <p class="lc-smallest mt-2 mb-4"><i>Locality / Project / LandMark</i></p>
+            <hr>
+            <p class="lc-head">Budget</p>
+            <input type="range" id="vol" name="vol" min="0" max="100" style="accent-color: rgb(186, 0, 0); width: 100%;">
+            
+            <hr>
+            <p class="lc-sub-head">Condition<i class="fa-solid fa-angle-down"></i></p>
+            <p class="lc-sub-head">Capacity<i class="fa-solid fa-angle-down"></i></p>
+            <hr>
+            <p class="lc-head">Payment Calculator</p>
+            <div class="fields">
+                <div style="display: flex;">
+                    <p>Purchase Price :</p>
+                    <input type="text" placeholder="$ 0.00">
+                </div>
+                <div style="display: flex;">
+                    <p>Down Payment :</p>
+                    <input type="text" placeholder="$ 0.00">
+                </div>
+                <div style="display: flex;">
+                    <p>Interest Rate :</p>
+                    <input type="text" placeholder="$ 0.00">
+                </div>
+                <div style="display: flex;">
+                    <p>Loan Term Years :</p>
+                    <input type="text" placeholder="$ 0.00">
+                </div>
+                <div style="display: flex;">
+                    <p>Monthly Payment :</p>
+                    <input type="text" placeholder="$ 0.00">
+                </div>
+            </div>
+            <hr>
+            <p class="lc-head">Mileage Calculator</p>
+            <div class="fields">
+                <div style="display: flex;">
+                    <p>Distance :</p>
+                    <input type="text" placeholder="0.00">
+                </div>
+                <div style="display: flex;">
+                    <p>Fuel :</p>
+                    <input type="text" placeholder="0.00">
+                </div>
+                <div style="display: flex;">
+                    <p>Price :</p>
+                    <input type="text" placeholder="0.00">
+                </div>
+                <div style="display: flex;">
+                    <p>Mileage :</p>
+                    <input type="text" placeholder="0.00">
+                </div>
+            </div>
+            <div class="lc-subcan container" style="display: flex; gap:10%;">
+                <button class="btn border border-1 border-danger">Cancel</button>
+                <button style="background-color: rgb(186, 0, 0); color: white;" class="btn">Show Results</button>
+            </div>
+        </div>
+        <div class="collec-cards" >
+            <div class="car-card" *ngFor="let car of carDetails">
+                <img src={{car.imgUrl}}>
+                <div class="container">
+                    <p style="font-weight: bold; font-size: 15px; margin-bottom: 6px;">{{car.name}}</p>
+                    <h4 style="font-family: Montserrat; font-weight:bold; color: #ED5434;">$ {{car.price}}</h4>
+                    <div class="smallblock">
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/speedometer-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                            <p>4,000</p>
+                        </div>
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/manual-gearbox.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                            <p>Auto</p>
+                        </div>
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/users-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                            <p>4 Person</p>
+                        </div>
+                        <div class="smallsubblock text-center">
+                            <img src="../../../assets/gas-station.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                            <p>Electric</p>
+                        </div>
+                    </div>
+                    <button class="btn btn-white" style="font-weight: bold; border: solid black 1px; border-radius: 20px; margin-top: 10px; font-size: 12px; width: 100%; margin-bottom: 20px;">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

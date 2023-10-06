@@ -1,0 +1,55 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import "node_modules/@fontsource/montserrat";
+@import "node_modules/@fontsource/inter";
+@import "primeng/resources/primeng.css";
+
+@import 'ag-grid-community/styles/ag-grid.css';
+
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+@font-face {
+  font-family: 'Monts';
+  src: url('assets/fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url('assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+@font-face {
+  font-family: 'ZenKakuGothicAntique';
+  src: url('../src/assets/fonts/ZenKakuGothicAntique-Regular.ttf');
+}
+
+
+@font-face {
+  font-family: 'PJSans';
+  src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+.ag-theme-alpine{
+    // --ag-grid-size: 5px !important;
+    --ag-row-height:30px;
+
+}
+
+.body{
+    margin: 0rem;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;               /* width of the entire scrollbar */
+    height: 5px;
+  }
+  
+body::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0);        /* color of the tracking area */
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(211, 0, 0);    /* color of the scroll thumb */
+    border-radius: 5px;       /* roundness of the scroll thumb */
+    // border: 2px solid rgb(255, 255, 255);  /* creates padding around scroll thumb */
+}

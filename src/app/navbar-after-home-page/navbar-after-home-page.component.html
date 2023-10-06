@@ -1,0 +1,95 @@
+<nav id="car-subs-nav" class="navbar py-3 navbar-fixed-top"
+[style.background-color]="bgcolor">
+
+    <div>
+        <a class="nav-brand" >
+            <img src ={{sideburger}} height="20px" width="25px" class="expand" (click)="expandSideBar()" style="margin-top: 6px;">
+            <img class="imgg" src={{aurologo}} alt="Bootstrap">
+        </a>
+
+        <div class="sidebar" [style.display]="isExpand ? 'inherit' : 'none'">
+            <!-- <img class="img3" src="..\assets\b494ahn2td2ykcqak6hr_1-removebg-preview 1.png" alt="img"
+              style="width:150px;height:40px;">
+           -->
+            <ul class="ul1">
+              <li style="margin-top: 25px;"> <img src="..\assets\Home.png" alt="Icon 1" style="width:20px;height:12px;"> <a
+                 class="anchor">Home</a></li>
+              <li style="margin-top: 20px;"><img src="../../assets/Profiles.png" alt="Icon 1" style="width:20px;height:12px;"> 
+                <!-- routerLink="/main-profile" -->
+                <a class="anchor" (click)="redirect('main-profile')">Profile</a></li>
+              <li style="margin-top: 20px;"><img src="..\assets\security-user.png" alt="Icon 1" style="width:20px;height:15px;">
+                <a class="anchor" (click)="redirect('rm-home-page')" >RM Homepage</a></li>
+              <li style="margin-top: 20px;"><img src="..\assets\Ticket.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+                class="anchor">Messages</a></li>
+              <li style="margin-top: 20px;"><img src="..\assets\Document.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+                class="anchor">Purchases</a></li>
+
+              <li style="margin-top: 20px;"><img src="..\assets\Calendar.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+
+                class="anchor">Returns</a></li>
+
+              <li style="margin-top: 20px;"><img src="..\assets\Activity.png" alt="Icon 1" style="width:20px;height:15px;"> <a
+
+                class="anchor">Gallery</a></li>
+
+              <li style="margin-top: 20px;"><img src="..\assets\Setting.png" alt="Icon 1" style="width:20px;height:15px;"><a
+
+                class="anchor"  routerLink="/profile-settings">Settings</a></li>
+
+         
+
+            </ul>
+
+          </div>
+
+    </div>
+
+    <ul class="nav justify-content-end" style="margin-right: -180px;">
+
+        <li class="nav-item">
+
+          <a class="nav-link active" routerLink="/home" aria-current="page" [style.color]="txtcolor">Home</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">About Us</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">Cars</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">Services</a>
+
+        </li>
+
+        <li class="nav-item">
+
+            <a class="nav-link" aria-current="page" (click)="redirect('work-space')" [style.color]="txtcolor">My Workspace</a>
+
+        </li>
+
+        <li>
+
+            <div class="car-subs-logogroup">
+                <img src={{like}} class="px-2">
+                <img src={{noti}} class="px-2">
+                <img src={{sett}} class="px-2">
+                <img src="../../assets/Profiles2.png" class="px-2">
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" [style.color]="txtcolor">En<i class="fa-solid fa-angle-down" [style.color]="txtcolor"></i></a>
+        </li>
+
+    </ul>
+    <hr>
+</nav>

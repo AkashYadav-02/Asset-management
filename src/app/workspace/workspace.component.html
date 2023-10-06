@@ -1,0 +1,19 @@
+
+<app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+<div style="margin: 0px 65px; padding-top: 90px;">
+    <div class="ws-black-card">
+        <p class="ws-bc-head">DashBoard Overview</p>
+        <p class="ws-bc-name">Hello John <img src="../../assets/logos/image 1783.png"></p>
+    </div>
+    <div class="ws-grid-card">
+        <ag-grid-angular
+    style="width: 100%; height: 100%;"
+    class="ag-theme-alpine"
+    [rowData]="rowData$ | async"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef">
+</ag-grid-angular>
+
+    </div>
+    
+</div>

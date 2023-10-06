@@ -1,0 +1,83 @@
+<div class="mainclass w-full">
+  <div class="childclass1">
+    <img class="logoimg"
+      src="https://s3-alpha-sig.figma.com/img/c259/7a8d/7f9091727584b82529cb60ae7e5e7c81?Expires=1696809600&Signature=BrXvYQjujd7hPBC58a89qabnssdYSVSPRr8x0nHaUKW9X7CiKTkWixkLxSffm2jNnEet45eQHQo5jA8144I7BAqvZtntOS5f4DiDwdb5lnhV-x42IRh3aSj8pk55vPGdx7qWez7VMmGZRRKdgmp5e-R5GEWOB5ZqbCmqq04ds6FsqScnjkfx73ltc1I7ju7RMpjB6MX72M5wkmKmaUjFwPBDY8I8eM9OsRT2ql9F6f1aLpEv8yjVe3kYsc6~t5OVg4l73oNUOeyXkbIMrYJww2roTisTsZSNBLmUrFP5mmw2g04YMVcnfiZ~fwoBoNJpVLJt0CLOnHpap~XL7n9Hjw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4">
+    <div class="subchild1">
+      <h1>Building the Future...</h1>
+      <p>Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="slider">
+        <img src="../../assets/login_image/carousel-slider.svg">
+      </div>
+    </div>
+  </div>
+
+  <div class="childclass2">
+
+    <div class="header">
+      <h5 style="font-weight: bold; font-family: 'Monts';">Forgot Password</h5>
+    </div>
+    <div (click)="redirect('user/login')" class="arow">
+      <img src="../../assets/arrow-circle-left.png">
+    </div>
+    <div class="form-group">
+
+      <label id="email" for="email">Enter Email Address to Request for OTP link</label>
+      <br>
+      <br>
+      <div class="container1">
+        <div class="did-floating-label-content label-input">
+
+          <input class="did-floating-input " type="text" placeholder="User Name">
+
+          <label class="did-floating-label">Name</label>
+
+        </div>
+      </div>
+      <br>
+      <label id="signin"> Back to sign in</label>
+
+      <form (ngSubmit)="onSubmit()">
+        <div>
+          <button id="sendbutton" type="submit" class="started btn" style="font-family: 'Monts' ;" (click)="onSubmit()">Send</button>
+        </div>
+
+        <div class="container">
+
+          <div class="row justify-content-center  ">
+
+            <div class="col-md-5">
+              <hr class="my-2">
+            </div>
+
+            <div class="col-auto" style="font-weight: 400;">
+              <p class="or-text" style="font-weight: bold;">Or</p>
+            </div>
+
+            <div class="col-md-5">
+              <hr class="my-2">
+            </div>
+
+          </div>
+
+        </div>
+        <!-- ../../assets/images/icons8-google.jpg -->
+        <button class="googlee btn btn-google mt-3 " style="font-family: 'Monts';"><img
+            src="../../assets/login_image/google.png" alt="Google Logo" class="google-logo mr-2">Sign Up with
+          Google</button>
+
+        <button class="googlee btn btn-google " style="font-family: 'Monts'"><img
+            src="../../assets/login_image/apple.jpg" alt="Apple Logo" class="google-logo mr-2">Sign Up with
+          Apple</button>
+
+        <div class="span">
+          <!-- routerLink='register' -->
+          <span style="font-weight: normal;">Don't Have an Account? <a class="fw-bold text-body"
+              (click)="redirect('registration')">LOGIN HERE</a></span>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>

@@ -1,0 +1,113 @@
+#car-subs-nav {
+    // margin-left: 65px;
+    // margin-right: 65px;
+    width: 90%;
+    position: fixed;
+    // width: 100%;
+    padding-left: 5px;
+    padding-right: 65px;
+    left: 50%;   // align items at center in fixed position
+    transform: translate(-50%, 0%); // align items at center in fixed position
+    z-index: 10;
+    color: white;
+    border-bottom: solid 1px rgb(196, 192, 192);
+    font-size: 17px;
+    font-family: "Montserrat";
+    // box-shadow: 25px 30px 3px -30px rgb(175, 168, 175);
+}
+
+.navbar-fixed-top.scrolled {
+    background-color: #fff !important;
+    transition: background-color 800ms linear;
+  }
+  
+  .navbar-fixed-top.scrolled .nav-link {
+    color:#555;
+  }
+
+.sidebar{
+    display: flex;
+    position: absolute;
+    background-color: black;
+    width: 16%;
+    height: 25rem;
+    //margin-top: 80px;
+    //margin-left:70px;
+    margin-top: 25px;
+    margin-left: -1px;
+    z-index: 1;
+}
+
+.anchor{
+
+    text-decoration: none;
+
+    color:white;
+
+    margin-left:10px;
+
+}
+
+.ul1{
+
+    //margin-top:-30px;
+
+    padding-bottom:80px;
+
+    list-style-type: none;
+
+}
+
+ 
+
+.nav-item{
+
+    margin-left: 8px;
+
+    margin-right: 8px;
+
+}
+
+ 
+
+.car-subs-logogroup img {
+
+    max-width: 3.5rem;
+
+    max-height: 2.2rem;
+
+}
+
+ 
+
+.nav-link{
+
+    color: rgb(255, 255, 255);
+
+}
+
+ 
+
+.loginBtn{
+
+    width: 180px;
+
+}
+
+ 
+
+.imgg {
+
+    height: 2.5rem;
+
+    margin-left:15px;
+
+}
+
+li {
+    cursor: pointer;
+}
+
+.expand{
+    cursor: pointer;
+}

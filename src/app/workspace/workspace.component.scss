@@ -1,0 +1,56 @@
+
+.ws-black-card{
+    border: solid 1px black;
+    width: 62rem;
+    height:22rem;
+    border-radius: 10px;
+    background-image: url(../../assets/workspace.jpg);
+    background-position: center;
+    padding: 2.5rem;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.ws-bc-name{
+    font-family: "Montserrat";
+    font-weight:bolder;
+    color: #ffffff;
+    font-size: 45px;
+}
+
+.ws-bc-name img{
+    height: 35px;
+    vertical-align: middle;
+}
+
+.ws-bc-head{
+    font-family: "Inter";
+    font-weight: bold;
+    color: #D9D9D9;
+    font-size: 25px;
+}
+
+.ws-grid-card{
+    border: solid 2px black;
+    width: 62rem;
+    height:24rem;
+    border-radius: 10px;
+    background-color: #F4F6FB;
+    padding: 2.5rem 1rem;
+    float: right;
+    overflow: hidden;
+}
+
+.ag-theme-alpine {
+    --ag-grid-size: 2px !important;
+    --ag-list-item-height: 0px !important;
+    --ag-header-background-color: #F4F6FB;
+    --ag-header-foreground-color: #000000;
+    --ag-background-color: #F4F6FB;
+    --ag-odd-row-background-color: #F4F6FB;
+    --ag-foreground-color: rgb(0, 0, 0);
+    --ag-borders: none;
+    --ag-font-size: 13px;
+
+  }
+
