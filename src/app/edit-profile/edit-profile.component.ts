@@ -12,8 +12,9 @@ import {FormGroup,FormControl,Validators} from '@angular/forms'
 
 })
 export class EditProfileComponent implements OnInit {
+  
   constructor(private router: Router, private messageService: MessageService) {}
-  userForm!:FormGroup;
+  userForm:FormGroup | any;
   ngOnInit(): void {
     this.userForm = new FormGroup(
       {
@@ -24,10 +25,17 @@ export class EditProfileComponent implements OnInit {
       }
     )
   }
+  clicked1=true;
+  clicked2=false;
   navigateToProfile() {
-    this.router.navigate(['/main-profile']);
+    if(this.clicked1){
+      this.clicked2=true;
+      this.clicked1=false;
+      console.log(this.clicked1, this.clicked2);
+      
+    }
+   this.router.navigate(['/main-profile']);
   }
-
   navigateToAccountSettings() {
     this.router.navigate(['/profile-settings']);
   }
