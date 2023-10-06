@@ -8,6 +8,13 @@
     display: flex;
    
 }
+:host ::ng-deep .p-toast {
+    background-color: #f1f5f2 ;
+    color:#090808; 
+    // border-radius: 0.5rem;
+    width: 20rem;
+  
+  }
 // .nav{
 //     margin-top:20px;
 //     border: solid rgb(236, 234, 234);
