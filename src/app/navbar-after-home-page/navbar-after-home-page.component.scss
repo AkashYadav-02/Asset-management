@@ -25,7 +25,7 @@
     color:#555;
   }
 
-.sidebar{
+  .sidebar{
     display: flex;
     position: absolute;
     background-color: black;
@@ -38,12 +38,50 @@
     z-index: 1;
 }
 
+.notibar, .profilebar{
+    display: flex;
+    position: absolute;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
+    border: solid 1px rgb(224, 220, 220);
+    color: black;
+    height: fit-content;
+    font-size: 15px;
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.drop{
+    list-style-type: none;
+    margin-left: -10px;
+}
+
+.drop i{
+    padding-right: 10px;
+}
+
+.drop li{
+    padding-bottom: 10px;
+}
+
+.notibar{
+    margin-top: 25px;
+    margin-left: -9rem;
+    width: 15rem;
+}
+
+.profilebar{
+    margin-top: 25px;
+    margin-left: 0rem;
+    width: 12rem;
+}
+
+
+
 .anchor{
-
     text-decoration: none;
-
     color:white;
-
     margin-left:10px;
 
 }

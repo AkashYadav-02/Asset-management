@@ -13,6 +13,8 @@ declare var $: any;
 })
 export class NavbarAfterHomePageComponent implements OnInit{
   isExpand=false;
+  isNotiExpand=false;
+  isProfileExpand=false;
 
   @Input() navtheme?:string;
 
@@ -56,18 +58,31 @@ export class NavbarAfterHomePageComponent implements OnInit{
     // }
 
   expandSideBar(){
-
     if (this.isExpand){
-
       this.isExpand=false
-
     }else{
-
       this.isExpand=true
-
     }
-    console.log(this.isExpand);
+    this.isNotiExpand=false
+    this.isProfileExpand=false
   }
+  expandNotiBar(){
+    if (this.isNotiExpand){
+      this.isNotiExpand=false
+    }else{
+      this.isNotiExpand=true
+    }
+    this.isProfileExpand=false
+    this.isExpand=false
+  }
+  expandProfileBar(){
+    if (this.isProfileExpand){
+      this.isProfileExpand=false
+    }else{
+      this.isProfileExpand=true
+      this.isNotiExpand=false
+      this.isExpand=false
+    }}
 
   setBackground(color:string){
     if(color == "black"){
