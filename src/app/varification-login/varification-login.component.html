@@ -35,8 +35,8 @@
                 <p>If you didn't receive a code, <span><a class="resend-text" href="">Resend</a></span></p>
 
             </div>
-
-            <button type="submit" class="started btn" (click)="onSubmit()">Verify</button>
+            <p-toast position="top-center" key="tc"></p-toast>
+            <button type="button" pbutton pRipple (click)="onSubmit()"  class="started btn p-button-success" label="Verify" (click)="onSubmit()">Verify</button>
 
             <div class="container">
 
