@@ -99,19 +99,13 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+:host ::ng-deep .p-toast {
+    background-color: #eff7f1 ;
+    color:#0d0e0d; 
+    // border-radius: 0.5rem;
+    width: 20rem;
+  
+  }
 
 .childclass2 span {
 
@@ -345,9 +339,8 @@ h1 {
 
     margin-left: 1rem;
     font-family: Inter;
-    font-size: 2rem;
-
-    padding: 0.3rem;
+    font-size: 1.5rem;
+    padding: 0.9rem;
 
 }
 
