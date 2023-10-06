@@ -13,7 +13,6 @@ function passwordMatchValidator(control: AbstractControl): ValidationErrors | nu
   }
   return null;
 }
-
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -27,7 +26,6 @@ export class RegistrationComponent {
   password: string = '';
   confirmPassword: string = '';
   register: FormGroup | any;
-
   constructor(
     private router: Router,
     private formBuilder: FormBuilder,
@@ -46,18 +44,17 @@ export class RegistrationComponent {
       validators: passwordMatchValidator, // Validate password and confirmPassword
     });
   }
-
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
   }
-
   redirectToForgotPassPage() {
     this.router.navigate(['forgot']);
   }
-
   onSubmit() {
     this.messageService.add({ key : 'tc' ,severity: 'success', summary: 'Success', detail: 'Message Content' }); 
-       this.redirect('user/login');
+    setTimeout(() => {
+      this.redirect('user/login'); 
+    }, 1000);
     // if (this.register && this.register.valid) {
     //   // console.log('Form submitted');
     //   // You can perform additional actions here, e.g., sending the form data to an API.
