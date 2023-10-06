@@ -1,4 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Subject } from 'rxjs';
+// import { Subscription } from 'rxjs';
+import { NavbarAfterHomePageComponent } from 'src/app/navbar-after-home-page/navbar-after-home-page.component';
+
 
 @Component({
   selector: 'app-homepage-upper',
@@ -6,9 +10,16 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./homepage-upper.component.scss']
 })
 export class HomepageUpperComponent {
+  @ViewChild(NavbarAfterHomePageComponent) Navbar!: NavbarAfterHomePageComponent ;
   box = document.getElementsByClassName('find-card-btn');
-  clicked1=true
-  clicked2=false
+  clicked1=true;
+  clicked2=false;
+
+  // _isVisible: boolean = false;
+  // dropdownControllerSubject: Subject<boolean> | undefined ;
+  constructor(){
+    
+  }
   switchCSS(){
     // this.box.style
     if(this.clicked1){
@@ -27,6 +38,6 @@ export class HomepageUpperComponent {
   }
   @Output() newEvent = new EventEmitter<Event>()
   close(){
-    console.log(event,"hello");
+      this.Navbar.isExpand = false;
   }
 }
