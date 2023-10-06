@@ -19,17 +19,9 @@ login:FormGroup|any;
 
   constructor(private router:Router,private fb: FormBuilder,
    private redirectMenu : RedirectMenuService,
-    ) {}
-
- 
-
+    ) {} 
   ngOnInit(): void {
-
- 
-
     this.login = this.fb.group({
-
- 
 
     // lname: ['', [Validators.required, Validators.minLength(2), Validators.pattern('[a-zA-Z ]*')]],
 
