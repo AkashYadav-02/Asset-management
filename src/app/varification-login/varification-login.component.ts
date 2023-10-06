@@ -16,11 +16,10 @@ export class VarificationLoginComponent {
 
   onSubmit(){
     this.messageService.clear();
-    this.messageService.add({ key : 'tc' ,severity: 'success', summary: 'Success', detail: 'Message Content' }); 
+    this.messageService.add({ key : 'tc' ,severity: 'success', summary: 'Success', detail: 'Verified' }); 
     setTimeout(() => {
       this.redirecttonewPass();
     }, 1000);
-
   }
 
 redirecttonewPass() {

@@ -99,19 +99,13 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+:host ::ng-deep .p-toast {
+    background-color: #eff7f1 ;
+    color:#0d0e0d; 
+    // border-radius: 0.5rem;
+    width: 20rem;
+  
+  }
 
 .childclass2 span {
 
