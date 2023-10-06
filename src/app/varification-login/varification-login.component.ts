@@ -14,12 +14,8 @@ export class VarificationLoginComponent {
   constructor(private router:Router,
     private messageService: MessageService) {}
 
-  onSubmit(){
-    this.messageService.clear();
-    this.messageService.add({ key : 'tc' ,severity: 'success', summary: 'Success', detail: 'Verified' }); 
-    setTimeout(() => {
+  onSubmit(){  
       this.redirecttonewPass();
-    }, 1000);
   }
 
 redirecttonewPass() {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -30,7 +30,9 @@ export class RegistrationComponent {
     private router: Router,
     private formBuilder: FormBuilder,
     private redirectMenu: RedirectMenuService,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private renderer: Renderer2,
+    private el: ElementRef
   ) {}
   ngOnInit(): void {
     this.register = this.formBuilder.group({
@@ -50,16 +52,22 @@ export class RegistrationComponent {
   redirectToForgotPassPage() {
     this.router.navigate(['forgot']);
   }
-  onSubmit() {
-    this.messageService.add({ key : 'tc' ,severity: 'success', summary: 'Success', detail: ' Registration Successfull' }); 
-    setTimeout(() => {
-      this.redirect('user/login'); 
-    }, 1000);
-    // if (this.register && this.register.valid) {
-    //   // console.log('Form submitted');
-    //   // You can perform additional actions here, e.g., sending the form data to an API.
-    // } else {
-    //   console.log('Please fill in all required fields and make sure passwords match.');
-    // }
+  showAlert() {
+    const alertDiv = this.renderer.createElement('div');
+    this.renderer.addClass(alertDiv, 'alert');
+    this.renderer.addClass(alertDiv, 'alert-success');
+    this.renderer.setAttribute(alertDiv, 'role', 'alert');
+    alertDiv.innerHTML = `Registration Successfull`;
+    const alertContainer = this.el.nativeElement.querySelector('#alertContainer');
+    if (alertContainer) {
+      this.renderer.appendChild(alertContainer, alertDiv);
+    }
   }
+  onSubmit() {
+      this.showAlert(); // Show the alert after successful form submission
+      setTimeout(() => {
+        this.redirect('user/login'); // Redirect after showing the alert
+      }, 1000);
+    } 
+  
 }
