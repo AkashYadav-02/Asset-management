@@ -79,7 +79,7 @@ redirectToForgotPassPage(){
 
 onSubmit() {
   if (this.login && this.login.valid) {
-    this.redirect('home');
+    this.redirect('rm-home-page');
 
     // console.log('Form submitted');
 

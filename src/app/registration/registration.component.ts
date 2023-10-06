@@ -51,7 +51,7 @@ export class RegistrationComponent {
     this.router.navigate(['forgot']);
   }
   onSubmit() {
-    this.messageService.add({ key : 'tc' ,severity: 'success', summary: 'Success', detail: 'Message Content' }); 
+    this.messageService.add({ key : 'tc' ,severity: 'success', summary: 'Success', detail: ' Registration Successfull' }); 
     setTimeout(() => {
       this.redirect('user/login'); 
     }, 1000);

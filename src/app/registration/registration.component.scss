@@ -19,11 +19,11 @@
 }
 
 :host ::ng-deep .p-toast {
-  /* Add your custom styles for the toast */
-  background-color: #f7f7ef ; /* Yellow background */
-  color: #14bd2b; 
-  border-radius: 0.5rem;
-  // height: 0.5rem;
+  background-color: #070707 ;
+  color:#ffffff; 
+  // border-radius: 0.5rem;
+  width: 20rem;
+
 }
 
 .childclass1 {
@@ -128,7 +128,7 @@ font-family:  'Inter'  ;
   width: 319px;
   height: 89px;
   padding-left: 2px;
-  padding-right: 10px;
+  padding-right: 2px;
   margin: 2px auto;
   font-family: 'Monts';
   margin-top: 0.5rem;
