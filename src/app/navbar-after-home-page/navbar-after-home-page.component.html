@@ -12,11 +12,11 @@
               style="width:150px;height:40px;">
            -->
             <ul class="ul1">
-              <li style="margin-top: 25px;"> <img src="..\assets\Home.png" alt="Icon 1" style="width:20px;height:12px;"> <a
-                 class="anchor">Home</a></li>
+              <li style="margin-top: 25px;"> <img src="..\assets\Category.png" alt="Icon 1" style="width:20px;height:12px;"> <a
+                 class="anchor"  (click)="redirect('work-space')">Dashboard</a></li>
               <li style="margin-top: 20px;"><img src="../../assets/Profiles.png" alt="Icon 1" style="width:20px;height:12px;"> 
                 <!-- routerLink="/main-profile" -->
-                <a class="anchor" (click)="redirect('main-profile')">Profile</a></li>
+                <a class="anchor" (click)="redirect('/main-profile')">Profile</a></li>
               <li style="margin-top: 20px;"><img src="..\assets\security-user.png" alt="Icon 1" style="width:20px;height:15px;">
                 <a class="anchor" (click)="redirect('rm-home-page')" >RM Homepage</a></li>
               <li style="margin-top: 20px;"><img src="..\assets\Ticket.png" alt="Icon 1" style="width:20px;height:15px;"> <a
@@ -48,7 +48,7 @@
 
         <li class="nav-item">
 
-          <a class="nav-link active" routerLink="/home" aria-current="page" [style.color]="txtcolor">Home</a>
+          <a class="nav-link active" routerLink="/work-space" aria-current="page" [style.color]="txtcolor">Dashboard</a>
 
         </li>
 
