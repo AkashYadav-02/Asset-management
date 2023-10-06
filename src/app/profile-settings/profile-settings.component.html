@@ -1,29 +1,34 @@
-<div class="sidebar">
-    <img class = "img3" src = "..\assets\b494ahn2td2ykcqak6hr_1-removebg-preview 1.png" alt="img"  style="width:150px;height:40px;">
-    
-    <ul>
-        <li style="margin-top: 60px;" > <img src="..\assets\Home.png" alt="Icon 1" style="width:20px;height:12px;"> <a href="/home">Home</a></li>
-        <li style="margin-top: 15px;"><img src="..\assets\Vector.png" alt="Icon 1" style="width:20px;height:12px;"> <a href="#">Profile</a></li>
+
+<!-- <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page> -->
+<!-- <app-navbar-after-home-page  [navtheme]="'whitetheme'"></app-navbar-after-home-page> -->
+<!-- <app-navbar-after-home-page  [navtheme]="'whitetheme'"></app-navbar-after-home-page>  -->
+<app-nav-bar-after-home-profile [navtheme]="'whitetheme'"></app-nav-bar-after-home-profile>
+  <!--<div class="sidebar">
+   <img class = "img3" src = "..\assets\b494ahn2td2ykcqak6hr_1-removebg-preview 1.png" alt="img"  style="width:150px;height:40px;">
+   
+    <ul class="ul1">
+         <li style="margin-top: 60px;" > <img src="..\assets\Home.png" alt="Icon 1" style="width:20px;height:12px;"> <a href="#">Home</a></li> 
+        <li style="margin-top: 15px;"><img src="..\assets\Profiles.png" alt="Icon 1" style="width:20px;height:12px;"> <a href="#">Profile</a></li>
         <li style="margin-top: 15px;"><img src="..\assets\security-user.png" alt="Icon 1" style="width:20px;height:15px;"> <a href="#">RM Homepage</a></li>
         <li style="margin-top: 15px;"><img src="..\assets\Ticket.png" alt="Icon 1" style="width:20px;height:15px;"> <a href="#">Messages</a></li>
         <li style="margin-top: 15px;"><img src="..\assets\Document.png" alt="Icon 1" style="width:20px;height:15px;"> <a href="#">Purchases</a></li>
         <li style="margin-top: 15px;"><img src="..\assets\Calendar.png" alt="Icon 1" style="width:20px;height:15px;"> <a href="#">Returns</a></li>
         <li style="margin-top: 15px;"><img src="..\assets\Activity.png" alt="Icon 1" style="width:20px;height:15px;"> <a href="#">Gallery</a></li>
-        <!-- <li style="margin-top: 15px;"><img src="..\assets\Setting.png" alt="Icon 1" style="width:20px;height:12px;"><a href="#">Settings</a></li> -->
+         <li style="margin-top: 15px;"><img src="..\assets\Setting.png" alt="Icon 1" style="width:20px;height:12px;"><a href="#">Settings</a></li> 
         <li style="margin-top: 15px; border-radius: 0px 5px 5px 0px;
         opacity: 0.2;
         background: linear-gradient(90deg, #eb6060 48.95%, rgba(255, 255, 255, 0.171) 91.25%);
         "><img src="..\assets\Setting.png" alt="Icon 1" style="width:20px;height:15px;"><a href="#">Settings</a></li>
         
     </ul>
-</div>
-
+</div>  -->
+<div >
 <nav>
     <div class="div1"> 
       <!-- <h5><img src="..\assets\Setting2.png" alt="Icon 1" style="width:20px;height:18px; margin-bottom: 3px; margin-right: 7px;">  Account Settings</h5> -->
       <div class="nav-spacing">
         <button type="button" class="btn btn-outline-light text-dark pro-btn" (click)="navigateToProfile()"><img src="..\assets\profile2.png" alt="Icon 1" style="width:20px;height:15px; margin-bottom: 3px; margin-right: 7px;">Profile</button>
-        <button type="button" class="btn btn-outline-light text-dark set-btn" (click)="navigateToAccountSettings()" ><img src="..\assets\Setting2.png" alt="Icon 1" style="width:20px;height:15px; margin-bottom: 3px; margin-right: 7px;">Account Settings</button>
+        <button type="button" class="btn btn-outline-light text-dark set-btn" [style.background-color]="clicked1 ? '#db232359':'white'" [style.border-color]="clicked1 ? 'red':'white'"(click)="navigateToAccountSettings()" ><img src="..\assets\Setting2.png" alt="Icon 1" style="width:20px;height:15px; margin-bottom: 3px; margin-right: 7px;">Account Settings</button>
         </div>
         <a  href="#"class="a1">Change Password</a> 
 
@@ -37,18 +42,23 @@
                 <p>Phone numbers can be used as second factor of verification in two-factor authentication. See this ARTICLE for details setting up this ASP.NET application to support two factor authentication to SMS</p>
                 
                   <!-- <p>(206-555-1234) <a href="#"style="color:red; text-decoration: underline;">Change</a> <a href="#"style="color:black;text-decoration: underline;">Remove</a></p>   -->
-                 <input id="number" style= "border:none; width:120px ;"placeholder="(206-555-1234) "> <a class="anchor"href="../profile-settings" id="link1">Change</a> <a class="anchor" href="../profile-settings" id="link2">Remove</a>
-                <br><br>
+                 <input id="number" style= "border:none; width:120px ;"placeholder="(206-555-1234) "> <a class="anchor" id="link1" [style.color]="clicked5 ? 'black':'red'"(click)="changeclick()">Change</a> <a class="anchor" id="link2" [style.color]="clicked6 ? 'black':'red'"(click)="removeclick()">Remove</a>
+                 <!-- href="../profile-settings" -->
+                 <br><br>
                 <h4>Two Factor Authentication:</h4>
-                <a class="anchor" href="../profile-settings">Enable</a>
-                <a  class="anchor" href="../profile-settings">Disable</a>
+                <!-- <a class="anchor" href="../profile-settings">Enable</a>
+                <a  class="anchor" href="../profile-settings">Disable</a> -->
+                <a class="anchor" [style.color]="clicked3 ? 'black':'red'"(click)="enableclick()">Enable</a>
+                <a  class="anchor"[style.color]="clicked4 ? 'black':'red'"(click)="disableclick()">Disable</a>
 
             </div>
-                <button type="button" class="btn1 btn btn-danger ">Save</button>
+                <p-toast position="bottom-center" key="bc"></p-toast> 
+                <button type="button" class="btn1 btn btn-danger " (click)="showBottomCenter()">Save</button>
                 <button type="button" class="btn2 btn btn-outline-danger " (click)="navigateToProfile()">Cancel</button>
                 <!-- <button type="button" class="btn btn-outline-danger">Danger</button> -->
             </div>
            </div>
  </div>
+</div>
 
 <router-outlet></router-outlet>

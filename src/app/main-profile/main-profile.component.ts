@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./main-profile.component.scss']
 })
 export class MainProfileComponent implements OnInit {
-  userForm!:FormGroup;
+  userForm:FormGroup|any;
   arr:any[]=[{
     name:'sahil',
     email:'sahil@gmail.com',
@@ -28,16 +28,23 @@ export class MainProfileComponent implements OnInit {
       }
     )
   }
-
+  clicked1=true;
+  clicked2=false;
   navigateToProfile() {
-    this.router.navigate(['/main-profile']);
+    if(this.clicked1){
+      this.clicked2=true;
+      this.clicked1=false;
+      console.log(this.clicked1, this.clicked2);
+      
+    }
+   this.router.navigate(['/main-profile']);
   }
   
-  navigateToAccountSettings() {
+  navigateToAccountSettings() {   
     this.router.navigate(['/profile-settings']);
   }
   navigateToEditProfile() {
-    this.router.navigate(['/edit-profile']);
+    this.router.navigate(['../edit-profile']);
   }
 
   onSubmit(){

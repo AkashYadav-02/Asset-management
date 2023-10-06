@@ -23,7 +23,7 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { NavbarAfterHomePageComponent } from './navbar-after-home-page/navbar-after-home-page.component';
 import { HomePageAfterComponent } from './home-page-after/home-page-after.component';
 import { VarificationLoginComponent } from './varification-login/varification-login.component';
-// import { FormsModule } from '@angular/forms';
+// import { Form } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 import { AgGridModule } from 'ag-grid-angular';
 import { HomepageUpperComponent } from './rm-homepage/homepage-upper/homepage-upper.component';
@@ -34,14 +34,20 @@ import { HomeupperpageComponent } from './rm-homepage/homeupperpage/homeupperpag
 import { AfternavbarComponent } from './afternavbar/afternavbar.component';
 
 import { RouterModule } from '@angular/router';
-import { MainProfileComponent } from './forgot/main-profile/main-profile.component';
+
 import { ApplyNowFlow1Component } from './apply-now-flow1/apply-now-flow1.component';
+import { MainProfileComponent } from './main-profile/main-profile.component';
+import { NavBarAfterHomeProfileComponent } from './nav-bar-after-home-profile/nav-bar-after-home-profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
  
 
 @NgModule({
   declarations: [
     AppComponent,
+    
     CarSubsComponent,
     HomeCarCollecComponent,
     RmHomepageComponent,
@@ -59,14 +65,17 @@ import { ApplyNowFlow1Component } from './apply-now-flow1/apply-now-flow1.compon
     HomePageAfterComponent,
     HomepageUpperComponent,
     FooterComponent,
-    MainProfileComponent,
     ApplyNowFlow1Component,
-  
+    MainProfileComponent,
+    NavBarAfterHomeProfileComponent,
+    EditProfileComponent,
+    ProfileSettingsComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    AppRoutingModule,
     ReactiveFormsModule,
     ToastModule,
     InputTextareaModule,
@@ -76,7 +85,7 @@ import { ApplyNowFlow1Component } from './apply-now-flow1/apply-now-flow1.compon
     TimelineModule,
     AgGridModule,
     HttpClientModule,
-
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
