@@ -48,6 +48,11 @@ export class HomeCarCollecComponent {
       price: 8200,
       imgUrl: "../../assets/Cars/car5.png"
     },
+    {
+      name:"Nissan Maxima Platinum 2022",
+      price: 8200,
+      imgUrl: "../../assets/Cars/Nisan.png"
+    },
     
   ]
 
