@@ -11,8 +11,13 @@ export class RmHomepageComponent implements OnInit {
   constructor(
     private renderer: Renderer2
     ) {}
+    element = document.getElementById("car-subs-nav");
   ngOnInit(): void {
-
+    if (this.element) {
+      // Get the scroll height
+      const scrollHeight = this.element.scrollHeight;
+      console.log(`Scroll Height: ${scrollHeight}`);
+    }
   }
 
     // @HostListener('window:scroll', ['$event']) 
