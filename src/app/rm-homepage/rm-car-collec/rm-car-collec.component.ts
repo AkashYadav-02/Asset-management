@@ -14,34 +14,34 @@ export class RmCarCollecComponent {
      ) {}
   carDetails=[
     {
-      name:"Audi A8 L 2022",
+      name:"2023 Toyota Glanza",
       price: 8200,
-      imgUrl: "../../assets/Cars/car2.png"
+      imgUrl : "../../assets/Toyota-Glanza-060520221539 2.png"
     },
     {
-      name:"Nissan Maxima Platinum 2022",
+      name:"2023 Toyota Fortuner",
       price: 8200,
-      imgUrl: "../../assets/Cars/Nisan.png"
+      imgUrl: "../../assets/Toyota-Fortuner-110120211829 2.png"
     },
     {
-      name:"Porsche Cayenne GTS 2022",
+      name:"2023 Toyota Innova Crysta",
       price: 8200,
-      imgUrl: "../../assets/Cars/car4.png"
+      imgUrl: "../../assets/20201015102234_2021-Toyota-Innova-Crysta-facelift-grey-studio 2.png"
     },
     {
-      name:"BMW M8 Coupe 2022",
+      name:"2023 Toyota Vellfire ",
       price: 8200,
-      imgUrl: "../../assets/Cars/car6.png"
+      imgUrl: "../../assets/cover_6492c7391b5b5 2.png"
     },
     {
-      name:"BMW X7 M50i 2022",
+      name:"2023 Toyota Urban Cruiser ",
       price: 8200,
-      imgUrl: "../../assets/Cars/car5.png"
+      imgUrl: "../../assets/urban-cruiser-hyryder-exterior-right-front-three-quarter-72 2.png"
     },
     {
-      name:"Porsche Cayenne GTS 2022",
+      name:"Toyota Camry",
       price: 8200,
-      imgUrl: "../../assets/Cars/car1.png"
+      imgUrl: "../../assets/CamryModelImage 2.png"
     }
     
   ]
