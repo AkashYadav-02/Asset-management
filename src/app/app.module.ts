@@ -22,7 +22,8 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { NavbarAfterHomePageComponent } from './navbar-after-home-page/navbar-after-home-page.component';
 import { HomePageAfterComponent } from './home-page-after/home-page-after.component';
 import { VarificationLoginComponent } from './varification-login/varification-login.component';
-// import { Form } from '@angular/forms';
+
+
 import { HttpClientModule } from '@angular/common/http'
 import { AgGridModule } from 'ag-grid-angular';
 import { HomepageUpperComponent } from './rm-homepage/homepage-upper/homepage-upper.component';
@@ -42,6 +43,7 @@ import { MainProfileComponent } from './main-profile/main-profile.component';
 import { NavBarAfterHomeProfileComponent } from './nav-bar-after-home-profile/nav-bar-after-home-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
+import { AlertComponent } from './alert/alert.component';
 
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
  
@@ -74,7 +76,8 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
     ProfileSettingsComponent,
     SpinnerComponent,
     Spinner1Component,
-    Spinner2Component
+    Spinner2Component,
+    AlertComponent
 
   ],
   imports: [
