@@ -12,26 +12,26 @@
     </div>
   </div>
 
-  <div class="childclass2">
+  <div class="childclass2 w-full">
     <p>LET'S GET YOU STARTED</p>
     <h5 style="font-weight: bold; font-family: 'ZenKakuGothicAntique';">Sign In</h5>
 
 
     <form [formGroup]="login" (ngSubmit)="onSubmit()">
 
-      <div class="form-group container1">
-        <div class="did-floating-label-content label-input">
+      <div class="form-group container1 w-full">
+        <div class="did-floating-label-content label-input w-full">
           <input class="did-floating-input " formControlName="email" type="text" placeholder="Email">
           <label class="did-floating-label" style="font-size: -0.3rem;">Email</label>
         </div>  
 
-        <div class="did-floating-label-content label-input">
+        <div class="did-floating-label-content label-input w-full">
           <input class="did-floating-input" type="password" formControlName="password" placeholder="*********">
           <label class="did-floating-label " style="font-size: -0.3rem;">Password</label>
         </div>
       </div>
 
-      <div style="cursor: pointer;">
+      <div style="cursor: pointer;" class="w-full">
         <!-- href="#!"routerLink="forgot" -->
         <a (click)="redirect('forget')" style="font-family: Monts; font-size: 0.7rem; font-weight:500">Forgot
           Password?</a>
@@ -40,11 +40,11 @@
 
       <!-- <button type="submit " class="started btn"  >Login</button> -->
 
-      <button type="submit" class="started btn" style="font-family: Monts" (click)="onSubmit()" >Login</button>
+      <button type="submit" class="started btn w-full" style="font-family: Monts" (click)="onSubmit()" >Login</button>
 
 
 
-      <div class="container">
+      <div class="container w-full">
         <div class="row justify-content-center">
           <div class="col-md-5">
             <hr class="my-4" style="margin-left: -8.9%;">
