@@ -7,4 +7,6 @@ import { NavbarAfterHomePageComponent } from '../navbar-after-home-page/navbar-a
 })
 export class ApprovedComponent {
 
+title1 : string = "ApprovalCondition" ; 
+
 }
