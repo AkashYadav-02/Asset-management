@@ -24,7 +24,7 @@ export class WorkspaceComponent {
     { field: 'financing' },
     {
       field: 'status', width: 100, cellStyle: function(params) {
-          if (params.node.data.status =='Completed') {
+          if (params.node.data.status =='Processed') {
             return { 'color': 'white', 'text-align': 'center', 'border-radius':'20px', 
             'border-top':'solid 3.5px #F4F6FB',
             'line-height':'2.3',
