@@ -10,6 +10,8 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 })
 export class NavBarAfterHomeProfileComponent implements OnInit{
   isExpand=false;
+  isNotiExpand = false;
+  isProfileExpand = false;
 
   @Input() navtheme?:string;
 
@@ -61,6 +63,25 @@ export class NavBarAfterHomeProfileComponent implements OnInit{
 
    
 
+  }
+
+  expandNotiBar() {
+    if (this.isNotiExpand) {
+      this.isNotiExpand = false
+    } else {
+      this.isNotiExpand = true
+    }
+    this.isProfileExpand = false
+    this.isExpand = false
+  }
+  expandProfileBar() {
+    if (this.isProfileExpand) {
+      this.isProfileExpand = false
+    } else {
+      this.isProfileExpand = true
+      this.isNotiExpand = false
+      this.isExpand = false
+    }
   }
 
   redirect(path : string){
