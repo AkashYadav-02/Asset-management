@@ -40,8 +40,8 @@
 }
 
 body::-webkit-scrollbar {
-    width: 5px;               /* width of the entire scrollbar */
-    height: 5px;
+    width: 0px;               /* width of the entire scrollbar */
+    height: 0px;
   }
   
 body::-webkit-scrollbar-track {
