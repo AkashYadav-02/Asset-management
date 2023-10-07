@@ -15,32 +15,32 @@ export class RmCarCollecComponent {
   carDetails=[
     {
       name:"2023 Toyota Glanza",
-      price: 8200,
+      price: '17,949',
       imgUrl : "../../assets/Toyota-Glanza-060520221539 2.png"
     },
     {
       name:"2023 Toyota Fortuner",
-      price: 8200,
+      price: '61,490',
       imgUrl: "../../assets/Toyota-Fortuner-110120211829 2.png"
     },
     {
       name:"2023 Toyota Innova Crysta",
-      price: 8200,
+      price: '30,990',
       imgUrl: "../../assets/20201015102234_2021-Toyota-Innova-Crysta-facelift-grey-studio 2.png"
     },
     {
       name:"2023 Toyota Vellfire ",
-      price: 8200,
+      price: '1,30,830',
       imgUrl: "../../assets/cover_6492c7391b5b5 2.png"
     },
     {
       name:"2023 Toyota Urban Cruiser ",
-      price: 8200,
+      price: '25,989',
       imgUrl: "../../assets/urban-cruiser-hyryder-exterior-right-front-three-quarter-72 2.png"
     },
     {
       name:"Toyota Camry",
-      price: 8200,
+      price: '49,390',
       imgUrl: "../../assets/CamryModelImage 2.png"
     }
     
