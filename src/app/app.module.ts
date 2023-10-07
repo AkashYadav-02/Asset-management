@@ -43,7 +43,7 @@ import { MainProfileComponent } from './main-profile/main-profile.component';
 import { NavBarAfterHomeProfileComponent } from './nav-bar-after-home-profile/nav-bar-after-home-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
-import { AlertComponent } from './alert/alert.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
  
@@ -77,7 +77,7 @@ import { AlertComponent } from './alert/alert.component';
     SpinnerComponent,
     Spinner1Component,
     Spinner2Component,
-    AlertComponent
+    HowItWorksComponent
 
   ],
   imports: [

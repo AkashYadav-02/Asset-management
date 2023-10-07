@@ -105,8 +105,15 @@
     display: flex;
     font-weight: bold; 
     font-size: 15px; 
-    margin-bottom: 6px;
+    // margin-bottom: 6px;
     justify-content: space-between;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cardhead p{
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .cardhead img{

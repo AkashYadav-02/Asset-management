@@ -44,8 +44,8 @@ export class NavbarAfterHomePageComponent implements OnInit {
             this.sett = '../../assets/logos/Settings2.png';
             this.sideburger = '../../assets/logos/black-burger.png';
             navbar.style.width = '100%';
-            navbar.style.paddingLeft = '65px'
-            navbar.style.paddingRight = '65px'
+            navbar.style.paddingLeft = '61px'
+            navbar.style.paddingRight = '61px'
           } else {
             // navbar.style.backgroundColor = '#333'; // Initial color
             this.txtcolor = 'white';

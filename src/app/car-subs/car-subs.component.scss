@@ -118,10 +118,16 @@ img {
     background-size: 48rem 25rem !important;
 } 
 
+.carousel-inner{
+    height: 25rem;
+    border: solid 1px rgb(222, 214, 214);
+    border-radius: 5px;
+}
+
 .carousel-item img {
     height: 25rem;
     width: auto;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .carousel-indicators {

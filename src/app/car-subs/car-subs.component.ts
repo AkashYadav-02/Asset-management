@@ -11,7 +11,7 @@ declare var $: any;
 export class CarSubsComponent implements OnInit{
 
   constructor(   private redirectMenu : RedirectMenuService){
-
+ 
   }
 
   ngOnInit(){
