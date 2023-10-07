@@ -43,6 +43,7 @@ import { NavBarAfterHomeProfileComponent } from './nav-bar-after-home-profile/na
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.component';
 
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
  
@@ -76,7 +77,8 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
     SpinnerComponent,
     Spinner1Component,
     Spinner2Component,
-    HowItWorksComponent
+    HowItWorksComponent,
+    ApplyNowPendingComponent
 
   ],
   imports: [
