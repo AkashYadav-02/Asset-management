@@ -9,6 +9,7 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
   styleUrls: ['./rm-car-collec.component.scss']
 })
 export class RmCarCollecComponent {
+  data:any = {};
   constructor(private router:Router,private fb: FormBuilder,
     private redirectMenu : RedirectMenuService,
      ) {}
@@ -81,6 +82,27 @@ export class RmCarCollecComponent {
     else if (this.heartURL==this.red){
       this.heartURL=this.white
     }
+  }
+
+  buyNow(num:number){
+
+      for (let index = 0; index < this.carDetails.length; index++) {
+        if(index == num){
+          this.data = this.carDetails[index];
+          break;
+        }
+      }
+      this.router.navigate(['car-sub'], { state: this.data });
+  }
+
+  allowCars(num : number){
+    let list = [0,1,2];
+
+      for(let i in list){
+          if(Number(i) == num) 
+            return true;
+      }
+      return false;
   }
 
   redirect(path : string){

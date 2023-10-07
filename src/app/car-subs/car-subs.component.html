@@ -15,7 +15,7 @@
             <div id="carouselExampleIndicators" class="carousel slide">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                            <img src="../../assets/Cars/toyota.png" class="d-block w-100" alt="...">
+                        <img src="{{techDetailsParameter.imgUrl}}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img src="../../assets/Toyota-Fortuner-Interior 1.png" class="d-block w-100" alt="...">
@@ -30,7 +30,7 @@
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide 1">
-                        <img src="../../assets/Toyota-Fortuner-110120211829 2.png" class="d-block w-100" alt="...">
+                        <img src="{{techDetailsParameter.imgUrl}}" class="d-block w-100" alt="...">
                     </button>
                     <button id="middle1" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
                         aria-label="Slide 2">
@@ -50,8 +50,8 @@
             <div class="leftcard my-3">
                 <div style="display: flex; justify-content: space-between; ">
                     <div>
-                        <h2>2023 Toyota Fortuner</h2>
-                        <p class="mb-4">Engine Capacity 3.5 L/213 · Diesel · Manual </p>
+                        <h2>{{techDetailsParameter.name}}</h2>
+                        <p class="mb-4">Engine Capacity {{specificaiton.engine_capacity}} · {{specificaiton.Fuel_Type}} · {{specificaiton.transmmission_type}} </p>
                     </div>
                     <div style="text-align: center;">
                         <i style="font-size: 30px;" class="fa-regular fa-heart"></i>
@@ -248,7 +248,7 @@
 <div class="car-subs-footer">
     <div class="cs-footer-com">
         <h6 class="redtxt">PRICE DETAILS</h6>
-        <h6 class="price">$20000</h6>
+        <h6 class="price">${{techDetailsParameter.price}}</h6>
         <h6 style="font-size: 12px; margin-top: 2.5px;">Fixed on road price</h6>
     </div>
     <div class="cs-footer-com">
