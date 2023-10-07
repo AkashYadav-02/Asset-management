@@ -5,6 +5,7 @@ import { MessageService } from 'primeng/api';
 import {FormGroup,FormControl,Validators} from '@angular/forms'
 import { Renderer2 } from '@angular/core';
 import { ElementRef } from '@angular/core';
+import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -17,6 +18,7 @@ export class EditProfileComponent implements OnInit {
  
   constructor(private router: Router, private messageService: MessageService,  
     private renderer: Renderer2,
+    private redirectMenu : RedirectMenuService,
     private el: ElementRef) {}
   userForm:FormGroup | any;
   ngOnInit(): void {
@@ -49,6 +51,9 @@ export class EditProfileComponent implements OnInit {
 
   showBottomCenter(val1:any,val2:any,val3:any,val4:any) {
     this.showAlert()
+    setTimeout(() => {
+      this.redirect('main-profile');
+    }, 1000);
     console.log("clicked");
     this.print(val1,val2,val3,val4)
     // this.messageService.add({ key: 'tc', severity: 'success', summary: 'Success', detail: 'Your Profile has been updated successfully' });
@@ -64,6 +69,9 @@ showAlert() {
   const alertContainer = this.el.nativeElement.querySelector('#alertContainer');
   if (alertContainer) {
     this.renderer.appendChild(alertContainer, alertDiv);
+    setTimeout(() => {
+      this.renderer.removeChild(alertContainer, alertDiv);
+    }, 500);
   }
 }
   show() {
@@ -84,6 +92,9 @@ onSubmit(){
 resetForm(){
   this.router.navigate(['/main-profile']);
   this.userForm.reset();
+}
+redirect(path : string){
+  this.redirectMenu.redirectTo(path);
 }
 }
 

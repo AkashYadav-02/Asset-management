@@ -26,6 +26,9 @@ export class NewpassComponent {
       const alertContainer = this.el.nativeElement.querySelector('#alertContainer');
       if (alertContainer) {
         this.renderer.appendChild(alertContainer, alertDiv);
+        setTimeout(() => {
+          this.renderer.removeChild(alertContainer, alertDiv);
+        }, 500);
       }
     }
     onSubmit() {
