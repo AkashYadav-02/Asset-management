@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { RedirectMenuService } from 'src/services/redirect-menu.service';
 import { AgGridModule } from 'ag-grid-angular';
 
 @Component({
@@ -10,7 +12,8 @@ import { AgGridModule } from 'ag-grid-angular';
   styleUrls: ['./workspace.component.scss']
 })
 export class WorkspaceComponent {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient,private router: Router,
+    private redirectMenu: RedirectMenuService) { }
 
   ngOnInit() {
     this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/workspace.json');
@@ -83,4 +86,7 @@ export class WorkspaceComponent {
   },
   headerHeight: 30};
   public rowData$!: Observable<any[]>;
+  redirect(path: string) {
+    this.redirectMenu.redirectTo(path);
+  }
 }

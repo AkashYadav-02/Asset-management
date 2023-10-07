@@ -3,14 +3,14 @@
     <div style="padding: 0px 65px; padding-top: 90px;">
         <div class="ws-white-card">
             <ul>
-                <li class="activeli"><img src="../../assets/logos/Category.png">Dashboard</li>
-                <li><img src="../../assets/Profiles.png">Profile</li>
-                <li><img src="../../assets/security-user.png">RM Homepage</li>
-                <li><img src="../../assets/Ticket.png">Messages</li>
-                <li><img src="../../assets/Document.png">Purchases</li>
-                <li><img src="../../assets/Calendar.png">Returns</li>
-                <li><img src="../../assets/Activity.png">Gallery</li>
-                <li><img src="../../assets/Setting.png">Settings</li>
+                <li class="activeli"><a><img src="../../assets/logos/Category.png">Dashboard</a></li>
+                <li><a (click)="redirect('/main-profile')"><img src="../../assets/Profiles.png">Profile </a></li>
+                <li><a (click)="redirect('rm-home-page')"><img src="../../assets/security-user.png">RM Homepage</a></li>
+                <li><a><img src="../../assets/Ticket.png">Messages</a></li>
+                <li><a><img src="../../assets/Document.png">Purchases</a></li>
+                <li><a><img src="../../assets/Calendar.png">Returns</a></li>
+                <li><a><img src="../../assets/Activity.png">Gallery</a></li>
+                <li><a><img src="../../assets/Setting.png">Settings</a></li>
             </ul>
         </div>
         <div class="ws-black-card">
