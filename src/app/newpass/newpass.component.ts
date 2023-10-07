@@ -31,7 +31,8 @@ export class NewpassComponent {
         }, 500);
       }
     }
-    onSubmit() {
+    onSubmit(event : Event) {
+      event.preventDefault();
         this.showAlert(); 
         setTimeout(() => {
           this.redirect('user/login'); 
