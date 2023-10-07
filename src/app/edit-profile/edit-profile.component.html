@@ -47,7 +47,7 @@
           src="..\assets\Setting2.png" alt="Icon 1"
           style="width:20px;height:15px; margin-bottom: 3px; margin-right: 7px;">Account Settings</button>
     </div>
-    <a href="#" class="a1">Change Password</a>
+    <a    class="a1"   (click)="redirect('newPass')" >Change Password</a>
   </div>
   <div class="divs">
     <div class="div2" [formGroup]="userForm" (ngSubmit)="onSubmit()">

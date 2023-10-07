@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 declare var $: any;
@@ -10,20 +11,102 @@ declare var $: any;
 })
 export class CarSubsComponent implements OnInit{
 
-  constructor(   private redirectMenu : RedirectMenuService){
- 
-  }
-
-  ngOnInit(){
-    $(document).ready(function () {
-      $("#demo").vc3dEye({
-          imagePath: "../../assets/3Dimages/",// the location where you’ve put the images.
-          totalImages: 50,// the number of images you have.
-          imageExtension: "jpg" // the extension of the images. Make sure all the images have same extension.
+  myObserver ;
+  currentUrl : any;
+  techDetailsParameter : any;
+  specificaiton : any;
+  
+  
+  constructor(   private redirectMenu : RedirectMenuService,
+    private router: Router,
+    ){
+      this.myObserver = this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          this.currentUrl = event.url;
+        const navigation = this.router.getCurrentNavigation();
+        if (navigation?.extras.state) {
+          this.techDetailsParameter = navigation.extras.state;
+          console.log("tech param",this.techDetailsParameter);
+        } 
+        }
+      });
+    }
+          carDetails=[
+            {
+              name:"2023 Toyota Glanza",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"2023 Toyota Fortuner",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"2023 Toyota Innova Crysta",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"2023 Toyota Vellfire ",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"2023 Toyota Urban Cruiser ",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"Toyota Camry",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"2023 Toyota Glanza",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"2023 Toyota Fortuner",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            },
+            {
+              name:"2023 Toyota Innova Crysta",
+              engine_capacity:"3.5L/213",
+              transmmission_type : "Manual",
+              Fuel_Type: "Diesel"
+            }
+            
+          ]
+          
+          ngOnInit(){
+            this.filterDetails();
+            $(document).ready(function () {
+              $("#demo").vc3dEye({
+                imagePath: "../../assets/3Dimages/",// the location where you’ve put the images.
+                totalImages: 50,// the number of images you have.
+                imageExtension: "jpg" // the extension of the images. Make sure all the images have same extension.
       });
     });
   }
-  
+  percentageValue: number = 50; // Initial percentage value
+
+  // Function to update the percentage value when the slider changes
+  updatePercentage(event: Event): void {
+    const sliderValue = (event.target as HTMLInputElement).value;
+    this.percentageValue = parseFloat(sliderValue);
+  }
+
   isUpperVisible=true
   isLowerVisible=false
   onClick(){
@@ -33,6 +116,11 @@ export class CarSubsComponent implements OnInit{
       this.isUpperVisible=true
     }
   }
+
+filterDetails(){
+  // let name =  ;
+   this.specificaiton = this.carDetails.find((element)=> element.name == this.techDetailsParameter.name);   
+}
 
   onPress(){
     if (this.isLowerVisible){
