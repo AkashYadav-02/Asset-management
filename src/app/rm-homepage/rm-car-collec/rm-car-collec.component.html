@@ -8,7 +8,7 @@
     <div class="home-card-sec">
         <div class="collec-cards" >
             <div   *ngFor="let car of carDetails; let i = index">
-                <div class="car-card" (click)="redirect('car-sub')">
+                <div class="car-card" *ngIf="i != 1">
                     <img src={{car.imgUrl}}>
                     <div class="container">
                         <div class="cardhead">
@@ -34,7 +34,36 @@
                                 <p>{{car.type}}</p>
                             </div>
                         </div>
-                        <button class="buybtn btn btn-white">Select</button>
+                        <button  class="buybtn btn btn-white">Select</button>
+                    </div>
+                </div>
+                <div class="car-card" *ngIf="i == 1" >
+                    <img src={{car.imgUrl}}>
+                    <div class="container">
+                        <div class="cardhead">
+                            <p>{{car.name}}</p>
+                            <img (click)="turnRed()" src={{heartURL}}>
+                        </div>
+                        <h4 style="font-family: Montserrat; font-weight:bold; color: #ED5434;">$ {{car.price}}</h4>
+                        <div class="smallblock">
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/speedometer-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>{{car.speed}}</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/manual-gearbox.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>{{car.gear}}</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/users-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>{{car.capacity}} Person</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/gas-station.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>{{car.type}}</p>
+                            </div>
+                        </div>
+                        <button (click)="redirect('car-sub')" class="buybtn btn btn-white">Select</button>
                     </div>
                 </div>
             </div>
