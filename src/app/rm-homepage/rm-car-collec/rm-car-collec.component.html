@@ -7,33 +7,64 @@
     </div>
     <div class="home-card-sec">
         <div class="collec-cards" >
-            <div (click)="redirect('car-sub')" class="car-card" *ngFor="let car of carDetails">
-                <img src={{car.imgUrl}}>
-                <div class="container">
-                    <div class="cardhead">
-                        <p>{{car.name}}</p>
-                        <img (click)="turnRed()" src={{heartURL}}>
+            <div   *ngFor="let car of carDetails; let i = index">
+                <div *ngIf="i != 1"  class="car-card">
+                    <img src={{car.imgUrl}}>
+                    <div class="container">
+                        <div class="cardhead">
+                            <p>{{car.name}}</p>
+                            <img (click)="turnRed()" src={{heartURL}}>
+                        </div>
+                        <h4 style="font-family: Montserrat; font-weight:bold; color: #ED5434;">$ {{car.price}}</h4>
+                        <div class="smallblock">
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/speedometer-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>4,000</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/manual-gearbox.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>Auto</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/users-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>4 Person</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/gas-station.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>Electric</p>
+                            </div>
+                        </div>
+                        <button class="buybtn btn btn-white">Buy Now</button>
                     </div>
-                    <h4 style="font-family: Montserrat; font-weight:bold; color: #ED5434;">$ {{car.price}}</h4>
-                    <div class="smallblock">
-                        <div class="smallsubblock text-center">
-                            <img src="../../../assets/speedometer-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
-                            <p>4,000</p>
+                </div>
+                <div class="car-card" *ngIf="i == 1"  (click)="redirect('car-sub')">
+                    <img src={{car.imgUrl}}>
+                    <div class="container">
+                        <div class="cardhead">
+                            <p>{{car.name}}</p>
+                            <img (click)="turnRed()" src={{heartURL}}>
                         </div>
-                        <div class="smallsubblock text-center">
-                            <img src="../../../assets/manual-gearbox.png" style="height: 15px; width: auto; margin-bottom: 0;">
-                            <p>Auto</p>
+                        <h4 style="font-family: Montserrat; font-weight:bold; color: #ED5434;">$ {{car.price}}</h4>
+                        <div class="smallblock">
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/speedometer-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>4,000</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/manual-gearbox.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>Auto</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/users-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>4 Person</p>
+                            </div>
+                            <div class="smallsubblock text-center">
+                                <img src="../../../assets/gas-station.png" style="height: 15px; width: auto; margin-bottom: 0;">
+                                <p>Electric</p>
+                            </div>
                         </div>
-                        <div class="smallsubblock text-center">
-                            <img src="../../../assets/users-01.png" style="height: 15px; width: auto; margin-bottom: 0;">
-                            <p>4 Person</p>
-                        </div>
-                        <div class="smallsubblock text-center">
-                            <img src="../../../assets/gas-station.png" style="height: 15px; width: auto; margin-bottom: 0;">
-                            <p>Electric</p>
-                        </div>
+                        <button class="buybtn btn btn-white">Buy Now</button>
                     </div>
-                    <button class="buybtn btn btn-white">Buy Now</button>
                 </div>
             </div>
         </div>
