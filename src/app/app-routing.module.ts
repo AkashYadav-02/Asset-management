@@ -28,6 +28,7 @@ const routes: Routes = [
   {path:'user/varification',component: VarificationLoginComponent},
   {path:'newPass', component: NewpassComponent},
   {path:'car-sub', component:CarSubsComponent},
+  {path:'apply-now', component:CarSubsComponent},
   {path:'work-space', component: WorkspaceComponent},
   {path:'rm-home-page', component: RmHomepageComponent}
 ];

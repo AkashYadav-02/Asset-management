@@ -24,6 +24,13 @@
     display:flex;
 
 }
+:host ::ng-deep .p-toast {
+    background-color: #6eca85 ;
+    color:#090808; 
+    // border-radius: 0.5rem;
+    width: 20rem;
+  
+  }
 //  .border{
 //     margin-top:25px;
 // //     border-color: white;

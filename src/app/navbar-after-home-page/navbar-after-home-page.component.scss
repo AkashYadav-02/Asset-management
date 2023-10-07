@@ -1,7 +1,7 @@
 #car-subs-nav {
     // margin-left: 65px;
     // margin-right: 65px;
-    width: 90%;
+    width: 91%;
     position: fixed;
     // width: 100%;
     padding-left: 5px;
@@ -66,15 +66,42 @@
 }
 
 .notibar{
+
     margin-top: 25px;
     margin-left: -9rem;
-    width: 15rem;
+    width: 17rem;
+}
+
+.notibar p{
+    width: 14rem;
+    font-size: 0.8rem !important;
+}
+
+.notification-text{
+margin-left: 1.5rem;
+}
+
+.user-names{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.time-ago{
+    // text-align: right;
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 0.6rem;
+    padding-right: 1rem;
+    margin-top: 0.3rem;
 }
 
 .profilebar{
     margin-top: 25px;
     margin-left: 0rem;
     width: 12rem;
+    border-radius: 0.7rem;
 }
 
 

@@ -6,7 +6,7 @@
             <img src ={{sideburger}} height="20px" width="25px" class="expand" (click)="expandSideBar()" style="margin-top: 6px;">
             <img class="imgg" src={{aurologo}} alt="Bootstrap">
         </a>
-
+ 
         <div class="sidebar" [style.display]="isExpand ? 'inherit' : 'none'">
             <!-- <img class="img3" src="..\assets\b494ahn2td2ykcqak6hr_1-removebg-preview 1.png" alt="img"
               style="width:150px;height:40px;">
@@ -79,17 +79,29 @@
 
         <li>
 
-            <div class="car-subs-logogroup">
-
-                <img src={{like}} class="px-2">
-
-                <img src={{noti}} class="px-2">
-
-                <img src={{sett}} class="px-2">
-
-                <img src="../../assets/Profiles2.png" class="px-2">
-
+          <div class="car-subs-logogroup">
+            <img src={{like}} class="px-2" >
+            <img src={{noti}} class="px-2" (click)="expandNotiBar()">
+            <div class="notibar" [style.display]="isNotiExpand ? 'inherit' : 'none'">
+              <ul class="drop">
+                <p><b>You have 2 notifications</b></p>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a>Jerome Bell</a>
+                </li>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a>Anna Miles</a>
+                </li>
+              </ul>
             </div>
+            <img src={{sett}} class="px-2">
+            <img src="../../assets/Profiles2.png" class="px-2" (click)="expandProfileBar()">
+            <div class="profilebar" [style.display]="isProfileExpand ? 'inherit' : 'none'">
+              <ul class="drop">
+                <p><b>Welcome, John !</b></p>
+                <li routerLink="/"><i class="fa-solid fa-arrow-right-from-bracket"></i><a>LogOut</a></li>
+              </ul>
+            </div>
+        </div>
 
         </li>
 
