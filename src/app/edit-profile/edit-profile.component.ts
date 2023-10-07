@@ -44,7 +44,7 @@ export class EditProfileComponent implements OnInit {
   }
 
   showBottomCenter(val1:any,val2:any,val3:any,val4:any) {
-    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Your Profile has been updated successfully' });
+    this.messageService.add({ key: 'bc', severity: '', summary: '', detail: 'Your Profile has been updated successfully' });
     console.log("clicked");
     this.print(val1,val2,val3,val4)
 }

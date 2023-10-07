@@ -11,22 +11,37 @@ export class HomeCarCollecComponent {
     {
       name:"Audi A8 L 2022",
       price: 8200,
-      imgUrl: "https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200"
+      imgUrl: "../../assets/Cars/car2.png"
     },
     {
       name:"Nissan Maxima Platinum 2022",
       price: 8200,
-      imgUrl: "../../assets/Cars/car2.png"
+      imgUrl: "../../assets/Cars/Nisan.png"
     },
     {
       name:"Porsche Cayenne GTS 2022",
       price: 8200,
-      imgUrl: "../../assets/Cars/car3.png"
+      imgUrl: "../../assets/Cars/car1.png"
     },
     {
       name:"BMW M8 Coupe 2022",
       price: 8200,
+      imgUrl: "../../assets/Cars/car5.png"
+    },
+    {
+      name:"BMW X7 M50i 2022",
+      price: 8200,
+      imgUrl: "../../assets/Cars/car6.png"
+    },
+    {
+      name:"Porsche Cayenne GTS 2022",
+      price: 8200,
       imgUrl: "../../assets/Cars/car4.png"
+    },
+    {
+      name:"BMW M8 Coupe 2022",
+      price: 8200,
+      imgUrl: "../../assets/Cars/car6.png"
     },
     {
       name:"BMW X7 M50i 2022",
@@ -34,19 +49,9 @@ export class HomeCarCollecComponent {
       imgUrl: "../../assets/Cars/car5.png"
     },
     {
-      name:"Porsche Cayenne GTS 2022",
+      name:"Nissan Maxima Platinum 2022",
       price: 8200,
-      imgUrl: "../../assets/Cars/car3.png"
-    },
-    {
-      name:"BMW M8 Coupe 2022",
-      price: 8200,
-      imgUrl: "../../assets/Cars/car4.png"
-    },
-    {
-      name:"BMW X7 M50i 2022",
-      price: 8200,
-      imgUrl: "../../assets/Cars/car5.png"
+      imgUrl: "../../assets/Cars/Nisan.png"
     },
     
   ]

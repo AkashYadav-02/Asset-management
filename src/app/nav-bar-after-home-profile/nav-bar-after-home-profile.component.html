@@ -79,17 +79,29 @@
 
         <li>
 
-            <div class="car-subs-logogroup">
-
-                <img src={{like}} class="px-2">
-
-                <img src={{noti}} class="px-2">
-
-                <img src={{sett}} class="px-2">
-
-                <img src="../../assets/Profiles2.png" class="px-2">
-
+          <div class="car-subs-logogroup">
+            <img src={{like}} class="px-2" >
+            <img src={{noti}} class="px-2" (click)="expandNotiBar()">
+            <div class="notibar" [style.display]="isNotiExpand ? 'inherit' : 'none'">
+              <ul class="drop">
+                <p><b>You have 2 notifications</b></p>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a>Jerome Bell</a>
+                </li>
+                <li><i class="fa-solid fa-circle-user"></i>
+                  <a>Anna Miles</a>
+                </li>
+              </ul>
             </div>
+            <img src={{sett}} class="px-2">
+            <img src="../../assets/Profiles2.png" class="px-2" (click)="expandProfileBar()">
+            <div class="profilebar" [style.display]="isProfileExpand ? 'inherit' : 'none'">
+              <ul class="drop">
+                <p><b>Welcome, John !</b></p>
+                <li routerLink="/"><i class="fa-solid fa-arrow-right-from-bracket"></i><a>LogOut</a></li>
+              </ul>
+            </div>
+        </div>
 
         </li>
 

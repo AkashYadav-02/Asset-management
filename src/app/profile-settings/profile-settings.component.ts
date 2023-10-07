@@ -38,7 +38,7 @@ export class ProfileSettingsComponent implements OnInit{
     this.router.navigate(['/profile-settings']);
   }
   showBottomCenter() {
-    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Account Setting has been updated successfully' });
+    this.messageService.add({ key: 'bc', severity: '', summary: '', detail: 'Account Setting has been updated successfully' });
     console.log("clicked");
     //this.print(val1,val2,val3,val4)
 }

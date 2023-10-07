@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 declare var $: any;
 
@@ -8,6 +9,10 @@ declare var $: any;
   styleUrls: ['./car-subs.component.scss']
 })
 export class CarSubsComponent implements OnInit{
+
+  constructor(   private redirectMenu : RedirectMenuService){
+
+  }
 
   ngOnInit(){
     $(document).ready(function () {
@@ -40,6 +45,10 @@ export class CarSubsComponent implements OnInit{
   inputtxt=''
   outline(event:Event){
     (<HTMLButtonElement>event.target).style.outlineColor=(<HTMLButtonElement>event.target).id
+  }
+
+  redirect(path : string){
+    this.redirectMenu.redirectTo(path);
   }
 
 }
