@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, HostListener, ElementRef, ViewChild, Renderer2} from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 
 @Component({
@@ -8,7 +9,9 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrls: ['./home-screen.component.scss']
 })
 export class HomeScreenComponent {
-
+  constructor(
+    private redirectMenu : RedirectMenuService,
+     ) {} 
   @ViewChild(NavbarComponent) Navbar: NavbarComponent | undefined;
 
   
@@ -21,5 +24,9 @@ export class HomeScreenComponent {
     } else {
       this.Navbar?.setBackground(""); 
     }
+  }
+
+  onSubmit(){
+    this.redirectMenu.redirectTo('how-it-works')
   }
 }

@@ -5,7 +5,7 @@
     justify-content: space-between;
 }
 
-.footer-download{
+.footer-download {
     width: 50%;
 }
 
@@ -14,11 +14,13 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
 .apple-btn {
     width: auto;
     height: 62px;
 }
-.playStore-btn{
+
+.playStore-btn {
     width: auto;
     height: 57px;
 }
@@ -96,7 +98,7 @@ hr {
     line-height: 130%;
     margin-top: 20px;
     /* 54.6px */
-    
+
     letter-spacing: -0.84px;
 }
 
@@ -156,9 +158,11 @@ hr {
     width: 80px;
     height: 80px;
 }
-#review-header{
+
+#review-header {
     margin-top: 1.5rem;
 }
+
 .profile-pic-name {
     color: #0F0F0F;
     font-family: Inter;
@@ -182,7 +186,7 @@ hr {
     margin-top: -15px;
 }
 
-.profile-pic-country span{
+.profile-pic-country span {
     opacity: 0.8;
 }
 
@@ -355,7 +359,7 @@ hr {
 
 }
 
-.One{
+.One {
     padding-top: 5.438rem;
 }
 
@@ -406,7 +410,7 @@ hr {
 //     margin-top: 10px;
 // }
 
-.arrowImage img{
+.arrowImage img {
     margin-top: 10px;
 }
 
@@ -419,7 +423,7 @@ hr {
 }
 
 .brandNameText {
-   font-size: 10.5rem;
+    font-size: 10.5rem;
     margin: 0 auto;
     text-align: center;
     // color: rgba(255, 255, 255, 0.28);
@@ -704,16 +708,37 @@ hr {
 
 .findMoreFirstDiv {
     width: 150px;
-
+    color: #DB2423;
     margin: 0 auto;
     text-align: center;
     position: relative;
     align-items: center !important;
-
+    border: none !important;
     display: flex;
     // position: absolute;
     padding: 10px;
     margin-bottom: 25px;
+    // border: 1px solid #FFF !important;
+    // background: #DB2423 !important;
+}
+
+.text-white {
+    font-family: Inter;
+    color: white;
+    // background-color: red;
+    border: none;
+}
+
+.find-more-btn {
+    width: 8rem;
+    height: 3.5rem;
+    border-radius: 0;
+    font-size: 0.8rem;
+    font-family: Inter;
+    background-color: #DB2423;
+    border: 1px solid #FFF;
+
+
 }
 
 .findMoreSecondDiv {
@@ -884,7 +909,7 @@ hr {
 
     .col {
         background-color: #fff;
-            }
+    }
 
     .vectorImage-main {
         position: relative;
@@ -899,14 +924,14 @@ hr {
     }
 }
 
-.box-text{
-    width: 100%; 
-    height: 100%; 
-    color: #424242; 
-    font-size: 13px; 
-    font-family: Montserrat; 
-    font-weight: 400; 
-    line-height: 28px; 
+.box-text {
+    width: 100%;
+    height: 100%;
+    color: #424242;
+    font-size: 13px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 28px;
     word-wrap: break-word
 }
 
@@ -916,7 +941,7 @@ hr {
     font-size: 22px;
     font-family: Inter;
     font-weight: 600;
-    flex:auto
+    flex: auto
 }
 
 .rectangleImage {
@@ -1010,15 +1035,15 @@ hr {
     padding: 12px 0;
 }
 
-.row-data p{
+.row-data p {
     margin-bottom: 0;
 }
 
-.row-data img{
+.row-data img {
     height: 30px
 }
 
-.row-data:hover{
+.row-data:hover {
     border: 1px solid #838383;
 }
 
@@ -1027,11 +1052,7 @@ hr {
     font-size: 13px;
 }
 
-.brands-view-all{
+.brands-view-all {
     margin: 15px -10px;
     display: flex;
-}
-
-.text-white{
-    font-family: Inter;
 }

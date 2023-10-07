@@ -14,6 +14,7 @@ import { RmHomepageComponent } from './rm-homepage/rm-homepage.component';
 import { MainProfileComponent } from './main-profile/main-profile.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 
 const routes: Routes = [
   // {path:'',redirectTo:'',pathMatch:'full'},
@@ -30,7 +31,8 @@ const routes: Routes = [
   {path:'car-sub', component:CarSubsComponent},
   {path:'apply-now', component:CarSubsComponent},
   {path:'work-space', component: WorkspaceComponent},
-  {path:'rm-home-page', component: RmHomepageComponent}
+  {path:'rm-home-page', component: RmHomepageComponent},
+  {path:'how-it-works', component: HowItWorksComponent},
 ];
 
 @NgModule({
