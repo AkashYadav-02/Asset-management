@@ -27,8 +27,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "/node_modules/sweetalert2src/sweetalert2.scss"
+              "src/assets"
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
