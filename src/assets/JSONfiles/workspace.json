@@ -4,7 +4,8 @@
     {"appID":"UNE7418", "customerName":"Ronald Richards", "carSelection":"(225) 555-0189", "financing":"$1,89,000", "status":"Completed"},
     {"appID":"UNE9419", "customerName":"Marvin McKinney", "carSelection":"(225) 541-0012", "financing":"$1,89,000", "status":"Pending"},
     {"appID":"UNE6145", "customerName":"Kathryn", "carSelection":"(225) 545-0198", "financing":"$1,90,000", "status":"Rejected"},
-    {"appID":"UNE8796", "customerName":"Kristin Watson", "carSelection":"(225) 556-0117", "financing":"$1,90,000", "status":"Completed"}
+    {"appID":"UNE8796", "customerName":"Kristin Watson", "carSelection":"(225) 556-0117", "financing":"$1,90,000", "status":"Completed"},
+    {"appID":"UNE6149", "customerName":"Jonh Damson", "carSelection":"(225) 545-0198", "financing":"$1,90,600", "status":"Rejected"}
     
     
 ]
