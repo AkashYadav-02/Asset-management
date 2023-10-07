@@ -17,7 +17,7 @@
 .circle-big .bg {
   fill: none;
   stroke-width: 10px;
-  stroke: #343035;
+  stroke: #092938;
 }
 
 .circle-big .progress {
@@ -26,7 +26,7 @@
   stroke: #30ADF3;
   stroke-linecap: round;
   stroke-dasharray: 326.56;
-  stroke-dashoffset: 60;
+  stroke-dashoffset: 90;
           transform: rotate(-90deg);
           transform-origin: 50% 50%;
           animation: big 1.5s ease-in-out;
@@ -34,18 +34,21 @@
 
 .circle-big .text {
   position: absolute;
-  color: white;
+  color: #30ADF3;
   width: 100%;
-  top: 37px;
-  font-size: 12px;
+  top: 25px;
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
   text-align: center;
 //   font-weight: bold;
-  line-height: 22px;
+  line-height: 15px;
 }
 
 .circle-big .text .small {
+  margin-top: 12px;
   font-size: 22px;
-  color: #fff;
+  color: #30ADF3;
 }
 
 
@@ -54,7 +57,7 @@
     stroke-dashoffset: 326.56;
   }
   to {
-    stroke-dashoffset: 60;
+    stroke-dashoffset: 90;
   }
 }
 

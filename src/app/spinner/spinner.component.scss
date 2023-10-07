@@ -34,18 +34,21 @@
 
 .circle-big .text {
   position: absolute;
-  color: white;
+  color: #FF5172;
   width: 100%;
-  top: 37px;
-  font-size: 12px;
+  top: 25px;
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
   text-align: center;
 //   font-weight: bold;
-  line-height: 22px;
+  line-height: 15px;
 }
 
 .circle-big .text .small {
+  margin-top: 12px;
   font-size: 22px;
-  color: #fff;
+  color: #FF5172;
 }
 
 

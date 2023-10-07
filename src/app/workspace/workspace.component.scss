@@ -1,11 +1,13 @@
 .ws-white-card{
-    border: solid 0.5px rgb(238, 238, 238);
+    border: solid 0.5px rgb(0, 0, 0);
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: black;
     float: left;
     width: 13rem;
     height: 47.1rem;
     border-radius: 15px;
     padding: 40px 0px;
+    margin-bottom: 20px;
 }
 
 .ws-white-card ul{
@@ -19,7 +21,7 @@
     padding: 8px 0px;
     padding-left: 40px;
     font-family: "Montserrat";
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 11px;
     
@@ -27,8 +29,8 @@
 
 .activeli, .ws-white-card li:hover{
     background: rgb(255,208,208);
-    background: linear-gradient(90deg, rgb(249, 216, 216) 8%, rgba(251,232,232,1) 42%, rgba(255,255,255,1) 90%);
-    color: rgb(167, 0, 0) !important;
+    background: linear-gradient(90deg, rgb(170, 131, 131) 8%, rgb(130, 105, 105) 52%, rgb(44, 40, 40) 90%);
+    color: rgb(10, 0, 0) !important;
 }
 
 .ws-white-card img{
@@ -44,7 +46,7 @@
     border-radius: 10px;
     background-image: url(../../assets/workspace.jpg);
     background-position: center;
-    padding: 2.5rem;
+    padding: 2.5rem 2.5rem;
     float: right;
     margin-bottom: 20px;
 }
@@ -71,9 +73,10 @@
 .ws-grid-card{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 62rem;
-    height:24rem;
+    height:22rem;
+    max-height:22rem;
     border-radius: 10px;
-    background-color: #F4F6FB;
+    background-color: #f4f4f6;
     padding: 1.5rem 1rem;
     float: right;
     overflow: hidden;

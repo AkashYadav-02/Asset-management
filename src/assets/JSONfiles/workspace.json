@@ -1,5 +1,10 @@
 [
-    {"appID":"UNE8783", "customerName":"Dipika", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"pending"},
-    {"appID":"UNE8783", "customerName":"Dipika", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"pending"},
-    {"appID":"UNE8783", "customerName":"Dipika", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"success"}
+    {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"Pending"},
+    {"appID":"UNE8783", "customerName":"Floyd Miles", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"Pending"},
+    {"appID":"UNE8783", "customerName":"Ronald Richards", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"Completed"},
+    {"appID":"UNE8783", "customerName":"Marvin McKinney", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"Pending"},
+    {"appID":"UNE8783", "customerName":"Kathryn", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"Rejected"},
+    {"appID":"UNE8783", "customerName":"Kristin Watson", "carSelection":"(225) 555-0118", "financing":"$1,40,000", "status":"Completed"}
+    
+    
 ]
