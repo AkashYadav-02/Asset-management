@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ColumnGroup } from 'ag-grid-community';
 import { MessageService } from 'primeng/api';
 import {FormGroup,FormControl,Validators} from '@angular/forms'
+import { Renderer2 } from '@angular/core';
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-edit-profile',
@@ -12,8 +14,10 @@ import {FormGroup,FormControl,Validators} from '@angular/forms'
 
 })
 export class EditProfileComponent implements OnInit {
-  
-  constructor(private router: Router, private messageService: MessageService) {}
+ 
+  constructor(private router: Router, private messageService: MessageService,  
+    private renderer: Renderer2,
+    private el: ElementRef) {}
   userForm:FormGroup | any;
   ngOnInit(): void {
     this.userForm = new FormGroup(
@@ -44,11 +48,24 @@ export class EditProfileComponent implements OnInit {
   }
 
   showBottomCenter(val1:any,val2:any,val3:any,val4:any) {
-    this.messageService.add({ key: 'bc', severity: '', summary: '', detail: 'Your Profile has been updated successfully' });
+    this.showAlert()
     console.log("clicked");
     this.print(val1,val2,val3,val4)
+    // this.messageService.add({ key: 'tc', severity: 'success', summary: 'Success', detail: 'Your Profile has been updated successfully' });
+    
 }
 
+showAlert() {
+  const alertDiv = this.renderer.createElement('div');
+  this.renderer.addClass(alertDiv, 'alert');
+  this.renderer.addClass(alertDiv, 'alert-success');
+  this.renderer.setAttribute(alertDiv, 'role', 'alert');
+  alertDiv.innerHTML = `Profile saved successfully`;
+  const alertContainer = this.el.nativeElement.querySelector('#alertContainer');
+  if (alertContainer) {
+    this.renderer.appendChild(alertContainer, alertDiv);
+  }
+}
   show() {
     this.messageService.add({severity: 'error', summary: 'Failed', detail: 'Log In Failed' });
     console.log("clicked");

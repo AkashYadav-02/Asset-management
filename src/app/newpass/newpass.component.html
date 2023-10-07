@@ -22,16 +22,18 @@
     <h1><b style="font-family: 'Monts';">New Password</b></h1>
     <form >
       <div class="form-group">
-<label for="password" style="font-family: 'Monts';" >Enter New Password</label>
 
-<input type="password"  class="form-control" formControlName="password"  required >  
-
-
-
-<label for="confirmPassword" style="font-family: 'Monts';">Confirm New Password</label>
-
-<input type="password" class="form-control" formControlName="confirmPassword" required>
-
+        <div class="form-group container1">
+          <div class="did-floating-label-content label-input">
+            <input class="did-floating-input " formControlName="email" type="text" placeholder="Email">
+            <label class="did-floating-label" style="font-size: -0.3rem;">Email</label>
+          </div>  
+  
+          <div class="did-floating-label-content label-input">
+            <input class="did-floating-input" type="password" formControlName="password" placeholder="*********">
+            <label class="did-floating-label " style="font-size: -0.3rem;">Password</label>
+          </div>
+        </div>
  
 
 </div>

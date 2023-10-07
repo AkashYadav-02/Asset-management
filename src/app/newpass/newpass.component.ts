@@ -13,7 +13,6 @@ import { MessageService } from 'primeng/api';
 export class NewpassComponent {
   constructor(private router:Router,
     private redirectMenu : RedirectMenuService,
-   
     private renderer: Renderer2,
     private el: ElementRef
      ) {}
