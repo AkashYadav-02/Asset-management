@@ -2,7 +2,17 @@
 //     margin-top:20px;
 //     border: solid rgb(236, 234, 234);
 //   }
-
+.top-center-alert {
+    position: fixed;
+    top: 0%;
+    left: 48%;
+    width: 18rem;
+    font-size: small;
+    transform: translateX(-50%);
+    z-index: 9999;
+    text-align: center;
+    // padding-left: 5rem;
+  }
 .div1{
     margin-top: 50px;
     

@@ -1,3 +1,5 @@
+import { Renderer2 } from '@angular/core';
+import { ElementRef } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -9,7 +11,9 @@ import { MessageService } from 'primeng/api';
   providers: [MessageService]
 })
 export class ProfileSettingsComponent implements OnInit{
-  constructor(private router: Router, private messageService: MessageService){}
+  constructor(private router: Router, private messageService: MessageService,
+    private renderer: Renderer2,
+    private el: ElementRef){}
   ngOnInit(): void {
     const link1 = document.getElementById("link1") as HTMLElement;
     const numberInput = document.getElementById("number") as HTMLInputElement;
@@ -22,7 +26,17 @@ export class ProfileSettingsComponent implements OnInit{
     });
   
   }
-  
+  showAlert() {
+    const alertDiv = this.renderer.createElement('div');
+    this.renderer.addClass(alertDiv, 'alert');
+    this.renderer.addClass(alertDiv, 'alert-success');
+    this.renderer.setAttribute(alertDiv, 'role', 'alert');
+    alertDiv.innerHTML = `Account settings saved successfully`;
+    const alertContainer = this.el.nativeElement.querySelector('#alertContainer');
+    if (alertContainer) {
+      this.renderer.appendChild(alertContainer, alertDiv);
+    }
+  }
   navigateToProfile() {
     this.router.navigate(['/main-profile']);
   }
@@ -38,7 +52,8 @@ export class ProfileSettingsComponent implements OnInit{
     this.router.navigate(['/profile-settings']);
   }
   showBottomCenter() {
-    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Account Setting has been updated successfully' });
+    this.showAlert()
+    // this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Account Setting has been updated successfully' });
     console.log("clicked");
     //this.print(val1,val2,val3,val4)
 }
