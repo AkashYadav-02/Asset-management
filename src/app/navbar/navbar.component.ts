@@ -13,17 +13,10 @@ export class NavbarComponent implements OnInit{
   txtcolor='white';
   aurologo='../../assets/Aurionpro.png';
   bgcolor='rgba(0, 0, 0, 0)';
+  btnborder=''
+  btncolor=''
 
   ngOnInit(): void {
-    // if (this.navtheme =='blacktheme'){
-    //   this.txtcolor='white';
-    //   this.bgcolor='rgba(0, 0, 0, 0)'
-    //   this.aurologo='../../assets/Aurionpro.png';
-    // } else if (this.navtheme =='whitetheme'){
-    //   this.txtcolor='black';
-    //   this.bgcolor='white'
-    //   this.aurologo='../../assets/logos/logo.png';
-    // }
 
     if (this.navtheme == 'blacktheme') {
       // TypeScript code
@@ -35,15 +28,17 @@ export class NavbarComponent implements OnInit{
 
           if (window.scrollY > scrollThreshold) {
             this.txtcolor = 'black';
-            this.bgcolor = 'white'
+            this.bgcolor = 'white';
             this.aurologo = '../../assets/logos/logo.png';
+            this.btncolor = '#C21807';
             navbar.style.width = '100%';
-            navbar.style.paddingLeft = '65px'
-            navbar.style.paddingRight = '65px'
+            navbar.style.paddingLeft = '65px';
+            navbar.style.paddingRight = '65px';
           } else {
             // navbar.style.backgroundColor = '#333'; // Initial color
             this.txtcolor = 'white';
             this.bgcolor = 'rgba(0, 0, 0, 0)'
+            this.btncolor = 'white';
             this.aurologo = '../../assets/Aurionpro.png';
             navbar.style.width = '91%';
             navbar.style.paddingLeft = '0px'
@@ -53,11 +48,13 @@ export class NavbarComponent implements OnInit{
       });
 
       this.txtcolor = 'white';
-      this.bgcolor = 'rgba(0, 0, 0, 0)'
+      this.bgcolor = 'rgba(0, 0, 0, 0)';
+      this.btncolor = 'white';
       this.aurologo = '../../assets/Aurionpro.png';
     } else if (this.navtheme == 'whitetheme') {
       this.txtcolor = 'black';
-      this.bgcolor = 'white'
+      this.bgcolor = 'white';
+      this.btncolor = '#C21807';
       this.aurologo = '../../assets/logos/logo.png';
     }
 
