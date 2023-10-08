@@ -195,12 +195,10 @@ filterDetails(){
 
 }
 
-applyNow(event : Event){
-  event.preventDefault();
+applyNow(){
   let data = {
     image : this.techDetailsParameter.imgUrl
   }
-  // this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
-  this.router.navigate(['apply-now-flow-1'], { state: data });
+  this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
 }
 }
