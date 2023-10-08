@@ -8,7 +8,7 @@
         <img src="../../assets/logos/Vector.png">
         <p>TOYOTA CARS</p>
         <img src="../../assets/logos/Vector.png">
-        <p>2023 Toyota Fortuner</p>
+        <p>{{techDetailsParameter.name}}</p>
     </div>
     <div class="bodyclass">
         <div>
@@ -80,7 +80,7 @@
         </div>
         <div>
             <div class="rightcard">
-                <div class="card card-timeline border-0">
+                <!-- <div class="card card-timeline border-0">
                     <ul class="bs4-order-tracking">
                         <li class="step">
                             <div style="padding-top: 1px;"><i class="fa-solid fa-circle-dot" style="color: #db0000; font-size: 16px;"></i></div>
@@ -96,7 +96,7 @@
                         </li>
                     </ul>
                 </div>
-                <hr style="margin-top: 0rem;">
+                <hr style="margin-top: 0rem;"> -->
                 <p class="lc-header"  (click)="onClick()">Subscription Type<i class="fa-solid" [class.fa-angle-down]="isUpperVisible" [class.fa-angle-up]="!isUpperVisible"></i></p>
                 <div [style.display]="isUpperVisible ? 'inherit' : 'none'"
                     [style.height]="isUpperVisible ? 'fit-content' : '0'">
@@ -114,7 +114,7 @@
                     <div class="numbers">
                         <button class="btn numbtn">24</button>
                         <button class="btn numbtn">36</button>
-                        <button class="btn numbtn">48</button>
+                        <button class="btn numbtn" style="border: solid 2px #DB2423; color: #DB2423;">48</button>
                         <button class="btn numbtn">60</button>
                         <button class="btn numbtn">72</button>
                         <button class="btn numbtn">84</button>
@@ -247,16 +247,15 @@
 </div>
 <div class="car-subs-footer">
     <div class="cs-footer-com">
-        <h6 class="redtxt">PRICE DETAILS</h6>
+        <button href="car-sub-submit" class="btn roadprice">On-road price</button>
         <h6 class="price">${{techDetailsParameter.price}}</h6>
-        <h6 style="font-size: 12px; margin-top: 2.5px;">Fixed on road price</h6>
     </div>
-    <div class="cs-footer-com">
-        <h6 class="price" style="font-size: 13px;">$0,000/m</h6>
+    <div class="cs-footer-com" style="padding-top: 5px;">
+        <h6 class="price" style="font-size: 15px;">Monthly Payment from: $2,200/m</h6>
         <i></i>
-        <h6 class="redtxt" style="font-size: 13px;">View Benefits</h6>
+        <h6 class="redtxt" style="font-size: 14px;">View Benefits</h6>
     </div>
     <div class="cs-footer-com" (click)="redirect('apply-now')">
-        <button href="car-sub-submit" class="btn">Apply Now</button>
+        <button href="car-sub-submit" class="btn applybtn">Apply Now</button>
     </div>
 </div>
