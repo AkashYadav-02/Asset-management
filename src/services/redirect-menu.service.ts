@@ -11,4 +11,8 @@ export class RedirectMenuService {
   redirectTo(routePath: string): void {
     this.router.navigateByUrl(routePath);
   }
+
+  redirectWithdata(routePath:string, data : any):void{
+    this.router.navigate(['car-sub'], { state: data });
+  }
 }
