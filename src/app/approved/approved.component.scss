@@ -183,3 +183,28 @@ select{
 :host ::ng-deep .ag-header{
 background-color: #EF9F9E !important;
 }
+
+.table-settings{
+    margin-left: -1rem;
+    margin-right: -1.5rem;
+}
+
+:host ::ng-deep  .ag-cell-value{
+width: 8rem !important;
+}
+
+:host ::ng-deep {
+    .ag-header-cell{
+        width: 8rem !important;
+        // left: 1.2rem !important;
+        text-align: center !important;
+    }
+
+    .ag-cell{
+        // left: 8rem !important;
+    }
+
+    #date{
+        left: 5rem !important;
+    }
+}

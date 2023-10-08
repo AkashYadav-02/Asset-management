@@ -129,7 +129,7 @@
             </div>
             <div *ngIf="showTransaction" style="margin-top: 1rem;">
                 <p class="an-head"> Transaction History</p>
-                <div class="an-body ">
+                <div class="an-body table-settings">
                     <ag-grid-angular style="width: 150%; height: 17.5rem; overflow: hidden;" class="ag-theme-alpine"
                         [rowData]="rowData$ | async" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef"
                         [rowHeight]="33">
