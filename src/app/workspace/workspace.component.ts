@@ -89,4 +89,12 @@ export class WorkspaceComponent {
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
   }
+
+  onCellClicked(data: any){
+    if (data.data.status == "Pending") {
+      this.redirect("apply-now-pending");
+    }else if(data.data.status == "Processed" ){
+      this.redirect("apply-now-approve");
+    }
+  }
 }
