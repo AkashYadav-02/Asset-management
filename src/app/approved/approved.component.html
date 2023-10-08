@@ -1,6 +1,8 @@
 <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
 <div class="an-pending">
+
     <div class="card left-card border border-2">
+
     </div>
     <div>
         <div class="card right-side">
@@ -8,7 +10,9 @@
             <div class="an-body">
                 <p><b>Condition :</b> 3 Months Bank Statement Required</p>
                 <p><b>Due By :</b> 15/10/2023</p>
-                <p><b>Status :</b> <span style="background-color: #AFF8B2; border-radius: 10px; padding: 5px 10px; margin-left: 10px;">Approved</span></p>
+                <p><b>Status :</b> <span
+                        style="background-color: #AFF8B2; border-radius: 10px; padding: 5px 10px; margin-left: 10px;">Approved</span>
+                </p>
             </div>
         </div>
         <div class="card right-side">
@@ -33,48 +37,49 @@
                 <p class="deal"><b>Country :</b> New Zealand</p>
             </div>
         </div>
-        
-    <div class="card right-side">
+
+        <div class="card right-side">
             <div class="topnav">
-              <a href="javascript:void(0);" (click)="showAccountDetails()">Account</a>
-              <a href="javascript:void(0);" (click)="showTransactionTable()">Transaction</a>
-               <a href="javascript:void(0);" (click)="showDisbursementDetails()">Disbursement</a>
+                <a href="javascript:void(0);" (click)="showAccountDetails()">Account</a>
+                <a href="javascript:void(0);" (click)="showTransactionTable()">Transaction</a>
+                <a href="javascript:void(0);" (click)="showDisbursementDetails()">Disbursement</a>
             </div>
-       
-        <div *ngIf="showAccount" style="margin-top: 1rem;">
-            <p class="an-head ">Account Details</p>
-            <div class="an-body accountDetails">
-            <p><b>Account Id:</b> {{ accountDetails.accountNumber }}</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <p><b>Borrowers:</b> {{ accountDetails.borrowers }}</p>
-            
-        </div>
-        <div class="an-body accountDetails ">
-            <p><b>Co-Borrowers(if any): </b> {{ accountDetails.coborrowers }}</p> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
-            <p><b>Account Name:</b> {{ accountDetails.accountname }}</p>
-        </div>
-        <div class="an-body ">
-            <p><b>Account Number:</b> {{ accountDetails.accountNumber }}</p>
-        </div>
-    </div> 
 
-    
-        <div *ngIf="showTransaction" style="margin-top: 1rem;">
-    <p class="an-head"> Transaction History</p>
-    <div class="an-body ">
-        
-        <ag-grid-angular
-        [gridOptions]="gridOptions"
-        [rowData]="rowData"
-        style="width: 80%; height: 300px;" 
-        class="ag-theme-mycustomtheme"
-      ></ag-grid-angular>
+            <div *ngIf="showAccount" style="margin-top: 1rem;">
+                <p class="an-head ">Account Details</p>
+                <div class="an-body accountDetails">
+                    <p><b>Account Id:</b> {{ accountDetails.accountNumber }}</p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p><b>Borrowers:</b> {{ accountDetails.borrowers }}</p>
 
-      <div *ngIf="showDisbursement" style="margin-top: 1rem;">
-        <p class="an-head ">Disbursment Details</p>
-        <div class="an-body accountDetails">
-        <p><b>Account Id:</b> {{ disbursmentdetails.totalsanctionamount }}</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <p><b>Borrowers:</b> {{ disbursmentdetails.totaldisbursedamount }}</p>
+                </div>
 
-</div>
+                <div class="an-body accountDetails ">
+                    <p><b>Co-Borrowers(if any): </b> {{ accountDetails.coborrowers }}</p> &nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    <p><b>Account Name:</b> {{ accountDetails.accountname }}</p>
+                </div>
+                <div class="an-body ">
+                    <p><b>Account Number:</b> {{ accountDetails.accountNumber }}</p>
+                </div>
+            </div>
 
-</div>
+            <div *ngIf="showDisbursement" style="margin-top: 1rem;">
+                <p class="an-head ">Disbursment Details</p>
+                <div class="an-body accountDetails">
+                    <p><b>Account Id:</b> {{ disbursmentdetails.totalsanctionamount }}</p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <p><b>Borrowers:</b> {{ disbursmentdetails.totaldisbursedamount }}</p>
+                </div>
+                </div>
+                <div *ngIf="showTransaction" style="margin-top: 1rem;">
+                    <p class="an-head"> Transaction History</p>
+                    <div class="an-body ">
+                        <ag-grid-angular style="width: 150%; height: 17.5rem; overflow: hidden;" class="ag-theme-alpine"
+                            [rowData]="rowData$ | async" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef"
+                            [rowHeight]="33">
+                        </ag-grid-angular>
+
+
+
+                    

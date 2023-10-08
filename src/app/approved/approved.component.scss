@@ -98,7 +98,11 @@ select{
 .deal{
     width: 15rem;
 }
-
+/* In your component's CSS file or a global CSS file */
+.ag-cell {
+    font-size: 12px; /* Adjust the font size as needed */
+  }
+  
 
 
 // .an-drag{

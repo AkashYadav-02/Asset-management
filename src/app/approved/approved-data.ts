@@ -9,5 +9,6 @@ export const accountDetails = {
   export const disbursmentdetails = {
     totalsanctionamount: '$42,000',
     totaldisbursedamount:'$3,21,000',
-  
   };
+
+  
