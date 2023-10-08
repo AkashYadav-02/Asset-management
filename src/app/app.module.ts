@@ -22,8 +22,7 @@ import { WorkspaceComponent } from './workspace/workspace.component';
 import { NavbarAfterHomePageComponent } from './navbar-after-home-page/navbar-after-home-page.component';
 import { HomePageAfterComponent } from './home-page-after/home-page-after.component';
 import { VarificationLoginComponent } from './varification-login/varification-login.component';
-
-
+import { FileUploadModule } from 'primeng/fileupload';
 import { HttpClientModule } from '@angular/common/http'
 import { AgGridModule } from 'ag-grid-angular';
 import { HomepageUpperComponent } from './rm-homepage/homepage-upper/homepage-upper.component';
@@ -31,6 +30,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { Spinner1Component } from './spinner1/spinner1.component';
 import { Spinner2Component } from './spinner2/spinner2.component';
+
 
 
 import { HomeupperpageComponent } from './rm-homepage/homeupperpage/homeupperpage.component';
@@ -97,6 +97,7 @@ import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.
     TimelineModule,
     AgGridModule,
     HttpClientModule,
+    FileUploadModule
     
   ],
   providers: [],

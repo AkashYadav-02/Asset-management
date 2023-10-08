@@ -52,10 +52,14 @@ select{
 .an-body{
     display: flex;
     color: black;
-    font-family: "Montserrat";
+    font-family: "Monts";
     font-size: 14px;
-    font-weight: 500;
     justify-content: space-between;
+    align-items:baseline;
+}
+
+.an-body p{
+    font-weight: 500;
 }
 
 .dealership{
