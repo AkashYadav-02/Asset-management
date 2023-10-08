@@ -138,5 +138,8 @@ filterDetails(){
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
   }
+  onSubmit(){
+    this.redirect('apply-now-flow-1'); 
 
+}
 }
