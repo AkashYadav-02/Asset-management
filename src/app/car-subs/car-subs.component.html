@@ -10,6 +10,16 @@
         <img src="../../assets/logos/Vector.png">
         <p>{{techDetailsParameter.name.toUpperCase()}}</p>
     </div>
+    <div class="stepper">
+        <div class="progress" style="height:9px" aria-label="Danger example">
+            <div class="progress-bar" style="width: 33.33%"></div>
+          </div>
+    </div>
+    <div class="stepper-label">
+        <p class="step-active">Choose Plan</p>
+        <p >Enter Details</p>
+        <p >Upload Documents</p>
+    </div>
     <div class="bodyclass">
         <div>
             <div id="carouselExampleIndicators" class="carousel slide">
@@ -100,13 +110,15 @@
                 <p class="lc-header"  (click)="onClick()">Subscription Type<i class="fa-solid" [class.fa-angle-down]="isUpperVisible" [class.fa-angle-up]="!isUpperVisible"></i></p>
                 <div [style.display]="isUpperVisible ? 'inherit' : 'none'"
                     [style.height]="isUpperVisible ? 'fit-content' : '0'">
-                    <div class="leasehire form-check form-check-inline" style="margin-left: -21px;">
-                        <input type="radio" name="radio1" value="value" checked>
-                        <label class="form-check-label" for="inlineRadio1">Lease</label>
-                    </div>
-                    <div class="leasehire form-check form-check-inline">
-                        <input type="radio" name="radio1" value="value">
-                        <label class="form-check-label" for="inlineRadio2">Hire Purchase</label>
+                    <div class="radio-body">
+                        <div class="leasehire form-check form-check-inline" style="margin-left: -21px;">
+                            <input type="radio" name="radio1" value="value" checked>
+                            <label class="form-check-label" for="inlineRadio1">Lease</label>
+                        </div>
+                        <div class="leasehire form-check form-check-inline">
+                            <input type="radio" name="radio1" value="value">
+                            <label class="form-check-label" for="inlineRadio2">Hire Purchase</label>
+                        </div>
                     </div>
 
                     <p class='subhead'>Tenure <span class="text-secondary">(Months)</span></p>
@@ -122,59 +134,66 @@
                     </div>
 
 
-                    <p class='subhead'>Usage Type</p>
-                    <div class="form-check form-check-inline" style="margin-left: -18px;">
-                        <input type="radio" name="radio2" value="value"
-                            class="radiobtn" checked>
-                        <label class="form-check-label" for="inlineRadio1">Individual</label>
+                    <p class='subhead'>Ownership</p>
+                    <div class="radio-body">
+                        <div class="form-check form-check-inline" style="margin-left: -18px;">
+                            <input type="radio" name="radio2" value="value"
+                                class="radiobtn" checked>
+                            <label class="form-check-label" for="inlineRadio1">Individual</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="radio2" value="value"
+                                class="radiobtn">
+                            <label class="form-check-label" for="inlineRadio2">Business</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" name="radio2" value="value"
-                            class="radiobtn">
-                        <label class="form-check-label" for="inlineRadio2">Business</label>
-                    </div>
+                    
 
                     <p class='subhead'>Mileage Package</p>
-                    <div class="form-check form-check-inline" style="margin-left: -18px;">
-                        <input type="radio" name="radio3" value="value"
-                            class="radiobtn" checked>
-                        <label class="form-check-label" for="inlineRadio1">Low Usage</label>
+                    <div class="radio-body">
+                        <div class="form-check form-check-inline" style="margin-left: -18px;">
+                            <input type="radio" name="radio3" value="value"
+                                class="radiobtn" checked>
+                            <label class="form-check-label" for="inlineRadio1">Low Usage</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="radio3" value="value"
+                                class="radiobtn">
+                            <label class="form-check-label" for="inlineRadio2">Moderate Usage</label>
+                        </div>
+                        <div class="form-check " style="margin-left: 6px;">
+                            <input type="radio" name="radio3" value="value"
+                                class="radiobtn">
+                            <label class="form-check-label" for="inlineRadio2">High Usage</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" name="radio3" value="value"
-                            class="radiobtn">
-                        <label class="form-check-label" for="inlineRadio2">Moderate Usage</label>
-                    </div>
-                    <div class="form-check" style="margin-left: 9px;">
-                        <input type="radio" name="radio3" value="value"
-                            class="radiobtn">
-                        <label class="form-check-label" for="inlineRadio2">High Usage</label>
-                    </div>
+                    
 
-                    <p class='subhead'>End of Lease (Buy Pack)</p>
-                    <div class="form-check form-switch" style="margin-left: 35px;">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                            checked>
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Yes</label>
+                    <div class="d-flex" style="align-items: baseline;">
+                        <p class='subhead'>Buyback</p>
+                        <div class="form-check form-switch" style="margin-left: 35px;">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                checked>
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Yes</label>
+                        </div>
                     </div>
+                    
 
                     <p class='subhead'>Percentage</p>
                     <p style="font-size: 13px; margin-top: -15px; margin-bottom: 10px; font-weight: bold; color:grey">Adjust Slider or Type in the Percentage</p>
-                    
                         <div class="container rangerr">
                             <p><b>{{percentageValue}}%</b></p>
-
                         </div>
                     
-                    <input type="range" [(ngModel)]="percentageValue" (input)="updatePercentage($event)" id="vol" name="vol" min="0" max="100" list="tickmarks" style="accent-color: #E42346; width: 100%; height: 5px;">
+                    <input type="range" [(ngModel)]="percentageValue" (input)="updatePercentage($event)" id="vol" name="vol" min="5" max="35" list="tickmarks" style="accent-color: #E42346; width: 100%; height: 5px;">
                     <datalist id="tickmarks">
-                        <option value="0" label="0%"></option>
-                        <option value="15" label="15%"></option>
-                        <option value="30" label="30%"></option>
-                        <option value="45" label="45%"></option>
-                        <option value="60" label="60%"></option>
-                        <option value="75" label="75%"></option>
-                        <option value="100" label="100%"></option>
+                        <option value="0" label="5%"></option>
+                        <option value="15" label="10%"></option>
+                        <option value="30" label="15%"></option>
+                        <option value="45" label="20%"></option>
+                        <option value="60" label="25%"></option>
+                        <option value="75" label="30%"></option>
+                        <option value="100" label="35%"></option>
                       </datalist>
                       <div class="container text-center mt-3">
                         <button class="btn btn-secondary buybtn mb-2" style="justify-content: center;">Buy Back Pack Amount</button>
@@ -184,16 +203,19 @@
                 <p class="lc-header"  (click)="onPress()">Eligibility<i class="fa-solid" [class.fa-angle-down]="isLowerVisible" [class.fa-angle-up]="!isLowerVisible"></i></p>
                 <div [style.display]="isLowerVisible ? 'inherit' : 'none'"
                     [style.height]="isLowerVisible ? 'fit-content' : '0'">
-                    <div class="form-check form-check-inline" style="margin-left: -18px;">
-                        <input type="radio" name="radio4" value="value"
-                            class="radiobtn" checked>
-                        <label class="form-check-label" for="inlineRadio1">Individual</label>
+                    <div class="radio-body">
+                        <div class="form-check form-check-inline" style="margin-left: -18px;">
+                            <input type="radio" name="radio4" value="value"
+                                class="radiobtn" checked>
+                            <label class="form-check-label" for="inlineRadio1">Individual</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" name="radio4" value="value"
+                                class="radiobtn">
+                            <label class="form-check-label" for="inlineRadio2">Business</label>
+                        </div>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" name="radio4" value="value"
-                            class="radiobtn">
-                        <label class="form-check-label" for="inlineRadio2">Business</label>
-                    </div>
+                    
                     <div class="fields">
                         <div style="display: flex;">
                             <p>Monthly Income : </p>
@@ -252,7 +274,7 @@
     </div>
     <div class="cs-footer-com" style="padding-top: 5px;">
         <h6 class="price" style="font-size: 15px;">Monthly Payment from: $2,200/m</h6>
-        <i></i>
+        <img src="../../assets/logos/info-circle.png" style="height:15px; margin-bottom: -8px; margin-right: 10px; margin-left: -12px;">
         <h6 class="redtxt" style="font-size: 14px;">View Benefits</h6>
     </div>
     <div class="cs-footer-com" (click)="redirect('apply-now-flow-1')">
