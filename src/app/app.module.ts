@@ -32,9 +32,7 @@ import { Spinner1Component } from './spinner1/spinner1.component';
 import { Spinner2Component } from './spinner2/spinner2.component';
 import { GridOptions } from 'ag-grid-community';
 
-
 import { HomeupperpageComponent } from './rm-homepage/homeupperpage/homeupperpage.component';
-
 import { RouterModule } from '@angular/router';
 
 import { ApplyNowFlow1Component } from './apply-now-flow1/apply-now-flow1.component';

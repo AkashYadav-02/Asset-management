@@ -18,21 +18,11 @@ export class ApplyNowFlow1Component {
      ) {}
 
   carDetails=[
-
     {
-
       name:"Audi A8 L 2022",
-
       price: 8200,
-
       imgUrl: "../../assets/Cars/car1.png"
-
-    },
-
-   
-
-   
-
+    }
   ]
 
  

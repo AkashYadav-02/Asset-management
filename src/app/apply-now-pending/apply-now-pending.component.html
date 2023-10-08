@@ -1,7 +1,23 @@
 <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
 <div class="an-pending">
-    <div class="card left-card border border-2">
-
+    <div class="card left-card border border-2" *ngFor="let car of carDetails">
+        <!-- (click)="redirect('car-sub')"  -->
+        <div class="car-card">
+            <img src={{car.imgUrl}}>
+        </div>
+          <h5 class="card-title" style="font-family: 'Inter'; text-align: center; font-size: 20px;"><b>Application ID: UNE0348</b></h5>
+        <div class="package-details">
+            <p style="font-family: 'Monts';"><b>Your chosen package: </b></p>
+            <p style="font-family: 'Monts'; color: #ED5434;"><b>Your current instalment is: per month</b></p>
+            <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Total Amount of Finance</b></p>
+            <p style="font-family: 'Monts';">Down Payment</p>
+            <p style="font-family: 'Monts';">Repayment Frequency </p>
+            <p style="font-family: 'Monts';">APR of</p>
+            <p style="font-family: 'Monts';">Add on (instalment)</p>
+            <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Final Instalment is</b></p>
+            <p style="font-family: 'Monts';">Your first payment is</p>
+    
+        </div>
     </div>
     <div>
         <div class="card right-side">
@@ -18,12 +34,24 @@
                 <label style="margin-right: 20px;"><b>Document Type:</b></label>
                 <select name="cars" id="cars" class="an-drop">
                     <option value="">Choose</option>
-                    <option value="saab">2023 Toyota</option>
-                    <option value="opel">2023 Toyota</option>
-                    <option value="audi">2023 Touota</option>
+                    <option value="saab">Identity Proof</option>
+                    <option value="opel">Bank Statement</option>
+                    <option value="audi">Paystub</option>
+                    <option value="audi">Tax Return</option>
                 </select>
             </div>
             <div class="an-drag">
+
+                <p-toast></p-toast>
+                <p-fileUpload name="files[]" 
+                url="https://www.primefaces.org/cdn/api/upload.php" 
+                (onUpload)="onUpload($event)" 
+                [multiple]="true" 
+                accept="image/*" [maxFileSize]="1000000">
+                        <ul *ngIf="uploadedFiles.length">
+                            <li *ngFor="let file of uploadedFiles">{{ file.name }} - {{ file.size }} bytes</li>
+                        </ul>
+                </p-fileUpload>
 
             </div>
             <p style="font-size: 11px; color: grey; font-family: Montserrat; font-weight: bold;">Max file is 10MB. Supported file format are JPG, PNG, PDF.</p>
