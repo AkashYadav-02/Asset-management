@@ -72,7 +72,7 @@ export class WorkspaceComponent {
           }
           
           
-        }
+        } 
       }
   ];
 
@@ -88,5 +88,13 @@ export class WorkspaceComponent {
   public rowData$!: Observable<any[]>;
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
+  }
+
+  onCellClicked(data: any){
+    if (data.data.status == "Pending") {
+      this.redirect("apply-now-pending");
+    }else if(data.data.status == "Processed" ){
+      this.redirect("apply-now-approve");
+    }
   }
 }

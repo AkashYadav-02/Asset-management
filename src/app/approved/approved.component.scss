@@ -7,9 +7,14 @@
 }
 
 .left-card{
-    height: 30rem;
-    width: 32.5vw;
+    // height: 30rem;
+    padding: 9px;
+    padding-left: 5px;
+    padding-right: 65px;
+    left: 3%;
+    width: 30.5vw;
     max-width: 32.5vw;
+    // margin-right: 1rem;
 }
 
 .right-side{
@@ -88,8 +93,34 @@ select{
     justify-content: left;
 }
 
+.card-title{
+
+    margin-top: 0.5rem;
+
+    text-align: center;
+
+}
 .accountDetails{
     justify-content: left;
+
+}
+.package-details{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 15px;
+    font-family: "Montserrat";
+}
+.car-card{
+
+    margin-left: 1rem;
+
+    margin-top: 0.5rem;
+
+    width: 350px;
+
+    height: 200px;
+
+ 
 
 }
 // .topnav{
@@ -98,7 +129,11 @@ select{
 .deal{
     width: 15rem;
 }
-
+/* In your component's CSS file or a global CSS file */
+.ag-cell {
+    font-size: 12px; /* Adjust the font size as needed */
+  }
+  
 
 
 // .an-drag{
@@ -108,3 +143,69 @@ select{
 //     border-radius: 5px;
 //     margin-bottom: 10px;
 // }
+
+.btn-grp-below-disbursment:hover{
+    background-color: #5B41E1;
+    color: white;
+}
+
+.btn-grp-below-disbursment{
+    background-color: #F2F1FA;
+    color: #644CE2;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.empty-box{
+    background-color: #EBF1F5;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.empty-box-p1{
+    font-size: 0.9rem;
+}
+
+.empty-box-p2{
+    font-size: 0.7rem;
+    color: #ACACAE !important;
+    margin-top: -1rem;
+}
+
+.empty-box-p3{
+    font-size: 0.7rem;
+    margin-top: -1rem;
+}
+
+:host ::ng-deep .ag-header{
+background-color: #EF9F9E !important;
+}
+
+.table-settings{
+    margin-left: -1rem;
+    margin-right: -1.5rem;
+}
+
+:host ::ng-deep  .ag-cell-value{
+width: 8rem !important;
+}
+
+:host ::ng-deep {
+    .ag-header-cell{
+        width: 8rem !important;
+        // left: 1.2rem !important;
+        text-align: center !important;
+    }
+
+    .ag-center-cols-container {
+        display: block;
+        text-align: center !important;
+    }
+
+    .ag-header-cell-label{
+        justify-content: space-evenly;
+    }
+}
