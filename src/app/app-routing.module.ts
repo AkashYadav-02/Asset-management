@@ -15,6 +15,7 @@ import { MainProfileComponent } from './main-profile/main-profile.component';
 import { ProfileSettingsComponent } from './profile-settings/profile-settings.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { CreditInformationComponent } from './credit-information/credit-information.component';
 import { ApplyNowFlow1Component } from './apply-now-flow1/apply-now-flow1.component';
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:'work-space', component: WorkspaceComponent},
   {path:'rm-home-page', component: RmHomepageComponent},
   {path:'how-it-works', component: HowItWorksComponent},
+  {path :'credit-info', component: CreditInformationComponent},
   {path:'apply-now-flow-1', component: ApplyNowFlow1Component},
 ];
 

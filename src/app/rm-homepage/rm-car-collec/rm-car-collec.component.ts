@@ -92,7 +92,7 @@ export class RmCarCollecComponent {
           break;
         }
       }
-      this.router.navigate(['car-sub'], { state: this.data });
+      this.redirectWithData("car-sub",this.data);
   }
 
   allowCars(num : number){
@@ -107,6 +107,9 @@ export class RmCarCollecComponent {
 
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
+  }
+  redirectWithData(path : string, data : any){
+    this.redirectMenu.redirectWithdata(path,data);
   }
   
 }
