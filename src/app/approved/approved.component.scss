@@ -8,7 +8,7 @@
 
 .left-card{
     height: 30rem;
-    width: 32.5vw;
+    // width: 32.5vw;
     max-width: 32.5vw;
 }
 
@@ -88,8 +88,34 @@ select{
     justify-content: left;
 }
 
+.card-title{
+
+    margin-top: 0.5rem;
+
+    text-align: center;
+
+}
 .accountDetails{
     justify-content: left;
+
+}
+.package-details{
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    font-size: 15px;
+    font-family: "Montserrat";
+}
+.car-card{
+
+    margin-left: 1rem;
+
+    margin-top: 0.5rem;
+
+    width: 350px;
+
+    height: 200px;
+
+ 
 
 }
 // .topnav{

@@ -4,6 +4,7 @@ import { accountDetails,disbursmentdetails } from './approved-data';
 import { GridOptions,ColDef  } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { RedirectMenuService } from 'src/services/redirect-menu.service';
 @Component({
   selector: 'app-approved',
   templateUrl: './approved.component.html',
@@ -13,6 +14,16 @@ export class ApprovedComponent {
 accountDetails = accountDetails;
 disbursmentdetails = disbursmentdetails;
 public rowData$!: Observable<any[]>;
+carDetails=[
+  {
+    name:"Audi A8 L 2022",
+    price: 8200,
+    imgUrl: ""
+  },
+]
+white="../../../assets/logos/heart.png";
+red="../../../assets/logos/heartred.png"
+heartURL=this.white;
 // gridOptions: GridOptions;
 // rowData: any[];
 showAccount = false;
@@ -39,7 +50,8 @@ customCellRenderer(params: any) {
 ngOnInit() {
     this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/approved-data.json');
 }
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient,  private redirectMenu : RedirectMenuService,
+       ) {
     // this.gridOptions = {
       
     //   columnDefs: [
@@ -67,6 +79,9 @@ ngOnInit() {
       sortable: true,
       width: 100
     };
+    redirect(path : string){
+      this.redirectMenu.redirectTo(path);
+    }
   columnDefs: ColDef[] = [
     { field: 'date',cellStyle: { 'font-size': '12px' } },
     { field: 'description',cellStyle: { 'font-size': '12px' } },
