@@ -45,6 +45,7 @@ import { ProfileSettingsComponent } from './profile-settings/profile-settings.co
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { ApprovedComponent } from './approved/approved.component';
 import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.component';
+import { CreditInformationComponent } from './credit-information/credit-information.component';
 
 
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
@@ -75,6 +76,7 @@ import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.
     NavBarAfterHomeProfileComponent,
     EditProfileComponent,
     ProfileSettingsComponent,
+    CreditInformationComponent,
     SpinnerComponent,
     Spinner1Component,
     Spinner2Component,

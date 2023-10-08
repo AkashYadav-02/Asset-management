@@ -1,0 +1,149 @@
+<app-nav-bar-after-home-profile [navtheme]="'whitetheme'"></app-nav-bar-after-home-profile>
+<div class="stepper">
+
+    <div class="progress" aria-label="Danger example">
+
+        <div class="progress-bar bg-success" style="width: 33.33%"></div>
+        <div class="progress-bar bg-danger" style="width: 33.33%"></div>
+
+    </div>
+    <div class="stepper-label">
+
+        <p style="font-family: Monts;">Choose Plan</p>
+
+        <p style="font-family: Monts;">Enter Details</p>
+
+        <p style="font-family: Monts;">Upload Documents</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="cs-cred-info-main-screen">
+    <div class="cs-cred-info-left-sec">
+
+        <img class="car-card" src=..\assets\car1.png>
+
+        <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: UNE0348</b></h5>
+
+        <div class="package-details">
+
+            <p style="font-family: Monts;"><b>Your chosen package: </b></p>
+
+            <p style="font-family: Monts; color: #ED5434;"><b>Your current instalment is: 1,420$ per month</b></p>
+
+            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Total Amount of Finance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$88,00</b></p>
+
+            <p style="font-family: Monts;">Down Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12,000</p>
+
+            <p style="font-family: Monts;">Repayment Frequency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monthly</p>
+
+            <p style="font-family: Monts;">APR of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.9%</p>
+
+            <p style="font-family: Monts;">Add on (instalment)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</p>
+
+            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Final Instalment is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1,420</b></p>
+
+            <p style="font-family: Monts;">Your first payment is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$14,420</p>
+
+
+
+            <!-- <div class="card" style="width: 24rem;">
+        
+            <div (click)="redirect('car-sub')"  *ngFor="let car of carDetails">
+        
+                <img class="car-card" src={{car.imgUrl}}>
+        
+            </div>  -->
+
+        </div>
+
+    </div>
+    <div class="cs-cred-info-right-sec">
+        
+        <div class="cs-step-one" >
+            <div class="header">
+                <h5 class="header-one">CREDIT INFORMATION</h5>
+                <input class="radio-button" type="radio" checked>
+                <h6 class="header-two">Validated with BUD</h6>
+            </div>
+            <div class="sub-header-one">
+                <h5>Asset details :</h5>
+            </div>
+            <div class="drop-one">
+                <h6 class="sub-header-two">Asset type :</h6>
+                <select name ="choose" class="Choose" id="Choose">
+                    <option value=""></option>
+                    <option value="Savings Account">Savings Account</option>
+                    <option value="Current Account">Current Account</option>
+                    <option value="Draft Account">Draft Account</option>
+                </select>
+            <input type="text" class="AssetInput">     
+            <button class="AssetAdd"></button>       
+            </div>
+         <span> <h6 class="sub-header-two">Asset type :&nbsp;Savings Account  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $30,000</h6></span>           
+        </div>
+        <div class="cs-step-two">
+            <div class="header">
+                <h5 class="header-one">Monthly Income Details</h5>
+                <!-- <input class="radio-button" type="radio" checked>
+                <h6 class="header-two">Validated with BUD</h6> -->
+            </div>
+            <!-- <div class="sub-header-one">
+                <h5>Income Type :</h5>
+            </div> -->
+            <div class="drop-one">
+                <h6 class="sub-header-two">Income Type :</h6>
+                <select name ="choose" class="Choose" id="Choose">
+                    <option value=""></option>
+                    <option value="Savings Account">Savings Account</option>
+                    <option value="Current Account">Current Account</option>
+                    <option value="Draft Account">Draft Account</option>
+                </select>
+            <input type="text" class="AssetInput">     
+            <button class="AssetAdd"></button>       
+            </div>
+         <span> <h6 class="sub-header-two">Income Type :&nbsp;Royalty  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Monthly Income:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1000</h6></span>           
+        </div>
+        
+        <div class="cs-step-three">
+            <div class="header">
+                <h5 class="header-one">Monthly Expense Details</h5>
+                <!-- <input class="radio-button" type="radio" checked>
+                <h6 class="header-two">Validated with BUD</h6> -->
+            </div>
+            <!-- <div class="sub-header-one">
+                <h5>Asset details :</h5>
+            </div> -->
+            <div class="drop-one">
+                <h6 class="sub-header-two">Expense type :</h6>
+                <select name ="choose" class="Choose" id="Choose">
+                    <option value=""></option>
+                    <option value="Savings Account">Savings Account</option>
+                    <option value="Current Account">Current Account</option>
+                    <option value="Draft Account">Draft Account</option>
+                </select>
+            <input type="text" class="AssetInput">     
+            <button class="AssetAdd"></button>       
+            </div>
+         <span> <h6 class="sub-header-two">Exchange Type :&nbsp;Rent  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $800&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Monthly Income:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$800</h6></span>          
+        </div>
+        </div>
+    </div>
+    
+    <div class="car-subs-footer">
+        <div class="cs-footer-left">
+            <button>Back</button>
+            <button>Save as Draft</button>
+        </div>
+
+        <div class="cs-footer-right">
+            <button class="btn">Submit</button>
+        </div>
+
+    </div>
