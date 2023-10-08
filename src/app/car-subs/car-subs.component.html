@@ -72,11 +72,18 @@
                 <div class="coloraccessories">
                     <div>
                         <h3>Color</h3>
-                    <form >
+                    <!-- <form >
                         <button id="#45473D" class="redbtn btn" style="background-color: #45473D; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
                         <button id="#000000" class="redbtn btn" style="background-color: #000000; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
                         <button id="#DB2423" class="redbtn btn" style="background-color: #DB2423; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
                         <button id="#9f9f9f" class="redbtn btn" style="background-color: #9f9f9f; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
+                    </form> -->
+                    <form>
+                        <div style="display: flex;">
+                            <div  *ngFor="let item of colorList">
+                                <button class="redbtn btn color{{item}}" style="outline: solid 2px #a38c8c;" ></button>
+                            </div>
+                        </div>
                     </form>
                     </div>
                     <div style="margin-left: -35px;">

@@ -16,6 +16,7 @@ export class CarSubsComponent implements OnInit{
   techDetailsParameter : any;
   specificaiton : any;
   EMI: any;
+  colorList: string[] = [];
   // selectedColor: string = '45473D';
   
   
@@ -180,9 +181,15 @@ export class CarSubsComponent implements OnInit{
   
  
 
-  
+  getColorList(spec : any){
+      let colors = Object.keys(spec.color_options).map(key=> spec.color_options[key]);
+      let flattenedColor = [].concat(...colors);
+      this.colorList.push(...flattenedColor);
+  }
+
 filterDetails(){
    this.specificaiton = this.carDetails.find((element)=> element.name == this.techDetailsParameter.name);   
+   this.getColorList(this.specificaiton);
 }
 
   onPress(){
@@ -193,16 +200,39 @@ filterDetails(){
     }
   }
 
-  inputtxt=''
   outline(event:Event){
     (<HTMLButtonElement>event.target).style.outlineColor=(<HTMLButtonElement>event.target).id
   }
 
+  
+
+// outline(event: Event, color: string) {
+//   this.selectedColor = color; // Update the selected color
+//   const buttons = document.querySelectorAll('.redbtn.btn') as NodeListOf<HTMLButtonElement>;
+//   buttons.forEach(button => {
+//     button.style.outlineColor = button.id === color ? color : '#ffffff'; // Set outline color based on selected color
+//   });
+// }
+
+
+// selectedColor: string = '45473D';
+
+// outline(color: string) {
+//   this.selectedColor = color;
+// }
+
+
+
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
   }
+
   onSubmit(){
     this.redirect('apply-now-flow-1'); 
+
+  // getCss(col:string){
+  //   return col;
+  // }
 
 }
 
