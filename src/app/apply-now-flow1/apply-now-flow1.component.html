@@ -26,7 +26,7 @@
 
     <div (click)="redirect('car-sub')"  *ngFor="let car of carDetails">
 
-        <img class="car-card" src={{car.imgUrl}}>
+        <img class="car-card" src={{techDetailsParameter.image}}>
 
     </div>
 
@@ -141,8 +141,6 @@
 
 </div>
 
- 
-
 <div class="customer-details-dropdown">
 
     <div class="collapsible">
@@ -153,14 +151,21 @@
 
         <div class="collapsible-data">
 
-            <p>snvavliunicln jb hfevblenlicuwiucnwvjdnjkn</p>
+            <p class="fname">First Name: John </p>
+            <p class="lname">Last Name: Smith</p>
+            <p class="mname">Middle Name: M</p>
+            <p class="dob">Date of Birth: 01/01/1975</p>
 
+            <!-- <div class="contact-details">
+                <p>Contact Details</p>
+            </div> -->
+
+            
         </div>
 
     </div>
 
 </div>
-
  
 
 <div class="work-details-dropdown">

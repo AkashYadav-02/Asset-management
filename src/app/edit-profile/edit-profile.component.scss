@@ -34,9 +34,10 @@ h5{
     // padding-left: 5rem;
   }
 .a1{
-    margin-left: 450px;
+    margin-left: 400px;
     color:red;
     text-decoration: none;
+    font-family:  'Inter'  ;
 }
 .pro-btn{
     margin-right: 10px;
@@ -46,6 +47,7 @@ h5{
     margin-top:2px;
     margin-left: 47px;
         // transition-duration: 0.4s;
+    font-family: 'Monts';
     
 }
 
@@ -55,6 +57,7 @@ h5{
     color: white;
     border-width: 1px;
     margin-left: 47px;
+    font-family: 'Monts';
   }
   .pro-btn:focus {
     border:solid red; /* Green */
@@ -62,6 +65,7 @@ h5{
     color: white;
     border-width: 1px;
     margin-left: 47px;
+    font-family: 'Monts';
 
   }
   .set-btn{
@@ -71,6 +75,7 @@ h5{
     border-width: 1px;
     margin-top:2px;
     margin-left:15px;
+    font-family: 'Monts';
   }
   .set-btn:hover {
     border:solid red; /* Green */
@@ -78,6 +83,7 @@ h5{
     color: white;
     border-width: 1px;
     margin-left:15px;
+    font-family: 'Monts';
   }
   .set-btn:focus {
     border:solid red; /* Green */
@@ -85,6 +91,7 @@ h5{
     color: white;
     border-width: 1px;
     margin-left:15px;
+    font-family: 'Monts';
   }
 // .img1{
 //     margin-top: 130px ;
@@ -136,7 +143,7 @@ h5{
     //display: block;
     width: 12%;
     margin-bottom: 30px;
-    
+    font-family:  'Inter'  ;
 }
 // .divs{
 //     display: flex;
@@ -154,6 +161,7 @@ h5{
     width: 12%;
     margin-left: 30px;
     margin-bottom: 30px;
+    font-family:  'Inter'  ;
 
 }
 .userinputfield{
@@ -162,12 +170,14 @@ h5{
     height: 3rem;
     width: 130%;
     margin-top: -0.25rem;
+    font-family: 'Monts';
 }
 .userphoneinput{
     margin-left: 30px;
     height: 3rem;
     width: 130%;
     //margin-top: -0.25rem;
+    font-family: 'Monts';
 }
 .label-input{
     margin-bottom: -0.6rem;
@@ -175,7 +185,9 @@ h5{
 .label-input2{
     margin-top: -0.6rem;
 }
-
+.col-form-label{
+    font-family:  'Inter'  ;
+}
 h4{
     color: black;
     font-size: 24px;

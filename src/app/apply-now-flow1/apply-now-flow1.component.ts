@@ -1,7 +1,8 @@
 
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 @Component({
   selector: 'app-apply-now-flow1',
@@ -10,9 +11,27 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 })
 
 export class ApplyNowFlow1Component {
+
+  myObserver ;
+  currentUrl : any;
+  techDetailsParameter : any;
+
   constructor(private router:Router,private fb: FormBuilder,
     private redirectMenu : RedirectMenuService,
-     ) {}
+     ) {
+
+      this.myObserver = this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          this.currentUrl = event.url;
+        const navigation = this.router.getCurrentNavigation();
+        if (navigation?.extras.state) {
+          this.techDetailsParameter = navigation.extras.state;
+        } 
+        }
+      });
+
+
+     }
   carDetails=[
     {
       name:"Audi A8 L 2022",
@@ -35,6 +54,15 @@ export class ApplyNowFlow1Component {
     this.redirectMenu.redirectTo(path);
   }
 
+  isUpperVisible=true
+  isLowerVisible=false
+  onClick(){
+    if (this.isUpperVisible){
+      this.isUpperVisible=false
+    }else{
+      this.isUpperVisible=true
+    }
+  }
  
 
 }

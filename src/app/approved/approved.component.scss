@@ -80,6 +80,11 @@ select{
   .topnav a.active {
     border-bottom: 3px solid red;
   }
+
+  .topnav a{
+border-bottom: 3px solid #EBEBEB;
+margin-bottom: 1rem;
+  }
 .an-body{
     display: flex;
     color: black;
@@ -200,11 +205,12 @@ width: 8rem !important;
         text-align: center !important;
     }
 
-    .ag-cell{
-        // left: 8rem !important;
+    .ag-center-cols-container {
+        display: block;
+        text-align: center !important;
     }
 
-    #date{
-        left: 5rem !important;
+    .ag-header-cell-label{
+        justify-content: space-evenly;
     }
 }

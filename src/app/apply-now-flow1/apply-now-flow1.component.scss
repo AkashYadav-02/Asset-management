@@ -198,7 +198,7 @@ hr-1, hr-2{
 
     font-size: small;
 
-    height: 1.5rem;
+    height: 2rem;
 
     width: 10rem;
 
@@ -214,7 +214,7 @@ hr-1, hr-2{
 
     margin-left: 8rem;
 
-    margin-bottom: 3px;
+    margin-bottom: 2.5px;
 
 }
 
@@ -292,7 +292,7 @@ hr-1, hr-2{
 
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
 
-    color: black;
+    color: #DB2423;
 
     display: block;
 
@@ -360,8 +360,22 @@ hr-1, hr-2{
 
     transition: all 0.3s ease;
 
+    justify-content: space-between;
+
+    display: flex;
+
+    margin-left: 1rem;
+
+    margin-right: 1rem;
+
 }
 
+.contact-details{
+    font-family: "Inter";
+    font-weight: bold;
+    color: #DB2423;
+    margin-right: 2;
+}
  
 
 .collapsible input:checked ~ .collapsible-data{
@@ -372,7 +386,7 @@ hr-1, hr-2{
 
     background: #fff;
 
-    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+    // box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
 
     opacity: 1;
 
@@ -380,17 +394,11 @@ hr-1, hr-2{
 
 }
 
- 
+.collapsible-data p{
+    font-family: "Montserrat";
+    // justify-content: space-between;
+}
 
-// .collapsible-data p{
-
-//     padding-left: 15px;
-
-//     padding-right: 15px;
-
-// }
-
- 
 
 .work-details-dropdown{
 
@@ -398,7 +406,7 @@ hr-1, hr-2{
 
     margin-right: 4rem;
 
-    margin-top: 10rem;
+    margin-top: 5rem;
 
     height: 22rem;
 

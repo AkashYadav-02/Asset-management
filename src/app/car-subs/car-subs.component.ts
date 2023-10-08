@@ -159,8 +159,6 @@ export class CarSubsComponent implements OnInit{
       });
     });
   }
-
-  
   percentageValue: number = 35; // Initial percentage value
 
   // Function to update the percentage value when the slider changes
@@ -206,5 +204,12 @@ filterDetails(){
   onSubmit(){
     this.redirect('apply-now-flow-1'); 
 
+}
+
+applyNow(){
+  let data = {
+    image : this.techDetailsParameter.imgUrl
+  }
+  this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
 }
 }
