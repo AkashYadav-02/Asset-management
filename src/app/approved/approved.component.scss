@@ -200,11 +200,12 @@ width: 8rem !important;
         text-align: center !important;
     }
 
-    .ag-cell{
-        // left: 8rem !important;
+    .ag-center-cols-container {
+        display: block;
+        text-align: center !important;
     }
 
-    #date{
-        left: 5rem !important;
+    .ag-header-cell-label{
+        justify-content: space-evenly;
     }
 }
