@@ -148,3 +148,7 @@ select{
     font-size: 0.7rem;
     margin-top: -1rem;
 }
+
+:host ::ng-deep .ag-header{
+background-color: #EF9F9E !important;
+}
