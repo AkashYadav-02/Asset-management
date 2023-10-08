@@ -152,7 +152,7 @@ export class CarSubsComponent implements OnInit{
       });
     });
   }
-  percentageValue: number = 50; // Initial percentage value
+  percentageValue: number = 35; // Initial percentage value
 
   // Function to update the percentage value when the slider changes
   updatePercentage(event: Event): void {
