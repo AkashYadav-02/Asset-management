@@ -229,11 +229,6 @@ filterDetails(){
 
   onSubmit(){
     this.redirect('apply-now-flow-1'); 
-
-  // getCss(col:string){
-  //   return col;
-  // }
-
 }
 
 applyNow(){
@@ -241,5 +236,19 @@ applyNow(){
     image : this.techDetailsParameter.imgUrl
   }
   this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
+}
+
+calculateEMI(Price: string) {
+  let price = Price.replace(/,/g, '');
+  let totalCarPrice : number = parseFloat(price);
+  let annualInterestRate: number = 7;
+  let  tenureInYears: number = 2;
+  const monthlyInterestRate = (annualInterestRate / 12) / 100;
+  const numberOfMonths = tenureInYears * 12;
+  
+  const emi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
+  console.log(emi.toFixed(2));
+  
+  return emi.toFixed(2);
 }
 }
