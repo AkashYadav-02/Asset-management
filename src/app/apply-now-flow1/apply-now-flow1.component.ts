@@ -69,6 +69,15 @@ export class ApplyNowFlow1Component {
 
   }
 
+  isUpperVisible=true
+  isLowerVisible=false
+  onClick(){
+    if (this.isUpperVisible){
+      this.isUpperVisible=false
+    }else{
+      this.isUpperVisible=true
+    }
+  }
  
 
 }
