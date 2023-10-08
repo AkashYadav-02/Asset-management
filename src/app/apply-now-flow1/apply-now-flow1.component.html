@@ -1,4 +1,220 @@
-<div>
 
-    
+
+<div class="navbar">
+
+    <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
+
 </div>
+<div class="stepper">
+    <div class="progress" aria-label="Danger example">
+        <div class="progress-bar bg-danger" style="width: 33.33%"></div>
+      </div>
+</div>
+
+ 
+
+<div class="stepper-label">
+
+    <p style="font-family: 'Monts';">Choose Plan</p>
+
+    <p style="font-family: 'Monts';">Enter Details</p>
+
+    <p style="font-family: 'Monts';">Upload Documents</p>
+
+</div>
+
+ 
+
+<div class="card" style="width: 24rem;">
+
+    <div (click)="redirect('car-sub')"  *ngFor="let car of carDetails">
+
+        <img class="car-card" src={{car.imgUrl}}>
+
+    </div>
+
+      <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: UNE0348</b></h5>
+
+    <div class="package-details">
+
+        <p style="font-family: 'Monts';"><b>Your chosen package: </b></p>
+
+        <p style="font-family: 'Monts'; color: #ED5434;"><b>Your current instalment is: per month</b></p>
+
+        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Total Amount of Finance</b></p>
+
+        <p style="font-family: 'Monts';">Down Payment</p>
+
+        <p style="font-family: 'Monts';">Repayment Frequency </p>
+
+        <p style="font-family: 'Monts';">APR of</p>
+
+        <p style="font-family: 'Monts';">Add on (instalment)</p>
+
+        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Final Instalment is</b></p>
+
+        <p style="font-family: 'Monts';">Your first payment is</p>
+
+    </div>
+
+</div>
+
+ 
+
+<div class="card" id="right-panel">
+
+    <div class="applying-as">
+
+        <label class="text-label"><b>Applying as</b></label>
+
+        <div class="content">
+
+            <div class="form-check form-check-inline">
+
+                <input type="radio" id="specifyColor" name="radio1" value="Individual">
+
+                <label for="specifyColor">&nbsp; Individual</label>
+
+            </div>
+
+            <div class="form-check form-check-inline">
+
+                <input type="radio" id="specifyColor" name="radio1" value="Joint">
+
+                <label for="specifyColor">&nbsp; Joint</label>
+
+            </div>
+
+            <div class="form-check form-check-inline">
+
+                <input type="radio" id="specifyColor" name="radio1" value="Business">
+
+                <label for="specifyColor">&nbsp; Business</label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr class="hr-1"/>
+
+    <div class="existing-customer">
+
+        <label class="text-label"><b>Existing UDC Customer</b></label>
+
+        <div class="content">
+
+            <div class="form-check form-check-inline">
+
+                <input type="radio" id="specifyColor" name="radio2" value="Individual">
+
+                <label for="specifyColor" class="label1">&nbsp; Last Name: </label>
+
+                <label for="specifyColor" class="label2"><b>&nbsp; Drivers License: </b></label>
+
+                <button class="retrieve-btn">Retrieve Details</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr class="hr-2"/>
+
+    <div class="license-details">
+
+        <label class="text-label"><b>License Details</b></label>
+
+        <div class="content1">
+
+            <div class="form-check form-check-inline">
+
+                <label for="specifyColor" class="label3"><b>&nbsp; Driving License Class: 1L</b></label>
+
+                <label for="specifyColor" class="label3"><b>&nbsp; License No: DM123456</b></label>
+
+                <label for="specifyColor" class="label3"><b>&nbsp; License Validity: 01/01/2026</b></label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+ 
+
+<div class="customer-details-dropdown">
+
+    <div class="collapsible">
+
+        <input type="checkbox" id="collapsible-head">
+
+        <label for="collapsible-head">CUSTOMER DETAILS</label>
+
+        <div class="collapsible-data">
+
+            <p>snvavliunicln jb hfevblenlicuwiucnwvjdnjkn</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+ 
+
+<div class="work-details-dropdown">
+
+    <div class="collapsible1">
+
+        <label>WORK DETAILS</label>
+
+        <div class="collapsible1-data">
+
+        </div>
+
+    </div>
+
+</div>
+
+ 
+
+ 
+
+<div class="car-subs-footer">
+
+    <div class="cs-footer-com">
+
+        <h6 class="redtxt">BACK</h6>
+
+    </div>
+
+ 
+
+    <div class="cs-footer-com">
+
+        <h6 class="price">SAVE AS DRAFT</h6>
+
+    </div>
+
+ 
+
+    <div class="cs-footer-com">
+
+ 
+
+        <button class="btn">SAVE & PROCEED</button>
+
+    </div>
+
+</div>
+
+ 
+
+ 
+
+ 

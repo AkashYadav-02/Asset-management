@@ -1,19 +1,80 @@
 <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
-
 <div class="an-pending">
-    <div class="card left-card">
-
- 
-
+    <div class="card left-card border border-2">
     </div>
-
+    <div>
+        <div class="card right-side">
+            <p class="an-head">APPROVAL CONDITION:</p>
+            <div class="an-body">
+                <p><b>Condition :</b> 3 Months Bank Statement Required</p>
+                <p><b>Due By :</b> 15/10/2023</p>
+                <p><b>Status :</b> <span style="background-color: #AFF8B2; border-radius: 10px; padding: 5px 10px; margin-left: 10px;">Approved</span></p>
+            </div>
+        </div>
+        <div class="card right-side">
+            <p class="an-head">APPROVAL CONDITION:</p>
+            <div class="an-body">
+                <p><b>Engine :</b> Engine: 1.6L 4 Cylinder 150HP</p>
+                <p><b>Registration : </b> KA19EQ1316</p>
+                <p><b> Insurance : </b> KA19EQ1316</p>
+            </div>
+            <div class="an-drag">
+            </div>
+        </div>
+        <div class="card right-side">
+            <p class="an-head">DEALERSHIP FOR DELIVERY:</p>
+            <div class="an-body dealership">
+                <p class="deal"><b>Street :</b> 1 Lowther Street</p>
+                <p class="deal"><b>City :</b> Cheristchurch</p>
+                <p><b>State / Province / Area :</b> Sockburn</p>
+            </div>
+            <div class="an-body dealership">
+                <p class="deal"><b>Zip Code :</b> 0142</p>
+                <p class="deal"><b>Country :</b> New Zealand</p>
+            </div>
+        </div>
+        
     <div class="card right-side">
-<div class="approval">
-    <h1>{{title1}}</h1>
+            <div class="topnav">
+              <a href="javascript:void(0);" (click)="showAccountDetails()">Account</a>
+              <a href="javascript:void(0);" (click)="showTransactionTable()">Transaction</a>
+               <a href="javascript:void(0);" (click)="showDisbursementDetails()">Disbursement</a>
+            </div>
+       
+        <div *ngIf="showAccount" style="margin-top: 1rem;">
+            <p class="an-head ">Account Details</p>
+            <div class="an-body accountDetails">
+            <p><b>Account Id:</b> {{ accountDetails.accountNumber }}</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p><b>Borrowers:</b> {{ accountDetails.borrowers }}</p>
+            
+        </div>
+        <div class="an-body accountDetails ">
+            <p><b>Co-Borrowers(if any): </b> {{ accountDetails.coborrowers }}</p> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+            <p><b>Account Name:</b> {{ accountDetails.accountname }}</p>
+        </div>
+        <div class="an-body ">
+            <p><b>Account Number:</b> {{ accountDetails.accountNumber }}</p>
+        </div>
+    </div> 
+
+    
+        <div *ngIf="showTransaction" style="margin-top: 1rem;">
+    <p class="an-head"> Transaction History</p>
+    <div class="an-body ">
+        
+        <ag-grid-angular
+        [gridOptions]="gridOptions"
+        [rowData]="rowData"
+        style="width: 80%; height: 300px;" 
+        class="ag-theme-mycustomtheme"
+      ></ag-grid-angular>
+
+      <div *ngIf="showDisbursement" style="margin-top: 1rem;">
+        <p class="an-head ">Disbursment Details</p>
+        <div class="an-body accountDetails">
+        <p><b>Account Id:</b> {{ disbursmentdetails.totalsanctionamount }}</p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p><b>Borrowers:</b> {{ disbursmentdetails.totaldisbursedamount }}</p>
+
 </div>
-
-    </div>
-
- 
 
 </div>
