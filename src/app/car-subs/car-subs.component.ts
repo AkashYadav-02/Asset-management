@@ -246,9 +246,9 @@ calculateEMI(Price: string) {
   const monthlyInterestRate = (annualInterestRate / 12) / 100;
   const numberOfMonths = tenureInYears * 12;
   
-  const emi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
-  console.log(emi.toFixed(2));
-  
-  return emi.toFixed(2);
+  const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
+  // console.log(emi.toFixed(0));
+  const emi = Math.trunc(roughemi);
+  return emi;
 }
 }
