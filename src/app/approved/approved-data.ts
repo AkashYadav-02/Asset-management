@@ -4,7 +4,7 @@ export const accountDetails = {
     borrowers : 'JamesWilliamson',
     coborrowers: 'HarryTaylor',
     AccountId: '1341388801'
-  };
+  };  
  
   export const disbursmentdetails = {
     totalsanctionamount: '$42,000',

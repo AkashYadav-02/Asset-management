@@ -61,13 +61,12 @@
         <div *ngIf="showTransaction" style="margin-top: 1rem;">
     <p class="an-head"> Transaction History</p>
     <div class="an-body ">
-  
-    
+        
         <ag-grid-angular
         [gridOptions]="gridOptions"
         [rowData]="rowData"
         style="width: 80%; height: 300px;" 
-        class="ag-theme-alpine"
+        class="ag-theme-mycustomtheme"
       ></ag-grid-angular>
 
       <div *ngIf="showDisbursement" style="margin-top: 1rem;">

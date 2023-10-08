@@ -12,8 +12,6 @@ accountDetails = accountDetails;
 disbursmentdetails = disbursmentdetails;
 gridOptions: GridOptions;
 rowData: any[];
-
-
 showAccount = false;
 showTransaction = false;
 showDisbursement = false;
@@ -44,7 +42,6 @@ showDisbursementDetails() {
         { headerName: 'Loan Amount', field: 'LoanAmount'},
         { headerName: 'APR', field: 'apr' },
         
-      
       ],
      
     };

@@ -7,9 +7,6 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
-
- 
-
 @Component({
   selector: 'app-apply-now-flow1',
   templateUrl: './apply-now-flow1.component.html',
