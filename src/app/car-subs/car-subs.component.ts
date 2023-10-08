@@ -36,55 +36,109 @@ export class CarSubsComponent implements OnInit{
               name:"2023 Toyota Glanza",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"2023 Toyota Fortuner",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"2023 Toyota Innova Crysta",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"2023 Toyota Vellfire ",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"2023 Toyota Urban Cruiser ",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"Toyota Camry",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"2023 Toyota Glanza",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"2023 Toyota Fortuner",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             },
             {
               name:"2023 Toyota Innova Crysta",
               engine_capacity:"3.5L/213",
               transmmission_type : "Manual",
-              Fuel_Type: "Diesel"
+              Fuel_Type: "Diesel",
+              color_options:{
+                  white:"Bhite",
+                  black:"Black",
+                  blue:"Blue",
+                  grey:"Grey"
+              }
             }
             
           ]
@@ -118,7 +172,6 @@ export class CarSubsComponent implements OnInit{
   }
 
 filterDetails(){
-  // let name =  ;
    this.specificaiton = this.carDetails.find((element)=> element.name == this.techDetailsParameter.name);   
 }
 
