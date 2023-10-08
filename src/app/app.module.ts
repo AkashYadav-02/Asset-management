@@ -31,7 +31,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { Spinner1Component } from './spinner1/spinner1.component';
 import { Spinner2Component } from './spinner2/spinner2.component';
-
+import { GridOptions } from 'ag-grid-community';
 
 import { HomeupperpageComponent } from './rm-homepage/homeupperpage/homeupperpage.component';
 import { AfternavbarComponent } from './afternavbar/afternavbar.component';
@@ -47,13 +47,13 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { ApprovedComponent } from './approved/approved.component';
 import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.component';
 
+
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
  
 
 @NgModule({
   declarations: [
     AppComponent,
-    
     CarSubsComponent,
     HomeCarCollecComponent,
     RmHomepageComponent,
@@ -81,10 +81,12 @@ import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.
     Spinner2Component,
     HowItWorksComponent,
     ApprovedComponent,
-    ApplyNowPendingComponent
+    ApplyNowPendingComponent,
+
 
   ],
   imports: [
+    
     BrowserModule,
     FormsModule,
     AppRoutingModule,
