@@ -34,7 +34,6 @@ import { GridOptions } from 'ag-grid-community';
 
 
 import { HomeupperpageComponent } from './rm-homepage/homeupperpage/homeupperpage.component';
-import { AfternavbarComponent } from './afternavbar/afternavbar.component';
 
 import { RouterModule } from '@angular/router';
 
