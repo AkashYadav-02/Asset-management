@@ -67,10 +67,11 @@
             <div *ngIf="showDisbursement" style="margin-top: 1rem;">
                 <p class="an-head ">Disbursment Details</p>
                 <div class="an-body accountDetails">
-                    <p><b>Account Id:</b> {{ disbursmentdetails.totalsanctionamount }}</p>
+                    <p><b>Total Sanction Amount</b> {{ disbursmentdetails.totalsanctionamount }}</p>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <p><b>Borrowers:</b> {{ disbursmentdetails.totaldisbursedamount }}</p>
+                    <p><b>Total Disbursement Amount:</b> {{ disbursmentdetails.totaldisbursedamount }}</p>
                 </div>
+                <p class="an-head " style="font-size: 1rem;">Disbursment History</p>
                 </div>
                 <div *ngIf="showTransaction" style="margin-top: 1rem;">
                     <p class="an-head"> Transaction History</p>
