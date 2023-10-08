@@ -19,6 +19,7 @@ img {
 }
 
 .stepper-label{
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     margin-right: 0.7rem;
@@ -141,7 +142,7 @@ img {
 
 .carousel-inner{
     height: 25rem;
-    border: solid 1px rgb(222, 214, 214);
+    // border: solid 1px rgb(222, 214, 214);
     border-radius: 5px;
 }
 
