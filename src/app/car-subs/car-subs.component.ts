@@ -194,4 +194,13 @@ filterDetails(){
     this.redirect('apply-now-flow-1'); 
 
 }
+
+applyNow(event : Event){
+  event.preventDefault();
+  let data = {
+    image : this.techDetailsParameter.imgUrl
+  }
+  // this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
+  this.router.navigate(['apply-now-flow-1'], { state: data });
+}
 }
