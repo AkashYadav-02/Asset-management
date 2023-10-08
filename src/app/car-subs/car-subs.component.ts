@@ -15,6 +15,7 @@ export class CarSubsComponent implements OnInit{
   currentUrl : any;
   techDetailsParameter : any;
   specificaiton : any;
+  EMI: any;
   // selectedColor: string = '45473D';
   
   
@@ -32,10 +33,12 @@ export class CarSubsComponent implements OnInit{
         }
       });
     }
+
+    
           carDetails=[
             {
               name:"2023 Toyota Glanza",
-              engine_capacity:"3L/213",
+              engine_capacity:"2.8L/213",
               transmmission_type : "Mannual",
               Fuel_Type: "Petrol",
               color_options:{
@@ -43,7 +46,8 @@ export class CarSubsComponent implements OnInit{
                   black:"Black",
                   blue:"Blue",
                   grey:"Grey"
-              }
+              },
+              emi:'811',
             },
             {
               name:"2023 Toyota Fortuner",
@@ -54,18 +58,21 @@ export class CarSubsComponent implements OnInit{
                   white:"White",
                   black:"Black",
                   grey:"Grey"
-              }
+              },
+              emi:'2,778',
+             
             },
             {
               name:"2023 Toyota Innova Crysta",
-              engine_capacity:"3.2L/213",
+              engine_capacity:"2.2L/213",
               transmmission_type : "Automatic",
               Fuel_Type: "Diesel",
               color_options:{
                   white:"White",
                   black:"Black",
                   blue:"Blue",
-              }
+              },
+              emi:'1,400'
             },
             {
               name:"2023 Toyota Vellfire ",
@@ -152,14 +159,16 @@ export class CarSubsComponent implements OnInit{
       });
     });
   }
-  percentageValue: number = 50; // Initial percentage value
+
+  
+  percentageValue: number = 35; // Initial percentage value
 
   // Function to update the percentage value when the slider changes
   updatePercentage(event: Event): void {
     const sliderValue = (event.target as HTMLInputElement).value;
     this.percentageValue = parseFloat(sliderValue);
   }
-
+  
   isUpperVisible=true
   isLowerVisible=false
   onClick(){
@@ -169,7 +178,11 @@ export class CarSubsComponent implements OnInit{
       this.isUpperVisible=true
     }
   }
+ 
+  
+ 
 
+  
 filterDetails(){
    this.specificaiton = this.carDetails.find((element)=> element.name == this.techDetailsParameter.name);   
 }
