@@ -17,6 +17,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { CreditInformationComponent } from './credit-information/credit-information.component';
 import { ApplyNowFlow1Component } from './apply-now-flow1/apply-now-flow1.component';
+import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.component';
+import { ApprovedComponent } from './approved/approved.component';
 
 const routes: Routes = [
   // {path:'',redirectTo:'',pathMatch:'full'},
@@ -37,6 +39,8 @@ const routes: Routes = [
   {path:'how-it-works', component: HowItWorksComponent},
   {path :'credit-info', component: CreditInformationComponent},
   {path:'apply-now-flow-1', component: ApplyNowFlow1Component},
+  {path:'apply-now-pending', component: ApplyNowPendingComponent},
+  {path:'apply-now-approve', component: ApprovedComponent},
 ];
 
 @NgModule({
