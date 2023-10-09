@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 interface UploadEvent {
@@ -16,11 +16,33 @@ interface UploadEvent {
 })
 export class ApplyNowPendingComponent {
   uploadedFiles: any[] = [];
+
   
-  constructor(private messageService: MessageService, private router: Router, private redirectMenu: RedirectMenuService) {}
+  myObserver ;
+  currentUrl : any;
+  techDetailsParameter : any;
+  
+  constructor(private messageService: MessageService, private router: Router, private redirectMenu: RedirectMenuService) {
+    this.myObserver = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentUrl = event.url;
+      const navigation = this.router.getCurrentNavigation();
+      if (navigation?.extras.state) {
+        this.techDetailsParameter = navigation.extras.state;
+      } 
+      }
+    });
+
+  }
 
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
+  }
+
+  onSubmit(){
+    this.techDetailsParameter.comp = "apply";
+    this.techDetailsParameter.status = "Processed";
+      this.redirectMenu.redirectWithdata('work-space',this.techDetailsParameter);
   }
 
   onUpload(event: any) {

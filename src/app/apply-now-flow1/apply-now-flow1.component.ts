@@ -33,7 +33,6 @@ export class ApplyNowFlow1Component implements OnInit {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
-          // console.log("Hello",this.techDetailsParameter);
         }
       }
       
@@ -79,7 +78,7 @@ export class ApplyNowFlow1Component implements OnInit {
 
   saveProcceed() {
     let data = {
-      username: "John",
+      username: "Brock",
       specs: this.techDetailsParameter,
       applicationId: this.applicationId,
       carddetails: this.leftcard
@@ -97,8 +96,7 @@ export class ApplyNowFlow1Component implements OnInit {
     // this.http.put('../../assets/JSONfiles/workspace.json');
 
     
-   this.redirectMenu.redirectWithdata('work-space', data);
-    this.redirectMenu.redirectTo('credit-info');
+    this.redirectMenu.redirectWithdata('credit-info',data);
   }
 
 }

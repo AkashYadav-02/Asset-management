@@ -260,7 +260,8 @@ applyNow(){
   let data = {
     image : this.techDetailsParameter.imgUrl,
     name : this.techDetailsParameter.name,
-    price : this.techDetailsParameter.price
+    price : this.techDetailsParameter.price,
+    emi : this.techDetailsParameter.emi
   }
   console.log("data->",data);
   
@@ -278,6 +279,7 @@ applyNow(){
     const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
     // console.log(emi.toFixed(0));
     const emi = Math.trunc(roughemi);
+    this.techDetailsParameter.emi = emi;
     return emi;
   }
 

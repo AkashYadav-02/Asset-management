@@ -17,16 +17,25 @@ export class WorkspaceComponent {
   myObserver ;
   currentUrl : any;
   techDetailsParameter : any;
+  default:string = '';
   
   constructor(private http: HttpClient,private router: Router,
     private redirectMenu: RedirectMenuService,
-    private jsonDetails : JsonOperationService) { 
+    private jsonOperation : JsonOperationService) { 
       this.myObserver = this.router.events.subscribe((event) => {
         if (event instanceof NavigationEnd) {
           this.currentUrl = event.url;
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
+          if(this.techDetailsParameter.comp =="credit"){
+            this.default = "No";
+                this.pushData(this.techDetailsParameter);
+          }else if(this.techDetailsParameter.comp == "apply"){
+            this.default = "No";
+            this.updateData(this.techDetailsParameter);
+
+          }
         } 
         }
       });
@@ -34,61 +43,57 @@ export class WorkspaceComponent {
 
   ngOnInit() {
     // this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/workspace.json');
-  
+  if(this.default != "No"){
     this.http.get<any[]>('../../assets/JSONfiles/workspace.json').subscribe((data:any)=>{
       this.rowData$ = data;
     });
-    console.log("json data",this.jsonDetails.getData());
-    // let abc: any[]=this.jsonDetails.getData().subscribe((data: any)=>{
+  }
+    // console.log("json data",this.jsonOperation.getData());
+    // let abc: any[]=this.jsonOperation.getData().subscribe((data: any)=>{
 
     //});
-    //abc.push({"appID":"UNE5549","customerName":"Jhon","carSelection":"2023 Toyota Fortuner","financing":"2","status":"Processed"});
-    console.log("json d",this.rowData$);
+    // abc.push({"appID":"UNE5549","customerName":"Jhon","carSelection":"2023 Toyota Fortuner","financing":"2","status":"Processed"});
+    // console.log("json d",this.rowData$);
 
-    console.log("this.techDetailsParameter",this.techDetailsParameter);
+    // console.log("this.techDetailsParameter",this.techDetailsParameter);
     // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
 
     // appID : 'UNE8783',
-    let data = {
-      appID : this.techDetailsParameter.applicationId,
-      customerName: "Jhon",
-      carSelection: this.techDetailsParameter.specs.name,
-      financing:"2",
-      status:"Processed"
-    }
-    let count  = 0;
-    let updatedData = this.jsonDetails.updateData(data).subscribe(
-      updatedArray => {
-        console.log('Updated Array:', updatedArray);
-        this.rowData$ = updatedArray;
-      },
-      error => {
-        console.error('Error:', error);
-      }
-    );
+    // let data = {
+    //   appID : this.techDetailsParameter.applicationId,
+    //   customerName: "Jhon",
+    //   carSelection: this.techDetailsParameter.specs.name,
+    //   financing:"2",
+    //   status:"Processed"
+    // }
+    // let count  = 0;
+    // let updatedData = this.jsonOperation.updateData(data).subscribe(
+    //   updatedArray => {
+    //     console.log('Updated Array:', updatedArray);
+    //     this.rowData$ = updatedArray;
+    //   },
+    //   error => {
+    //     console.error('Error:', error);
+    //   }
+    // );
       // setTimeout(() => {
         
       //   console.log("latest updated",updatedData);
       // }, 2000);
     
 
-      this.jsonDetails.pushData(data).subscribe(
-        print => {
-          console.log("printing pushed data",print);
-          
-        }
-      )
+
       
-      data.appID = "33";
-      console.log("data for 33",data);
+      // data.appID = "33";
+      // console.log("data for 33",data);
       
-      console.log("again nwe 33");
-      this.jsonDetails.pushData(data).subscribe(
-        print => {
-          console.log("printing pushed data",print);
+      // console.log("again nwe 33");
+      // this.jsonOperation.pushData(data).subscribe(
+      //   print => {
+      //     console.log("printing pushed data",print);
           
-        }
-      )
+      //   }
+      // )
 
 
 
@@ -99,8 +104,8 @@ export class WorkspaceComponent {
 
 
 
-    console.log("new entry data",data);
-    console.log("updatedData",updatedData);
+    // console.log("new entry data",data);
+    // console.log("updatedData",updatedData);
     
     // this.
     
@@ -181,9 +186,44 @@ export class WorkspaceComponent {
 
   onCellClicked(data: any){
     if (data.data.status == "Pending") {
+      
       this.redirectMenu.redirectWithdata("apply-now-pending",data.data);
     }else if(data.data.status == "Processed" ){
       this.redirectMenu.redirectWithdata("apply-now-approve",data.data);
     }
+  }
+
+  pushData(ipData: any){
+    // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
+let data = {
+  appID : ipData.applicationId,
+  customerName : ipData.username,
+  carSelection : ipData.specs.name,
+  financing : ipData.specs.price,
+  status : "Pending"
+}
+
+    this.jsonOperation.pushData(data).subscribe(
+      print => {
+        this.rowData$ = print;
+      }
+    )
+  }
+  updateData(ipData: any){
+    
+    // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
+let data = {
+  appID : ipData.appID,
+  customerName : ipData.customerName,
+  carSelection : ipData.carSelection,
+  financing : ipData.financing,
+  status : ipData.status
+}
+
+    this.jsonOperation.pushData(data).subscribe(
+      print => {
+        this.rowData$ = print;
+      }
+    )
   }
 }
