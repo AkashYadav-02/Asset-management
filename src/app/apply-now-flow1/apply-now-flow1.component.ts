@@ -11,6 +11,7 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 })
 
 export class ApplyNowFlow1Component {
+  applicationId: string = '' ;
 
   myObserver ;
   currentUrl : any;
@@ -32,6 +33,14 @@ export class ApplyNowFlow1Component {
 
 
      }
+     ngOnInit():void{
+      this.generateRandomApplicationId();
+     }
+  
+     generateRandomApplicationId(): void {
+      const randomPart = Math.floor(Math.random() * 10000).toString().padStart(4, '0'); // Generates a random 4-digit number
+      this.applicationId = `UNE${randomPart}`;
+    }
   carDetails=[
     {
       name:"Audi A8 L 2022",
