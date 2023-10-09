@@ -229,8 +229,6 @@ filterDetails(){
 //   this.selectedColor = color;
 // }
 
-
-
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
   }
@@ -241,8 +239,12 @@ filterDetails(){
 
 applyNow(){
   let data = {
-    image : this.techDetailsParameter.imgUrl
+    image : this.techDetailsParameter.imgUrl,
+    name : this.techDetailsParameter.name,
+    price : this.techDetailsParameter.price
   }
+  console.log("data->",data);
+  
   this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
 }
 
