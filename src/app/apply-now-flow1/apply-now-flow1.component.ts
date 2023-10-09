@@ -92,10 +92,20 @@ export class ApplyNowFlow1Component implements OnInit {
       financing: this.techDetailsParameter.price,
       status: "Pending"
     }
-    console.log("Jason",jsonData);
+
+    // let data = {
+    //   username: "John",
+    //   specs: this.techDetailsParameter,
+    //   applicationId: this.applicationId,
+    //   carddetails: this.leftcard,
+    //   jsonData: jsonData 
+    //   // emiDetails : 
+    // }
+    // console.log("Jason",jsonData);
     // this.http.put('../../assets/JSONfiles/workspace.json');
 
     
+  //  this.redirectMenu.redirectWithdata('work-space', );
     this.redirectMenu.redirectWithdata('credit-info',data);
   }
 

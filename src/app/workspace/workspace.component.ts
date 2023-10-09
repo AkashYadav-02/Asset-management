@@ -112,6 +112,8 @@ export class WorkspaceComponent {
     
   }
 
+  
+
   title = 'aggridpro';
   columnDefs: ColDef[] = [
     { field: 'appID' },

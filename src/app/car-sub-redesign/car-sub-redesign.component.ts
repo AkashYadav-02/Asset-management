@@ -13,10 +13,11 @@ declare var $: any;
 export class CarSubRedesignComponent implements OnInit {
   myObserver;
   currentUrl: any;
-  techDetailsParameter: any;
+  techDetailsParameter: any=0;
   specificaiton: any;
   EMI: any;
   colorList: string[] = [];
+  maxDownPayment?:number;
   // selectedColor: string = '45473D';
 
   constructor(private redirectMenu: RedirectMenuService,
@@ -28,6 +29,8 @@ export class CarSubRedesignComponent implements OnInit {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
+          this.amountCalc=Math.ceil(this.techDetailsParameter.price * (35/100));
+          this.maxDownPayment=Math.ceil(this.techDetailsParameter.price * (20/100));
           console.log("tech param", this.techDetailsParameter);
         }
       }
@@ -178,16 +181,31 @@ export class CarSubRedesignComponent implements OnInit {
       });
     });
   }
+
+
   percentageValue: number = 35; // Initial percentage value
+  amountCalc: number=this. techDetailsParameter.price * (35/100);
+  
+  displayRadioValue() {
+    var loanHire = document.getElementsByName('radio1') as NodeListOf<HTMLElement>;;
+    for (var i = 0; i < loanHire.length; i++) {
+      if (loanHire[i]){
+        console.log(loanHire[i].nodeValue)
+      }
+    }
+  }
 
   // Function to update the percentage value when the slider changes
   updatePercentage(event: Event): void {
     const sliderValue = (event.target as HTMLInputElement).value;
     this.percentageValue = parseFloat(sliderValue);
+    this.amountCalc = Math.ceil(this. techDetailsParameter.price * (parseInt(sliderValue)/100));
   }
 
   isUpperVisible = true
   isLowerVisible = false
+  loanHire = 'Loan';
+
   onClick() {
     if (this.isUpperVisible) {
       this.isUpperVisible = false
@@ -244,9 +262,9 @@ export class CarSubRedesignComponent implements OnInit {
 
   // selectedColor: string = '45473D';
 
-// outline(color: string) {
-//   this.selectedColor = color;
-// }
+  // outline(color: string) {
+  //   this.selectedColor = color;
+  // }
 
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
@@ -256,47 +274,89 @@ export class CarSubRedesignComponent implements OnInit {
     this.redirect('apply-now-flow-1');
   }
 
-applyNow(){
-  let data = {
-    image : this.techDetailsParameter.imgUrl,
-    name : this.techDetailsParameter.name,
-    price : this.techDetailsParameter.price,
-    emi : this.techDetailsParameter.emi
+  applyNow() {
+
+    //prev
+    // applyNow(){
+      // let data = {
+      //   image : this.techDetailsParameter.imgUrl,
+      //   name : this.techDetailsParameter.name,
+      //   price : this.techDetailsParameter.price,
+      //   emi : this.techDetailsParameter.emi
+      // }
+    let data = {
+      image: this.techDetailsParameter.imgUrl,
+      name: this.techDetailsParameter.name,
+      price: this.techDetailsParameter.price
+    }
+    console.log("data->", data);
+
+    this.redirectMenu.redirectWithdata('apply-now-flow-1', data);
   }
-  console.log("data->",data);
-  
-  this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
-}
 
   calculateEMI(Price: string) {
-    let price = Price.replace(/,/g, '');
-    let totalCarPrice: number = parseFloat(price);
-    let annualInterestRate: number = 7;
-    let tenureInYears: number = 2;
-    const monthlyInterestRate = (annualInterestRate / 12) / 100;
-    const numberOfMonths = tenureInYears * 12;
+    if (typeof Price === 'string') {
 
-    const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
-    // console.log(emi.toFixed(0));
-    const emi = Math.trunc(roughemi);
-    this.techDetailsParameter.emi = emi;
-    return emi;
+      let price = Price.replace(/,/g, '');
+      let totalCarPrice: number = parseFloat(price);
+      let annualInterestRate: number = 7;
+      let tenureInYears: number = 2;
+      const monthlyInterestRate = (annualInterestRate / 12) / 100;
+      const numberOfMonths = tenureInYears * 12;
+
+      const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
+      // console.log(emi.toFixed(0));
+      const emi = Math.trunc(roughemi);
+      console.log("EMI is" + emi);
+      return emi;
+    }
+    else {
+      let price = Price
+      let totalCarPrice: number = parseFloat(price);
+      let annualInterestRate: number = 7;
+      let tenureInYears: number = 2;
+      const monthlyInterestRate = (annualInterestRate / 12) / 100;
+      const numberOfMonths = tenureInYears * 12;
+
+      const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
+      // console.log(emi.toFixed(0));
+      const emi = Math.trunc(roughemi);
+      console.log("EMI is" + emi);
+      return emi;
+    }
   }
 
   border1: Boolean = false
   border2: Boolean = false
-
+  updatedPrice: number = 0
   addBorder() {
     let elem = document.getElementById('speedometer') as HTMLElement;
     if (this.border1 == false) {
       elem.setAttribute("style", "border:1px solid red;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem;border-radius:0.2rem")
-      this.border1 = true
-      // this.techDetailsParameter.price+300
+      this.border1 = true;
+      let myPrice = this.techDetailsParameter.price;
+      if (typeof myPrice === 'string') {
+        myPrice = myPrice.replace(/,/g, '');
+      }
+      console.log("before " + myPrice);
+      console.log("paseint " + (parseInt(myPrice)))
+      this.updatedPrice = (parseInt(myPrice) + 300)
+      this.techDetailsParameter.price = this.updatedPrice
+      console.log(this.techDetailsParameter.price);
+      this.calculateEMI(this.techDetailsParameter.price)
     }
     else {
+
       elem.setAttribute("style", "border:none")
       this.border1 = false
-      // this.techDetailsParameter.price-300
+      let myPrice = this.techDetailsParameter.price;
+      // myPrice = myPrice.replace(/,/g, '');
+      console.log("before " + myPrice);
+      console.log("paseint " + (parseInt(myPrice)))
+      this.updatedPrice = (parseInt(myPrice) - 300)
+      this.techDetailsParameter.price = this.updatedPrice
+      console.log(this.techDetailsParameter.price);
+      this.calculateEMI(this.techDetailsParameter.price)
     }
   }
 

@@ -11,7 +11,7 @@ img {
 }
 
 .stepper {
-    margin-right: 0.5rem;
+    // margin-right: 0.5rem;
 }
 
 .progress-bar {
@@ -140,32 +140,7 @@ img {
     background-size: 48rem 25rem !important;
 }
 
-.carousel-inner {
-    height: 25rem;
-    // border: solid 1px rgb(222, 214, 214);
-    border-radius: 5px;
-}
 
-.carousel-item img {
-    height: 25rem;
-    width: auto;
-    border-radius: 5px;
-}
-
-.carousel-indicators {
-    width: 48rem;
-    margin: 0px;
-}
-
-.carousel-indicators button {
-    width: 12rem;
-    height: 6rem;
-}
-
-.carousel-indicators img {
-    height: 6rem;
-    border-radius: 4px;
-}
 
 .leftcard {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -249,16 +224,18 @@ img {
 }
 
 .rightcard {
-    width: 27.5rem;
+    min-width: 33vw;
+    max-width: 33vw;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 5px;
     padding: 1.5rem;
     font-family: "Montserrat";
     color: black;
-    height: 53rem;
+    height: 47rem;
     overflow-y: scroll;
     overflow-x: scroll;
     overflow-x: scroll;
+    margin-bottom: 1rem;
 }
 
 .rightcard hr {
@@ -332,7 +309,7 @@ img {
     font-size: 12px;
     font-family: "Monts";
     font-weight: 600;
-    min-width: 100px;
+    min-width: 68px;
 }
 
 .subhead {
@@ -355,36 +332,48 @@ img {
 }
 
 .fields p {
-    width: 160px;
-    font-size: 13px;
+    width: 170px;
+    font-size: 14px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
-.fields input {
-    height: 1.75rem;
+.fields input, .downpayment input{
     height: 1.75rem;
     margin-top: 10px;
     padding: 0 10px;
     padding: 0 10px;
-    width: 40%;
+    width: 50%;
     border: solid 1px rgb(211, 206, 206);
     border-radius: 4px;
     font-size: 11px;
     font-weight: bold;
     border-radius: 4px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
+}
+
+.downpayment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.downpayment input{
+    font-size: 13px;
+    width: 60%;
+
 }
 
 .numbers {
     display: flex;
-    gap: 1.4rem;
+    gap: 0.6rem;
 }
 
 .numbers input {
     height: 58px;
-    min-width: 60px;
+    min-width: 65px;
     background-color: rgb(239, 233, 233);
     border: solid 2px rgb(156, 151, 151);
     color: black;
@@ -445,6 +434,16 @@ img {
     z-index: -1
 }
 
+.perAm {
+    margin-top: 20px;
+}
+
+.perAm p {
+    font-size: 14px;
+    margin-right: 15px;
+    padding-top: 2px;
+}
+
 .bs4-order-tracking li:first-child:after {
     width: 50%;
     left: 50%
@@ -499,21 +498,24 @@ img {
     border-radius: 10px;
 }
 
-.rangerr {
+.rangerr,
+.amountt {
     height: 26px;
     border-radius: 1px;
     border: solid 1px rgb(226, 222, 222);
     background-color: #f3f3f3;
     width: 75px;
     padding: 0 10px;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     font-size: 15px;
 
     .b {
         color: #000000;
     }
+}
+
+.amountt {
+    width: 120px;
 }
 
 .rangerinp {
@@ -568,21 +570,31 @@ datalist option {
 
 //==================================================================================================
 
+.car-images{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
 .car-main-img {
     border: none;
 }
 
 .car-main-img img {
-    width: 33rem;
-    height: 20rem;
+    width: auto;
+    max-width: 32.4rem;
+    height: 47vh;
     flex-shrink: 0;
-    border-radius: 16px;
+    border-radius: 5px;
     // border: none;
 }
 
 .car-etc-img-div img {
-    height: 9rem;
-    margin-bottom: 1.5rem;
+    height: 8.8rem;
+    // width: auto;
+    max-width: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
 }
 
 .car-details h2 {
@@ -723,7 +735,7 @@ datalist option {
     width: 3rem;
 }
 
-#engine{
+#engine {
     margin-right: 1rem;
     height: 3rem;
     width: 3rem;
@@ -764,13 +776,12 @@ datalist option {
 
 .option-text {
     display: inline-block;
-    width: 50px;
+    min-width: 60px;
     height: 50px;
     text-align: center;
     border: 1px solid #ddd;
     line-height: 50px;
     cursor: pointer;
-
     color: #000;
     font-family: Montserrat;
     font-size: 1rem;
@@ -791,11 +802,11 @@ datalist option {
     border: 1px solid red;
 }
 
-.option-text p{
+.option-text p {
     margin-top: 0.9rem;
 }
 
-.select-var-div{
+.select-var-div {
     font-family: Inter;
     font-weight: 500;
     font-size: 1rem;
