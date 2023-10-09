@@ -1,7 +1,7 @@
 
 
 .an-pending{
-    padding: 100px 65px 0px 65px;
+    padding: 100px 65px 70px 65px;
     display:flex;
     gap: 20px;
     justify-content: space-between;
@@ -9,7 +9,7 @@
 }
 
 .left-card{
-    // height: 30rem;
+    height: 46.5rem;
     padding: 10px;
     width: 32.5vw;
     max-width: 32.5vw;
@@ -110,10 +110,59 @@ select{
 :host {
     ::ng-deep .p-fileupload .p-fileupload-buttonbar{
         border: 2px dashed #DB2423 !important;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        text-align: center;
     }
     ::ng-deep .p-button{
-        background-color: #DB2423 !important;
+        background-color: #db232300 !important;
+        border: none;
         height: 40px;
+        color: #DB2423;
+        margin-right: 10px;
     }
+    ::ng-deep .p-fileupload-content{
+        padding: 8;
+    }
+}
 
+.car-subs-footer{
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    border-top: 1px solid rgb(141, 140, 140);
+    height: 60px;
+    z-index: 7;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ 
+
+.redtxt{
+    color: #c41628;
+    padding-right: 20px;
+}
+
+.price{
+    color: #c41628;
+    padding-right: 800px;
+}
+
+
+.cs-footer-com{
+    display: flex;
+}
+
+.cs-footer-com button{
+    color:white;
+    height: 40px;
+    background-color: #c41628;
+    padding: 0 3rem;
+    margin-right: -2rem;
 }

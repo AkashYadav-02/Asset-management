@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { Router } from '@angular/router';
+import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 interface UploadEvent {
     originalEvent: Event;
@@ -15,7 +17,11 @@ interface UploadEvent {
 export class ApplyNowPendingComponent {
   uploadedFiles: any[] = [];
   
-  constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService, private router: Router, private redirectMenu: RedirectMenuService) {}
+
+  redirect(path : string){
+    this.redirectMenu.redirectTo(path);
+  }
 
   onUpload(event: any) {
     for(let file of event.files){
