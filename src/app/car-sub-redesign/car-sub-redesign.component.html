@@ -20,16 +20,14 @@
         <p>Upload Documents</p>
     </div>
     <div class="bodyclass">
-        <div>
-            <div class="car-images d-flex">
+        <div class="right-section">
+            <div class="car-images">
                 <div class="car-main-img">
                     <img src="{{techDetailsParameter.imgUrl}}" alt="car-img">
                 </div>
                 <div class="car-etc-img-div">
-                    <img src="../../assets/Toyota-Fortuner-Interior 1.png" class="d-block w-100" alt="...">
-                    <img src="../../assets/toyota_fortuner_29 1.png" class="d-block w-100" alt="...">
-                </div>
-                <div>
+                    <img src="../../assets/Toyota-Fortuner-Interior 1.png" alt="...">
+                    <img src="../../assets/toyota_fortuner_29 1.png" alt="...">
                 </div>
             </div>
 
@@ -132,21 +130,19 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        <div>
-            <div class="rightcard">
+        <div class="rightcard">
                 <p class="lc-header" (click)="onClick()">Subscription Type<i class="fa-solid"
                         [class.fa-angle-down]="isUpperVisible" [class.fa-angle-up]="!isUpperVisible"></i></p>
                 <div [style.display]="isUpperVisible ? 'inherit' : 'none'"
                     [style.height]="isUpperVisible ? 'fit-content' : '0'">
                     <div class="radio-body">
                         <div class="leasehire form-check form-check-inline" style="margin-left: -21px;">
-                            <input type="radio" name="radio1" value="Loan" checked>
+                            <input type="radio" name="radio1" [(ngModel)]="loanHire" value="Loan" checked>
                             <label class="form-check-label" for="inlineRadio1">Loan</label>
                         </div>
                         <div class="leasehire form-check form-check-inline">
-                            <input type="radio" name="radio1" value="HirePurchase">
+                            <input type="radio" name="radio1" [(ngModel)]="loanHire" value="HirePurchase">
                             <label class="form-check-label" for="inlineRadio1">Hire Purchase</label>
                         </div>
                     </div>
@@ -199,25 +195,24 @@
                         </div>
                         
                     </div>
-
-
-                    <div class="d-flex" style="align-items: baseline;">
-                        <p class='subhead'>Buyback</p>
-                        <div class="form-check form-switch" style="margin-left: 35px;">
-                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
-                                checked>
-                            <label class="form-check-label" for="flexSwitchCheckChecked">Yes</label>
-                        </div>
-                    </div>
-
-
-                    <!-- <p class='subhead'>Percentage</p> -->
-                        <div class="fields" style="display: flex;">
-                            <p>Downpayment : </p>
+                    <div [style.display]="loanHire=='Loan'? 'none' : 'inherit'">
+                        <div class="downpayment">
+                            <p class="subhead">Downpayment : </p>
                             <input type="text" placeholder="$0.00">
                         </div>
-                        <p style="font-size: 11px; margin-top: -7px; margin-bottom: 10px; font-weight: bold; color:grey">
+                        <p style="font-size: 11px; margin-top: -6px; font-weight: bold; color:grey">
                             Maximum amount should be: $ {{maxDownPayment}}</p>
+                    </div>
+
+                    <div [style.display]="loanHire=='Loan'? 'inherit' : 'none'">
+                        <div class="d-flex" style="align-items: baseline;" >
+                            <p class='subhead'>Buyback</p>
+                            <div class="form-check form-switch" style="margin-left: 35px;">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                                    checked>
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Yes</label>
+                            </div>
+                        </div>
                     
                         <div class="d-flex perAm" style="gap:10px; justify-content: space-between;">
                             <div class="d-flex">
@@ -231,21 +226,23 @@
                         </div>
                         <p style="font-size: 11px; margin-top: -10px; margin-bottom: 10px; font-weight: bold; color:grey">
                             Adjust Slider or Type in the Percentage</p>
+                            <input type="range" [(ngModel)]="percentageValue" (input)="updatePercentage($event)" id="vol"
+                            name="vol" min="5" max="35" list="tickmarks"
+                            style="accent-color: #E42346; width: 100%; height: 5px;">
+                        <div></div>
+                        <datalist id="tickmarks">
+                            <option value="0" label="5%"></option>
+                            <option value="15" label="10%"></option>
+                            <option value="30" label="15%"></option>
+                            <option value="45" label="20%"></option>
+                            <option value="60" label="25%"></option>
+                            <option value="75" label="30%"></option>
+                            <option value="100" label="35%"></option>
+                        </datalist>
+                    </div>
                         
 
-                    <input type="range" [(ngModel)]="percentageValue" (input)="updatePercentage($event)" id="vol"
-                        name="vol" min="5" max="35" list="tickmarks"
-                        style="accent-color: #E42346; width: 100%; height: 5px;">
-                    <div></div>
-                    <datalist id="tickmarks">
-                        <option value="0" label="5%"></option>
-                        <option value="15" label="10%"></option>
-                        <option value="30" label="15%"></option>
-                        <option value="45" label="20%"></option>
-                        <option value="60" label="25%"></option>
-                        <option value="75" label="30%"></option>
-                        <option value="100" label="35%"></option>
-                    </datalist>
+                    
                     <!-- <div class="container text-center mt-3">
                         <button class="btn btn-secondary buybtn mb-2" style="justify-content: center;">Buy Back Pack
                             Amount</button>
@@ -318,7 +315,6 @@
                     </div>
 
                 </div>
-            </div>
         </div>
     </div>
 </div>

@@ -204,6 +204,8 @@ export class CarSubRedesignComponent implements OnInit {
 
   isUpperVisible = true
   isLowerVisible = false
+  loanHire = 'Loan';
+
   onClick() {
     if (this.isUpperVisible) {
       this.isUpperVisible = false
