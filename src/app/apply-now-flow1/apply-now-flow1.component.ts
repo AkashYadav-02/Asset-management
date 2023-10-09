@@ -97,7 +97,7 @@ export class ApplyNowFlow1Component implements OnInit {
     // this.http.put('../../assets/JSONfiles/workspace.json');
 
     
-    this.redirectMenu.redirectWithdata('work-space', data);
+   // this.redirectMenu.redirectWithdata('work-space', data);
     this.redirectMenu.redirectTo('credit-info');
   }
 
