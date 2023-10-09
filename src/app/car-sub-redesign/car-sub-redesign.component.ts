@@ -13,7 +13,7 @@ declare var $: any;
 export class CarSubRedesignComponent implements OnInit {
   myObserver;
   currentUrl: any;
-  techDetailsParameter: any;
+  techDetailsParameter: any=0;
   specificaiton: any;
   EMI: any;
   colorList: string[] = [];
@@ -178,12 +178,18 @@ export class CarSubRedesignComponent implements OnInit {
       });
     });
   }
+
+
   percentageValue: number = 35; // Initial percentage value
+  amountCalc: number=this. techDetailsParameter.price * (35/100);
+  
+  
 
   // Function to update the percentage value when the slider changes
   updatePercentage(event: Event): void {
     const sliderValue = (event.target as HTMLInputElement).value;
     this.percentageValue = parseFloat(sliderValue);
+    this.amountCalc = Math.ceil(this. techDetailsParameter.price * (parseInt(sliderValue)/100));
   }
 
   isUpperVisible = true

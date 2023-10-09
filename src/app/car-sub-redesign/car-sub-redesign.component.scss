@@ -332,7 +332,7 @@ img {
     font-size: 12px;
     font-family: "Monts";
     font-weight: 600;
-    min-width: 100px;
+    min-width: 68px;
 }
 
 .subhead {
@@ -499,21 +499,23 @@ img {
     border-radius: 10px;
 }
 
-.rangerr {
+.rangerr , .amountt{
     height: 26px;
     border-radius: 1px;
     border: solid 1px rgb(226, 222, 222);
     background-color: #f3f3f3;
     width: 75px;
     padding: 0 10px;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     font-size: 15px;
 
     .b {
         color: #000000;
     }
+}
+
+.amountt{
+    width: 120px;
 }
 
 .rangerinp {
