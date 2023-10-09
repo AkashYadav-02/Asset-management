@@ -5,18 +5,30 @@
         <div class="car-card">
             <img src={{car.imgUrl}}>
         </div>
-          <h5 class="card-title" style="font-family: 'Inter'; text-align: center; font-size: 20px;"><b>Application ID: UNE0348</b></h5>
-        <div class="package-details">
-            <p style="font-family: 'Monts';"><b>Your chosen package: </b></p>
-            <p style="font-family: 'Monts'; color: #ED5434;"><b>Your current instalment is: per month</b></p>
-            <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Total Amount of Finance</b></p>
-            <p style="font-family: 'Monts';">Down Payment</p>
-            <p style="font-family: 'Monts';">Repayment Frequency </p>
-            <p style="font-family: 'Monts';">APR of</p>
-            <p style="font-family: 'Monts';">Add on (instalment)</p>
-            <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Final Instalment is</b></p>
-            <p style="font-family: 'Monts';">Your first payment is</p>
-    
+          <h5 class="card-title" style="font-family: 'Inter'; text-align: center; font-size: 18px; color:#DB2423"><b>Application ID: UNE0348</b></h5>
+          <div class="d-flex" style="justify-content: space-between;">
+            <div class="package-details">
+                <p><b>Your chosen package:</b> </p>
+                <p style="color: #DB2423;"><b>Your current instalment is:</b></p>
+                <p ><b>Your Total Amount of Finance</b></p>
+                <p >Down Payment</p>
+                <p >Repayment Frequency </p>
+                <p >APR of</p>
+                <p >Add on (instalment)</p>
+                <p ><b>Your Final Instalment is</b></p>
+                <p >Your first payment is</p>
+            </div>
+            <div class="package-details">
+                <p><b>--</b> </p>
+                <p style="color: #DB2423;"><b>$14809 / month</b></p>
+                <p ><b>$8800</b></p>
+                <p >$12000</p>
+                <p >Monthly </p>
+                <p >7.9 %</p>
+                <p >$0</p>
+                <p ><b>$1,420</b></p>
+                <p >$14,420</p>
+            </div>
         </div>
     </div>
     <div>
@@ -54,6 +66,7 @@
                             <li *ngFor="let file of uploadedFiles">{{ file.name }} - {{ file.size }} bytes</li>
                         </ul>
                 </p-fileUpload>
+                <p class="drag-file-text mx-auto">Drag your files here</p>
 
             </div>
             <p style="font-size: 11px; color: grey; font-family: Montserrat; font-weight: bold;">Max file is 10MB. Supported file format are JPG, PNG, PDF.</p>
