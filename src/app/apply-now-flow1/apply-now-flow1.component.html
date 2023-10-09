@@ -29,45 +29,33 @@
         <img class="car-card" src={{techDetailsParameter.image}}>
 
     </div>
+            <h5 class="card-title" style="font-family: 'Inter'; text-align: center; font-size: 18px; color:#DB2423"><b>Application ID: {{applicationId}}</b></h5>
+          <div class="d-flex pd" style="justify-content: space-between;">
+            <div class="package-details">
+                <p><b>Your chosen package:</b> </p>
+                <p style="color: #DB2423;"><b>Your current instalment is:</b></p>
+                <p ><b>Your Total Amount of Finance</b></p>
+                <p >Down Payment</p>
+                <p >Repayment Frequency </p>
+                <p >APR of</p>
+                <p >Add on (instalment)</p>
+                <p ><b>Your Final Instalment is</b></p>
+                <p >Your first payment is</p>
+            </div>
 
-      <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: {{applicationId}}</b></h5>
-
-    <div class="package-details">
-        <p style="font-family: 'Monts';"><b>Your chosen package: </b></p>
-
-        <p style="font-family: 'Monts'; color: #ED5434;"><b>Your current instalment is: $1,420 per month</b></p>
-
-        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Total Amount of Finance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $88,00</b></p>
-
-        <p style="font-family: 'Monts';">Down Payment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $12,000</p>
-
-        <p style="font-family: 'Monts';">Repayment Frequency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monthly</p>
-
-        <p style="font-family: 'Monts';">APR of &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.9%</p>
-
-        <p style="font-family: 'Monts';">Add on (instalment) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</p>
-
-        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Final Instalment is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1,420</b></p>
-
-        <p style="font-family: 'Monts';">Your first payment is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$14,420</p>
-
-        <p style="font-family: 'Monts'; color: #236AF2;"><b>Your monthly deduction starts from November 2023, every 1st of the month</b></p>
-
-    </div>
-
+            <div class="package-details">
+                <p><b>--</b> </p>
+                <p style="color: #DB2423;"><b>{{leftcard.currentInstallment}}</b></p>
+                <p ><b>{{leftcard.totalfinanceamount}}</b></p>
+                <p >{{leftcard.downpayment}}</p>
+                <p >{{leftcard.repaymentfrequency}} </p>
+                <p >{{leftcard.APR}}</p>
+                <p >{{leftcard.addonInstallment}}</p>
+                <p ><b>{{leftcard.yourfinalinstallment}}</b></p>
+                <p >{{leftcard.yourfirstpayment}}</p>
+            </div>
+        </div>
 </div>
-
- 
 
 <div class="card" id="right-panel">
 
