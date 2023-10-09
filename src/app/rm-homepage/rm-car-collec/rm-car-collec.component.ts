@@ -44,7 +44,7 @@ export class RmCarCollecComponent {
     {
       name:"2023 Toyota Vellfire ",
       price: "130,830",
-      imgUrl: "../../assets/cover_6492c7391b5b5 2.png",
+      imgUrl: "../../assets/toyota vellfire.png",
       speed: 2500,
       gear:"CVT",
       capacity:8,
