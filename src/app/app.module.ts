@@ -31,6 +31,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { Spinner1Component } from './spinner1/spinner1.component';
 import { Spinner2Component } from './spinner2/spinner2.component';
 import { GridOptions } from 'ag-grid-community';
+import {Dialog, DialogRef, DIALOG_DATA, DialogModule} from '@angular/cdk/dialog';
 
 import { HomeupperpageComponent } from './rm-homepage/homeupperpage/homeupperpage.component';
 import { RouterModule } from '@angular/router';
@@ -45,6 +46,7 @@ import { ApprovedComponent } from './approved/approved.component';
 import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.component';
 import { CreditInformationComponent } from './credit-information/credit-information.component';
 import { CarSubRedesignComponent } from './car-sub-redesign/car-sub-redesign.component';
+import { DialogBoxComponent } from './dialog-box/dialog-box.component';
 
 
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
@@ -83,6 +85,7 @@ import { CarSubRedesignComponent } from './car-sub-redesign/car-sub-redesign.com
     ApprovedComponent,
     ApplyNowPendingComponent,
     CarSubRedesignComponent,
+    DialogBoxComponent,
 
 
   ],
@@ -100,8 +103,9 @@ import { CarSubRedesignComponent } from './car-sub-redesign/car-sub-redesign.com
     TimelineModule,
     AgGridModule,
     HttpClientModule,
-    FileUploadModule
     
+    FileUploadModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -91,8 +91,25 @@
                             [class.fa-angle-up]="!isVariantExpand"></i>
                     </div>
 
-                    <div [style.display]="isVariantExpand ? 'inherit' : 'none'">
-                        <h1>hello</h1>
+                    <div class="select-var-div" [style.display]="isVariantExpand ? 'inherit' : 'none'">
+                        <div class="d-flex radio-btn-group mt-3">
+                            <input class="ms-4 checked-radio" type="radio" name="warranty" id="specifyColor"
+                                checked="checked">
+                            <p class="mt-auto mb-auto ms-3">Standard</p>
+                        </div>
+                        <div class="d-flex radio-btn-group mt-3">
+                            <input class="ms-4 checked-radio" type="radio" name="warranty" id="specifyColor">
+                            <p class="mt-auto mb-auto ms-3">4x4</p>
+                        </div>
+                        <div class="d-flex radio-btn-group mt-3">
+                            <input class="ms-4 checked-radio" type="radio" name="warranty" id="specifyColor">
+                            <p class="mt-auto mb-auto ms-3">Turbo</p>
+                        </div>
+                        <div class="d-flex radio-btn-group mt-3">
+                            <input class="ms-4 checked-radio" type="radio" name="warranty" id="specifyColor">
+                            <p class="mt-auto mb-auto ms-3">Legender</p>
+                        </div>
+
                     </div>
 
                     <div class="color-div">
@@ -108,7 +125,8 @@
                     <div>
                         <h2 class="mt-3 accessories">Accessories <span>(optional)</span></h2>
                         <div class="d-flex mt-3 my-2">
-                            <img (click)="addBorder()" id="speedometer" class="speedometer" src="../../assets/logos/456.png" style="margin-right: 20px;">
+                            <img (click)="addBorder()" id="speedometer" class="speedometer"
+                                src="../../assets/logos/456.png" style="margin-right: 20px;">
                             <img (click)="addBorder2()" id="engine" src="../../assets/logos/123.png">
                         </div>
                     </div>
@@ -139,7 +157,7 @@
                     <div class="numbers select-size">
                         <input class="numbtn" type="radio" name="s-size" id="small" />
                         <input class="numbtn" type="radio" name="s-size" id="medium" />
-                        <input class="numbtn" type="radio" name="s-size" id="large" checked/>
+                        <input class="numbtn" type="radio" name="s-size" id="large" checked />
                         <input class="numbtn" type="radio" name="s-size" id="x-large" />
                         <input class="numbtn" type="radio" name="s-size" id="xx-large" />
                         <input class="numbtn" type="radio" name="s-size" id="xtra-large" />

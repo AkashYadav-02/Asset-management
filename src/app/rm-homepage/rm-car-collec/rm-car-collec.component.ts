@@ -21,7 +21,7 @@ export class RmCarCollecComponent {
       speed: 2000,
       gear:"Manual",
       capacity:5,
-      type:"Patrol"
+      type:"Petrol"
     },
     {
       name:"2023 Toyota Fortuner",

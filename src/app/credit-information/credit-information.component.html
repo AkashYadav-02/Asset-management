@@ -29,7 +29,7 @@
 
         <img class="car-card" src=..\assets\car1.png>
 
-        <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: UNE0348</b></h5>
+        <h5 class="card-title" style="font-family: Inter;"><b>Application ID: UNE0348</b></h5>
 
         <div class="package-details">
 
@@ -78,7 +78,8 @@
             <div class="drop-one">
                 <h6 class="sub-header-two">Asset type :</h6>
                 <select name ="choose" class="Choose" id="Choose">
-                    <option value=""></option>
+                    <img src ="../../assets/arrow-circle-down.svg" style="position:absolute">
+                    <option value="choose">Choose </option> 
                     <option value="Savings Account">Savings Account</option>
                     <option value="Current Account">Current Account</option>
                     <option value="Draft Account">Draft Account</option>
@@ -99,8 +100,9 @@
             </div> -->
             <div class="drop-one">
                 <h6 class="sub-header-two">Income Type :</h6>
-                <select name ="choose" class="Choose" id="Choose">
-                    <option value=""></option>
+                <select name ="choose" class="Choose rounded-border" id="Choose">
+                
+                    <option value="choose">Choose </option> 
                     <option value="Savings Account">Savings Account</option>
                     <option value="Current Account">Current Account</option>
                     <option value="Draft Account">Draft Account</option>
@@ -123,7 +125,11 @@
             <div class="drop-one">
                 <h6 class="sub-header-two">Expense type :</h6>
                 <select name ="choose" class="Choose" id="Choose">
-                    <option value=""></option>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 18.3332C14.6024 18.3332 18.3334 14.6022 18.3334 9.99984C18.3334 5.39746 14.6024 1.6665 10 1.6665C5.39765 1.6665 1.66669 5.39746 1.66669 9.99984C1.66669 14.6022 5.39765 18.3332 10 18.3332Z" stroke="#DB2423" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                                                
+                    <option value="choose"><b>Choose</b> </option> 
                     <option value="Savings Account">Savings Account</option>
                     <option value="Current Account">Current Account</option>
                     <option value="Draft Account">Draft Account</option>
@@ -143,7 +149,9 @@
         </div>
 
         <div class="cs-footer-right">
-            <button class="btn">Submit</button>
+            <button class="btn" (click)="onSubmit()">Submit</button>
+            
         </div>
+        
 
     </div>

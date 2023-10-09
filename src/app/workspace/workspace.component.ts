@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 import { AgGridModule } from 'ag-grid-angular';
+import { JsonOperationService } from '../json-operation.service';
 
 @Component({
   selector: 'app-workspace',
@@ -12,11 +13,98 @@ import { AgGridModule } from 'ag-grid-angular';
   styleUrls: ['./workspace.component.scss']
 })
 export class WorkspaceComponent {
+
+  myObserver ;
+  currentUrl : any;
+  techDetailsParameter : any;
+  
   constructor(private http: HttpClient,private router: Router,
-    private redirectMenu: RedirectMenuService) { }
+    private redirectMenu: RedirectMenuService,
+    private jsonDetails : JsonOperationService) { 
+      this.myObserver = this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          this.currentUrl = event.url;
+        const navigation = this.router.getCurrentNavigation();
+        if (navigation?.extras.state) {
+          this.techDetailsParameter = navigation.extras.state;
+        } 
+        }
+      });
+    }
 
   ngOnInit() {
-    this.rowData$ = this.http.get<any[]>('../../../workspace.json');
+    // this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/workspace.json');
+  
+    this.http.get<any[]>('../../assets/JSONfiles/workspace.json').subscribe((data:any)=>{
+      this.rowData$ = data;
+    });
+    console.log("json data",this.jsonDetails.getData());
+    // let abc: any[]=this.jsonDetails.getData().subscribe((data: any)=>{
+
+    //});
+    //abc.push({"appID":"UNE5549","customerName":"Jhon","carSelection":"2023 Toyota Fortuner","financing":"2","status":"Processed"});
+    console.log("json d",this.rowData$);
+
+    console.log("this.techDetailsParameter",this.techDetailsParameter);
+    // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
+
+    // appID : 'UNE8783',
+    let data = {
+      appID : this.techDetailsParameter.applicationId,
+      customerName: "Jhon",
+      carSelection: this.techDetailsParameter.specs.name,
+      financing:"2",
+      status:"Processed"
+    }
+    let count  = 0;
+    let updatedData = this.jsonDetails.updateData(data).subscribe(
+      updatedArray => {
+        console.log('Updated Array:', updatedArray);
+        this.rowData$ = updatedArray;
+      },
+      error => {
+        console.error('Error:', error);
+      }
+    );
+      // setTimeout(() => {
+        
+      //   console.log("latest updated",updatedData);
+      // }, 2000);
+    
+
+      this.jsonDetails.pushData(data).subscribe(
+        print => {
+          console.log("printing pushed data",print);
+          
+        }
+      )
+      
+      data.appID = "33";
+      console.log("data for 33",data);
+      
+      console.log("again nwe 33");
+      this.jsonDetails.pushData(data).subscribe(
+        print => {
+          console.log("printing pushed data",print);
+          
+        }
+      )
+
+
+
+    //  this.rowData$ = updatedData;
+    //  updatedData.subscribe((data:any)=>{
+    //   this.rowData$ = data;
+    // });
+
+
+
+    console.log("new entry data",data);
+    console.log("updatedData",updatedData);
+    
+    // this.
+    
+    
   }
 
   title = 'aggridpro';
@@ -85,7 +173,8 @@ export class WorkspaceComponent {
     cellStyle: { 'font-family': 'Inter', 'font-weight': '500', 'font-size': '11.5px' }
   },
   headerHeight: 30};
-  public rowData$!: Observable<any[]>;
+  // public rowData$!: Observable<any[]>;
+  public rowData$!: any[];
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
   }

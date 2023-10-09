@@ -303,19 +303,21 @@ applyNow(){
   addBorder() {
     let elem = document.getElementById('speedometer') as HTMLElement;
     if (this.border1 == false) {
-      elem.setAttribute("style", "border:1px solid black,height: 3rem,width: 3rem,margin-right: 20px;")
+      elem.setAttribute("style", "border:1px solid red;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem;border-radius:0.2rem")
       this.border1 = true
+      // this.techDetailsParameter.price+300
     }
     else {
       elem.setAttribute("style", "border:none")
       this.border1 = false
+      // this.techDetailsParameter.price-300
     }
   }
 
   addBorder2() {
     let elem = document.getElementById('engine') as HTMLElement;
     if (this.border2 == false) {
-      elem.setAttribute("style", "border:1px solid black,height: 3rem,width: 3rem,margin-right: 20px;")
+      elem.setAttribute("style", "border:1px solid red;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem; border-radius:0.2rem")
       this.border2 = true
     }
     else {
