@@ -38,7 +38,9 @@
     height: 40px;
     background-color: #c41628;
     padding: 0 3rem;
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-family: Montserrat;
+
 }
 
 .cs-footer-left {
@@ -71,27 +73,33 @@
         top: 220px;
         left: 670px;
         margin-top: 10px;
+        font-family: Montserrat;
 
     }
 
 .Choose{
+    
     margin: 20px;
     padding-left: 20px;
+    border-radius: 5px;
     background-size: cover;
     background-repeat:no-repeat;
-    background-image: url('../../assets/Group 1171275955.png');
+    border-radius: 4px;
+border: 1px solid #DB2423;
+background: rgba(219, 36, 35, 0.04);
+    // background-image: url('../../assets/Group 1171275955.png');
     width:200px;
     height:40px;
     -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
 margin-left: 10px;
-border-radius: 5px;
+
 }
 .AssetAdd{
-    margin-top: 25px;
+    margin-top: 27px;
     background-color:transparent;
-    width:100px;
+    width:80px;
     height:40px;
     border:none;
     background-size:contain;
@@ -104,7 +112,16 @@ border-radius: 5px;
     background-size: cover;
     background-repeat:no-repeat;
     width: 300px;
-    background-image: url('../../assets/Group 1171275956.png');
+    // background-image: url('../../assets/Group 1171275956.png');
+    border-radius: 4px;
+    border: 1px solid #DB2423;
+    background: rgba(219, 36, 35, 0.04);
+}
+.AssetInput :focus{
+    border-radius: 4px;
+    border: 1px solid #DB2423;
+    background: rgba(219, 36, 35, 0.04);
+
 }
 select::-ms-expand{
     display: none;
@@ -117,7 +134,7 @@ select::-ms-expand{
     padding: 10px;
     border: 1px solid rgb(141, 140, 140);
     border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    //box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
     
     .header {
 
@@ -144,8 +161,8 @@ select::-ms-expand{
     // border: 2px solid black;
     padding: 10px;
     border: 1px solid rgb(141, 140, 140);
-    // border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    border-radius: 5px;
+   // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
     margin-top: 2px;
 
     .header {
@@ -171,9 +188,11 @@ select::-ms-expand{
     // margin-top: auto;
     // margin-left: -839px;
     border: 1px solid rgb(141, 140, 140);
-    // border-radius: 5px;
-    box-shadow: 0px 0px 2px rgb(141, 140, 140);
+    border-radius: 5px;
+    //8box-shadow: 0px 0px 2px rgb(141, 140, 140);
     margin-top: 2px;
+   // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+
 
     .header {
 
@@ -202,9 +221,9 @@ select::-ms-expand{
     height: 40px;
     background-color: rgb(255, 255, 255);
     padding: 0 3rem;
-    font-size: 20px;
+    font-size: 1.2rem;
     border: none;
-    font-style: Nunito Sans;
+    font-family: Montserrat;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -219,7 +238,7 @@ select::-ms-expand{
     accent-color:#DB2423
 }
 .header-two{
-font-family: Montserrat;
+font-family: 'Monts';
 font-size: 14px;
 line-height: 20px;
 letter-spacing: 0px;
@@ -242,8 +261,12 @@ font-weight: 650;
         margin-top: 20px;
         margin-left: 20px;
 }
+.sub-header-one h5{
+    font-family: Inter
+}
 .header-one{
     font-weight: 1000px;
+    font-family: Inter;
 }
 
 .sub-header-two{
@@ -332,6 +355,6 @@ margin-left: 10px;
 
     font-size: 15px;
 
-    font-family: "Montserrat";
+    font-family: Montserrat;
 
 }

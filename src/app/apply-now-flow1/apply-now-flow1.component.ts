@@ -98,6 +98,7 @@ export class ApplyNowFlow1Component implements OnInit {
 
     
     this.redirectMenu.redirectWithdata('work-space', data);
+    this.redirectMenu.redirectTo('credit-info');
   }
 
 }
