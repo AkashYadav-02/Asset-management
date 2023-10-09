@@ -60,9 +60,10 @@ word-wrap: break-word
 
 .a1{
     // margin-left: 700px;
-    margin-left: 450px;
+    margin-left: 400px;
     color:red;
     text-decoration: none;
+    font-family:  'Inter'  ;
 }
 .pro-btn{
     margin-right: 10px;
@@ -72,6 +73,7 @@ word-wrap: break-word
     margin-top:2px;
     margin-left: 47px;
         // transition-duration: 0.4s;
+    font-family: 'Monts';
     
 }
 
@@ -81,6 +83,8 @@ word-wrap: break-word
     color: white;
     border-width: 1px;
     margin-left: 47px;
+    font-family: 'Monts';
+    
 
   }
   .pro-btn:focus {
@@ -89,6 +93,7 @@ word-wrap: break-word
     color: white;
     border-width: 1px;
     margin-left: 47px;
+    font-family: 'Monts';
 
   }
   .set-btn{
@@ -98,6 +103,7 @@ word-wrap: break-word
     border-width: 1px;
     margin-top:2px;
     margin-left:15px;
+    font-family: 'Monts';
   }
   .set-btn:hover {
     border:solid red; /* Green */
@@ -105,6 +111,7 @@ word-wrap: break-word
     color: white;
     border-width: 1px;
     margin-left:15px;
+    font-family: 'Monts';
   }
   .set-btn:focus {
     border:solid red; /* Green */
@@ -112,7 +119,7 @@ word-wrap: break-word
     color: white;
     border-width: 1px;
     margin-left:15px;
-
+    font-family: 'Monts';
   }
 
 // .img1{
@@ -153,6 +160,12 @@ word-wrap: break-word
    
     //background-color: rgb(245, 244, 244);
 }
+.div3 h4{
+    font-family: 'Inter';
+}
+.div3 p{
+    font-family: 'Monts';
+}
 
 //p.inset {border-style: inset;}
 .btn1{
@@ -160,6 +173,7 @@ word-wrap: break-word
     margin-left: 100px;
     //display: block;
     width: 12%;
+    font-family: 'Inter';
     
     
 }
@@ -177,6 +191,7 @@ word-wrap: break-word
     width: 12%;
     margin-left: 30px;
     // margin-bottom: 200px;
+    font-family: 'Inter';
   
 
 }
@@ -222,9 +237,11 @@ a{
 .anchor:hover{
     cursor: pointer;
     color:red;
+    font-family: 'Monts';
 }
 .anchor:focus{
     color:red;
+    font-family: 'Monts';
 }
 // a:hover{
 //     color:red;
@@ -232,8 +249,12 @@ a{
 .anchor{
     color:black; 
     text-decoration: underline;
+    font-family: 'Monts';
 }
  #link1:active{
     color:red;
+ }
+ #number{
+    font-family: 'Monts';
  }
  

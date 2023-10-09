@@ -80,6 +80,11 @@ select{
   .topnav a.active {
     border-bottom: 3px solid red;
   }
+
+  .topnav a{
+border-bottom: 3px solid #EBEBEB;
+margin-bottom: 1rem;
+  }
 .an-body{
     display: flex;
     color: black;

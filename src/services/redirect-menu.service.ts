@@ -13,6 +13,6 @@ export class RedirectMenuService {
   }
 
   redirectWithdata(routePath:string, data : any):void{
-    this.router.navigate(['car-sub'], { state: data });
+    this.router.navigate([routePath], { state: data });
   }
 }

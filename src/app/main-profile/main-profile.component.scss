@@ -186,10 +186,11 @@ h5{
 .a1{
     // margin-left: 700px;
     //margin-left: 500px;
-    margin-left: 450px;
+    margin-left: 400px;
     color:red;
     text-decoration: none;
     margin-top:50px;
+    font-family:  'Inter'  ;
 }
 .pro-btn{
     margin-right: 10px;
@@ -198,6 +199,7 @@ h5{
     border-width: 1px;
     margin-top:50px;
     margin-left: 47px;
+    font-family: 'Monts';
         // transition-duration: 0.4s;
     
 }
@@ -208,6 +210,7 @@ h5{
     color: white;
     border-width: 1px;
     margin-left: 47px;
+    font-family: 'Monts';
 
   }
   .pro-btn:focus {
@@ -216,6 +219,7 @@ h5{
     //color: white;
     border-width: 1px;
     margin-left: 47px;
+    font-family: 'Monts';
   }
 
   .pro-btn:active{
@@ -224,6 +228,7 @@ h5{
     //color: white;
     border-width: 1px;
     margin-left: 47px;
+    font-family: 'Monts';
   }
   .set-btn{
   //  margin-right: 10px;
@@ -232,6 +237,7 @@ h5{
     border-width: 1px;
     margin-top:50px;
     margin-left:15px;
+    font-family: 'Monts';
   }
   .set-btn:hover {
     border:solid red; /* Green */
@@ -239,6 +245,7 @@ h5{
     color: white;
     border-width: 1px;
     margin-left:15px;
+    font-family: 'Monts';
   }
   .set-btn:focus {
     border:solid red; /* Green */
@@ -246,13 +253,14 @@ h5{
     //color: white;
     border-width: 1px;
     margin-left:15px;
-
+    font-family: 'Monts';
   }
   .set-btn:active{
     border:solid red; /* Green */
     background: #db232359;
     //color: white;
     border-width: 1px;
+    font-family: 'Monts';
   }
 // .img1{
 //     margin-top: 130px ;
@@ -302,6 +310,7 @@ h5{
     width: 27%;
     margin-bottom: 30px;;
     //font-family: Inter;
+    font-family:  'Inter'  ;
     
 }
 // .divs{
@@ -408,6 +417,7 @@ margin-bottom: 2.5rem !important;
     transition:0.2s ease all; 
     -moz-transition:0.2s ease all; 
     -webkit-transition:0.2s ease all;
+    font-family:  'Inter'  ;
   }
   .did-floating-input, .did-floating-select {
     font-size:12px;
@@ -420,6 +430,7 @@ margin-bottom: 2.5rem !important;
     border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: 'Monts';
     // &:focus{
     //   outline:none;
     //   ~ .did-floating-label{

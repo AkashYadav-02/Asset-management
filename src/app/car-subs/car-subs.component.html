@@ -72,11 +72,18 @@
                 <div class="coloraccessories">
                     <div>
                         <h3>Color</h3>
-                    <form >
+                    <!-- <form >
                         <button id="#45473D" class="redbtn btn" style="background-color: #45473D; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
                         <button id="#000000" class="redbtn btn" style="background-color: #000000; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
                         <button id="#DB2423" class="redbtn btn" style="background-color: #DB2423; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
                         <button id="#9f9f9f" class="redbtn btn" style="background-color: #9f9f9f; outline: solid 2px #ffffff;" (click)="outline($event)"></button>
+                    </form> -->
+                    <form>
+                        <div style="display: flex;">
+                            <div  *ngFor="let item of colorList">
+                                <button class="redbtn btn color{{item}}" style="outline: solid 2px #a38c8c;" ></button>
+                            </div>
+                        </div>
                     </form>
                     </div>
                     <div style="margin-left: -35px;">
@@ -182,7 +189,7 @@
                     <p class='subhead'>Percentage</p>
                     <p style="font-size: 13px; margin-top: -15px; margin-bottom: 10px; font-weight: bold; color:grey">Adjust Slider or Type in the Percentage</p>
                         <div class="container rangerr">
-                            <p><b>{{percentageValue}}%</b></p>
+                            <p><b>{{percentageValue}} %</b></p>
                         </div>
                     
                     <input type="range" [(ngModel)]="percentageValue" (input)="updatePercentage($event)" id="vol" name="vol" min="5" max="35" list="tickmarks" style="accent-color: #E42346; width: 100%; height: 5px;">
@@ -273,11 +280,11 @@
         <h6 class="price">${{techDetailsParameter.price}}</h6>
     </div>
     <div class="cs-footer-com" style="padding-top: 5px;">
-        <h6 class="price" style="font-size: 15px;">Monthly Payment from: $2,200/m</h6>
+        <h6 class="price" style="font-size: 15px;">Monthly Payment from: $ {{calculateEMI(techDetailsParameter.price)}}/M</h6>
         <img src="../../assets/logos/info-circle.png" style="height:15px; margin-bottom: -8px; margin-right: 10px; margin-left: -12px;">
         <h6 class="redtxt" style="font-size: 14px;">View Benefits</h6>
     </div>
-    <div class="cs-footer-com" (click)="redirect('apply-now-flow-1')">
-        <button href="car-sub-submit" class="btn roadprice">Apply Now</button>
+    <div class="cs-footer-com" (click)="applyNow()">
+        <button class="btn roadprice">Apply Now</button>
     </div>
 </div>
