@@ -44,6 +44,7 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { ApprovedComponent } from './approved/approved.component';
 import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.component';
 import { CreditInformationComponent } from './credit-information/credit-information.component';
+import { CarSubRedesignComponent } from './car-sub-redesign/car-sub-redesign.component';
 
 
 // import { ToastmssageComponent } from './toastmssage/toastmssage.component';
@@ -81,6 +82,7 @@ import { CreditInformationComponent } from './credit-information/credit-informat
     HowItWorksComponent,
     ApprovedComponent,
     ApplyNowPendingComponent,
+    CarSubRedesignComponent,
 
 
   ],

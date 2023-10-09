@@ -92,7 +92,7 @@ export class RmCarCollecComponent {
           break;
         }
       }
-      this.redirectWithData("car-sub",this.data);
+      this.redirectWithData("car-sub-redesign",this.data);
   }
 
   allowCars(num : number){
