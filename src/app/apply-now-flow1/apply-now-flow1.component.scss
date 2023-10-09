@@ -1,8 +1,12 @@
 
 
 .navbar{
+
     width: fit-content;
+
 }
+
+ 
 
 .stepper{
 
@@ -214,7 +218,7 @@ hr-1, hr-2{
 
     margin-left: 8rem;
 
-    margin-bottom: 2.5px;
+    margin-bottom: -1px;
 
 }
 
@@ -242,8 +246,6 @@ hr-1, hr-2{
 
 }
 
- 
-
 .customer-details-dropdown{
 
     margin-left: 29rem;
@@ -252,7 +254,8 @@ hr-1, hr-2{
 
     margin-top: 0.5rem;
 
-    height: 22rem;
+    margin-bottom: 1rem;
+    // height: 22rem;
 
     width: 51.8rem;
 
@@ -308,8 +311,6 @@ hr-1, hr-2{
 
 }
 
- 
-
 .collapsible label:after{
 
     content: "";
@@ -333,9 +334,6 @@ hr-1, hr-2{
  
 
 .collapsible input:checked + label:after{
-
-    color: #DB2423;
-
     transform: rotate(180deg);
 
 }
@@ -344,25 +342,23 @@ hr-1, hr-2{
 
 .collapsible-data{
 
-    max-height: 1px;
+    display: none;
+     max-height: 0px;
+padding: 0px;
+margin: 0px;
+    // // overflow: hidden;
 
-    overflow: hidden;
+    // border-radius: 4px;
 
-    border-radius: 4px;
+    // line-height: 1.4;
 
-    line-height: 1.4;
+    // position: relative;
 
-    position: relative;
+    // top: -100%;
 
-    top: -100%;
+    // opacity: 0.5;
 
-    opacity: 0.5;
-
-    transition: all 0.3s ease;
-
-    justify-content: space-between;
-
-    display: flex;
+     transition: all 0.3s ease;
 
     margin-left: 1rem;
 
@@ -370,7 +366,7 @@ hr-1, hr-2{
 
 }
 
-.contact-details{
+.contact-details, .address-details{
     font-family: "Inter";
     font-weight: bold;
     color: #DB2423;
@@ -384,13 +380,14 @@ hr-1, hr-2{
 
     padding-bottom: 25px;
 
-    background: #fff;
+    // background: #fff;
 
-    // box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+    // // box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
 
-    opacity: 1;
-
-    top: 0;
+    // opacity: 1;
+    
+    // top: 0;
+    display: inherit;
 
 }
 
@@ -399,6 +396,26 @@ hr-1, hr-2{
     // justify-content: space-between;
 }
 
+.data1, .data4, .data2, .data6, .data7, .data9{
+    display: flex;
+    justify-content: space-between;
+}
+
+ .data3, .data5, .data8{
+    display: flex;
+}
+
+.work-city{
+    margin-left: 10rem;
+}
+
+.citizen{
+    margin-right: 50px;
+}
+
+.zipcode, .yearsataddress{
+    margin-left: 140px;
+}
 
 .work-details-dropdown{
 
@@ -406,9 +423,9 @@ hr-1, hr-2{
 
     margin-right: 4rem;
 
-    margin-top: 5rem;
+    margin-top: -1rem;
 
-    height: 22rem;
+    // height: 22rem;
 
     width: 51.8rem;
 
@@ -428,6 +445,14 @@ hr-1, hr-2{
 
  
 
+.collapsible1 input{
+
+    display: none;  
+
+}
+
+ 
+
 .collapsible1 label{
 
     position: relative;
@@ -436,13 +461,15 @@ hr-1, hr-2{
 
     background: #fff;
 
+    font-family: "Inter";
+
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
 
     color: #DB2423;
 
     display: block;
 
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
     cursor: pointer;
 
@@ -450,9 +477,9 @@ hr-1, hr-2{
 
     border-radius: 4px;
 
-}
+    z-index: 1;
 
- 
+}
 
 .collapsible1 label:after{
 
@@ -470,6 +497,78 @@ hr-1, hr-2{
 
     background: url(../../assets/down-arrow.png) no-repeat 0 0;
 
+    transition: all 0.3s ease;
+
+}
+
+ 
+
+.collapsible1 input:checked + label:after{
+
+    color: #DB2423;
+
+    transform: rotate(180deg);
+
+}
+
+ 
+
+.collapsible1-data{
+    display: none;
+     max-height: 0px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 3rem;
+
+    // max-height: 1px;
+
+    // overflow: hidden;
+
+    // border-radius: 4px;
+
+    // line-height: 1.4;
+
+    // position: relative;
+
+    // top: -100%;
+
+    // opacity: 0.5;
+
+    transition: all 0.3s ease;
+
+    margin-left: 1rem;
+
+    margin-right: 1rem;
+
+}
+
+.work-address{
+    font-family: "Inter";
+    font-weight: bold;
+    color: #DB2423;
+    margin-right: 2;
+}
+ 
+
+.collapsible1 input:checked ~ .collapsible1-data{
+
+    max-height: 300px;
+
+    padding-bottom: 25px;
+
+    // background: #fff;
+
+    // // box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1), 0 4px 11px 0 rgba(0, 0, 0, 0.08);
+
+    // opacity: 1;
+    
+    // top: 0;
+    display: inherit;
+}
+
+.collapsible1-data p{
+    font-family: "Montserrat";
+    // justify-content: space-between;
 }
 
  
@@ -478,7 +577,13 @@ hr-1, hr-2{
 
 .car-subs-footer{
 
-    position: relative;
+    position: fixed;
+
+    bottom: 0px;
+
+    left: 0px;
+
+    width: 100%;
 
     border-top: 1px solid rgb(141, 140, 140);
 
@@ -486,7 +591,7 @@ hr-1, hr-2{
 
     z-index: 7;
 
-    margin-top: 40rem;
+    margin-top: 7rem;
 
     background-color: rgb(255, 255, 255);
 
