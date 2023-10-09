@@ -54,17 +54,6 @@ export class ApplyNowFlow1Component {
     this.redirectMenu.redirectTo(path);
   }
 
-  isUpperVisible=true
-  isLowerVisible=false
-  onClick(){
-    if (this.isUpperVisible){
-      this.isUpperVisible=false
-    }else{
-      this.isUpperVisible=true
-    }
-  }
- 
-
 }
 
  
