@@ -356,13 +356,12 @@ img {
 
 .fields p {
     width: 160px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .fields input {
-    height: 1.75rem;
     height: 1.75rem;
     margin-top: 10px;
     padding: 0 10px;
@@ -373,18 +372,18 @@ img {
     font-size: 11px;
     font-weight: bold;
     border-radius: 4px;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
 }
 
 .numbers {
     display: flex;
-    gap: 1.4rem;
+    gap: 0.6rem;
 }
 
 .numbers input {
     height: 58px;
-    min-width: 60px;
+    min-width: 65px;
     background-color: rgb(239, 233, 233);
     border: solid 2px rgb(156, 151, 151);
     color: black;
@@ -443,6 +442,16 @@ img {
     right: 0%;
     top: 10px;
     z-index: -1
+}
+
+.perAm{
+    margin-top: 20px;
+}
+
+.perAm p{
+    font-size: 14px;
+    margin-right: 15px;
+    padding-top: 2px;
 }
 
 .bs4-order-tracking li:first-child:after {
@@ -759,13 +768,12 @@ datalist option {
 
 .option-text {
     display: inline-block;
-    width: 50px;
+    min-width: 60px;
     height: 50px;
     text-align: center;
     border: 1px solid #ddd;
     line-height: 50px;
     cursor: pointer;
-
     color: #000;
     font-family: Montserrat;
     font-size: 1rem;

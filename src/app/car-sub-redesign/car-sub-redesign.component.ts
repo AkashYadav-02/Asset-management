@@ -17,6 +17,7 @@ export class CarSubRedesignComponent implements OnInit {
   specificaiton: any;
   EMI: any;
   colorList: string[] = [];
+  maxDownPayment?:number;
   // selectedColor: string = '45473D';
 
   constructor(private redirectMenu: RedirectMenuService,
@@ -28,6 +29,8 @@ export class CarSubRedesignComponent implements OnInit {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
+          this.amountCalc=Math.ceil(this.techDetailsParameter.price * (35/100));
+          this.maxDownPayment=Math.ceil(this.techDetailsParameter.price * (20/100));
           console.log("tech param", this.techDetailsParameter);
         }
       }
@@ -183,7 +186,14 @@ export class CarSubRedesignComponent implements OnInit {
   percentageValue: number = 35; // Initial percentage value
   amountCalc: number=this. techDetailsParameter.price * (35/100);
   
-  
+  displayRadioValue() {
+    var loanHire = document.getElementsByName('radio1') as NodeListOf<HTMLElement>;;
+    for (var i = 0; i < loanHire.length; i++) {
+      if (loanHire[i]){
+        console.log(loanHire[i].nodeValue)
+      }
+    }
+  }
 
   // Function to update the percentage value when the slider changes
   updatePercentage(event: Event): void {

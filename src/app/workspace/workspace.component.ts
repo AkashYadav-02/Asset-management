@@ -16,7 +16,7 @@ export class WorkspaceComponent {
     private redirectMenu: RedirectMenuService) { }
 
   ngOnInit() {
-    this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/workspace.json');
+    this.rowData$ = this.http.get<any[]>('../../../workspace.json');
   }
 
   title = 'aggridpro';
