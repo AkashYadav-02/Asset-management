@@ -379,13 +379,12 @@ img {
 
 .numbers {
     display: flex;
-    gap: 0.5rem;
+    gap: 1.4rem;
 }
 
-.numbers button {
+.numbers input {
     height: 58px;
     min-width: 60px;
-
     background-color: rgb(239, 233, 233);
     border: solid 2px rgb(156, 151, 151);
     color: black;
@@ -740,14 +739,51 @@ datalist option {
     background-color: #9f9f9f;
 }
 
-.select-variant{
+.select-variant {
     align-items: baseline;
 }
 
-.select-variant i{
+.select-variant i {
     margin-left: 1rem;
 }
 
-.select-variant:hover{
+.select-variant:hover {
     cursor: pointer;
+}
+
+.select-size input {
+    display: none;
+}
+
+.option-text {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 50px;
+    cursor: pointer;
+
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 6px;
+    border: 1px solid #000;
+}
+
+#small:checked~.option-text[for="small"],
+#medium:checked~.option-text[for="medium"],
+#large:checked~.option-text[for="large"],
+#x-large:checked~.option-text[for="x-large"],
+#xx-large:checked~.option-text[for="xx-large"] {
+    background: #fef6f6;
+    color: #000000;
+    border: 1px solid red;
+}
+
+.option-text p{
+    margin-top: 0.9rem;
 }
