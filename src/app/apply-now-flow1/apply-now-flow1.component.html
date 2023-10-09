@@ -29,7 +29,7 @@
         <img class="car-card" src={{techDetailsParameter.image}}>
 
     </div>
-            <h5 class="card-title" style="font-family: 'Inter'; text-align: center; font-size: 18px; color:#DB2423"><b>Application ID: UNE0348</b></h5>
+            <h5 class="card-title" style="font-family: 'Inter'; text-align: center; font-size: 18px; color:#DB2423"><b>Application ID: {{applicationId}}</b></h5>
           <div class="d-flex pd" style="justify-content: space-between;">
             <div class="package-details">
                 <p><b>Your chosen package:</b> </p>
@@ -42,22 +42,20 @@
                 <p ><b>Your Final Instalment is</b></p>
                 <p >Your first payment is</p>
             </div>
+
             <div class="package-details">
                 <p><b>--</b> </p>
-                <p style="color: #DB2423;"><b>$14809 / month</b></p>
-                <p ><b>$8800</b></p>
-                <p >$12000</p>
-                <p >Monthly </p>
-                <p >7.9 %</p>
-                <p >$0</p>
-                <p ><b>$1,420</b></p>
-                <p >$14,420</p>
+                <p style="color: #DB2423;"><b>{{leftcard.currentInstallment}}</b></p>
+                <p ><b>{{leftcard.totalfinanceamount}}</b></p>
+                <p >{{leftcard.downpayment}}</p>
+                <p >{{leftcard.repaymentfrequency}} </p>
+                <p >{{leftcard.APR}}</p>
+                <p >{{leftcard.addonInstallment}}</p>
+                <p ><b>{{leftcard.yourfinalinstallment}}</b></p>
+                <p >{{leftcard.yourfirstpayment}}</p>
             </div>
         </div>
-
 </div>
-
- 
 
 <div class="card" id="right-panel">
 

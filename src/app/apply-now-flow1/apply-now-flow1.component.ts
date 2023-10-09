@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { leftcard } from './carddetails';
 // import { Router } from '@angular/router';
 import { Router, NavigationEnd } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
@@ -12,6 +13,8 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 
 export class ApplyNowFlow1Component implements OnInit {
   applicationId: string = '' ;
+
+  leftcard=leftcard;
 
   myObserver ;
   currentUrl : any;
@@ -35,9 +38,7 @@ export class ApplyNowFlow1Component implements OnInit {
      }
 
      ngOnInit():void{
-
       this.generateRandomApplicationId();
-
      }
 
 
