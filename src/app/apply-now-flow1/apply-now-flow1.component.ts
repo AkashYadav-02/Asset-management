@@ -1,7 +1,8 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+// import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
 @Component({
   selector: 'app-apply-now-flow1',
@@ -9,15 +10,43 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
   styleUrls: ['./apply-now-flow1.component.scss']
 })
 
-export class ApplyNowFlow1Component {
+export class ApplyNowFlow1Component implements OnInit {
+
+  myObserver ;
+  currentUrl : any;
+  techDetailsParameter : any;
+  applicationId: string = '' ;
+  lineItem: any;
+
   constructor(private router:Router,private fb: FormBuilder,
     private redirectMenu : RedirectMenuService,
-     ) {}
+     ) {
+
+      this.myObserver = this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          this.currentUrl = event.url;
+        const navigation = this.router.getCurrentNavigation();
+        if (navigation?.extras.state) {
+          this.techDetailsParameter = navigation.extras.state;
+        } 
+        }
+      });
+
+
+     }
+
+     ngOnInit():void{
+
+      this.generateRandomApplicationId();
+
+     }
+
+
   carDetails=[
     {
-      name:"Audi A8 L 2022",
-      price: 8200,
-      imgUrl: "../../assets/Cars/car1.png"
+      name:"2023 Toyota Fortuner",
+      price: "61,490",
+      imgUrl: "../../assets/Toyota-Fortuner-110120211829 2.png",
     },
   ]
   white="../../../assets/logos/heart.png";
@@ -31,20 +60,30 @@ export class ApplyNowFlow1Component {
       this.heartURL=this.white
     }
   }
+
+  generateRandomApplicationId(): void {
+    const randomPart = Math.floor(Math.random() * 10000).toString().padStart(4, '0'); // Generates a random 4-digit number
+    this.applicationId = `UNE${randomPart}`;
+    this.lineItem = this.applicationId;
+    console.log("line",this.lineItem);
+  }
+
+
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
   }
 
-  isUpperVisible=true
-  isLowerVisible=false
-  onClick(){
-    if (this.isUpperVisible){
-      this.isUpperVisible=false
-    }else{
-      this.isUpperVisible=true
-    }
+  saveProcceed(){
+    let data = {
+      specs: this.techDetailsParameter,
+      applicationId : this.applicationId,
+      // emiDetails : 
+
+    } 
+    console.log("y",data);
+    
+    this.redirectMenu.redirectWithdata('work-space',data);
   }
- 
 
 }
 

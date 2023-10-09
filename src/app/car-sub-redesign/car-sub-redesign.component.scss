@@ -10,15 +10,15 @@ img {
     height: 2.5rem;
 }
 
-.stepper{
+.stepper {
     margin-right: 0.5rem;
 }
 
-.progress-bar{
+.progress-bar {
     background-color: #DB2423;
 }
 
-.stepper-label{
+.stepper-label {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ img {
     font-weight: 600;
 }
 
-.step-active{
+.step-active {
     color: #DB2423;
 }
 
@@ -63,7 +63,7 @@ img {
     font-family: "Montserrat";
     font-weight: bold;
     font-size: 17px;
-    color:black;
+    color: black;
 }
 
 .car-subs-header img {
@@ -74,7 +74,7 @@ img {
     margin-right: 1.5rem;
 }
 
-.car-subs-footer{
+.car-subs-footer {
     position: relative;
     border-top: 1px solid rgb(141, 140, 140);
     height: 60px;
@@ -87,27 +87,27 @@ img {
     align-items: center;
 }
 
-.redtxt{
+.redtxt {
     color: #ffffff;
     font-weight: 500;
     padding-right: 20px;
 }
 
-.price{
+.price {
     color: #000000;
     font-weight: bold;
     padding-right: 20px;
     padding-right: 20px;
 }
 
-.cs-footer-com{
+.cs-footer-com {
     display: flex;
     align-items: baseline;
     font-family: "Inter";
 }
 
-.applybtn{
-    color:#DB2423;
+.applybtn {
+    color: #DB2423;
     font-family: "Monts";
     font-weight: 700;
     height: 40px;
@@ -116,9 +116,9 @@ img {
     width: 11rem;
 }
 
-.roadprice{
+.roadprice {
     width: 10rem;
-    color:#DB2423;
+    color: #DB2423;
     font-family: "Inter";
     font-weight: 600;
     height: 40px;
@@ -133,14 +133,14 @@ img {
     height: 32rem;
 }
 
-#demo{
+#demo {
     height: 25rem !important;
     width: auto !important;
     border-radius: 10px;
     background-size: 48rem 25rem !important;
-} 
+}
 
-.carousel-inner{
+.carousel-inner {
     height: 25rem;
     // border: solid 1px rgb(222, 214, 214);
     border-radius: 5px;
@@ -195,62 +195,33 @@ img {
     margin-bottom: 25px;
 }
 
-.lc-header{
-    font-size: 18px; font-weight: bold;
+.lc-header {
+    font-size: 18px;
+    font-weight: bold;
 }
-.lc-header i{
+
+.lc-header i {
     float: right;
     margin-top: 2px;
 }
 
-.buybtn{
+.buybtn {
     width: 2rem;
 }
 
-// .redbtn {
-//     width: 2.9rem;
-//     height: 2.9rem;
-//     border-radius: 50%;
-//     margin-right: 10px;
-//     border: solid 6px #ffffff; 
-// }
-
 .redbtn {
-    width: 50px;
-    height: 50px;
+    width: 2.9rem;
+    height: 2.9rem;
     border-radius: 50%;
-    margin: 5px;
-    position: relative;
-    border: 2px solid #ffffff;
-  }
-  
-  .active {
-    outline: solid 2px #ffffff;
-  }
-  
-  .colorWhite {
-    background-color: #ffffff;
-    
-  }
-  
-  .colorBlack {
-    background-color: #000000 !important;
-  }
-  
-  .colorBlue {
-    background-color: #b61e51 !important;
-  }
-  
-  .colorGrey {
-    background-color: #9f9f9f;
-  }
-  
+    margin-right: 10px;
+    border: solid 6px #ffffff;
+}
 
-.step li{
+.step li {
     padding: 0;
 }
 
-.step p{
+.step p {
     background-color: #e9e4e4;
     width: max-content;
     margin-top: 5px;
@@ -262,7 +233,7 @@ img {
     font-family: "Inter";
 }
 
-.step .activestep{
+.step .activestep {
     background-color: #DB2423;
     color: #ffffff;
 }
@@ -295,10 +266,10 @@ img {
     margin-bottom: 2rem;
 }
 
-.radiobtn{
-    height:15px; 
-    width:15px; 
-    vertical-align: middle; 
+.radiobtn {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
     margin-right: 10px;
 }
 
@@ -307,20 +278,20 @@ img {
     gap: 10%;
 }
 
- .rightcard::-webkit-scrollbar {
-     width: 2px;
-     height: 0px;
- }
- 
- .rightcard::-webkit-scrollbar-track { 
-     border-radius: 10px;
-     background: rgba(255, 255, 255, 0);
- }
- 
- .rightcard::-webkit-scrollbar-thumb {
-     border-radius: 10px;
-     background-color: rgb(211, 0, 0);
- }
+.rightcard::-webkit-scrollbar {
+    width: 2px;
+    height: 0px;
+}
+
+.rightcard::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+}
+
+.rightcard::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(211, 0, 0);
+}
 
 // .rightcard-input-radio {
 //     accent-color: #DB2423;
@@ -342,12 +313,15 @@ img {
     accent-color: #DB2423;
 }
 
-.radio-body{
+.radio-body {
     margin-left: 5px;
 }
 
-.leasehire input{
-    height:15px; width:15px; vertical-align: middle; margin-right: 10px;
+.leasehire input {
+    height: 15px;
+    width: 15px;
+    vertical-align: middle;
+    margin-right: 10px;
 }
 
 // .leasehire label{
@@ -361,8 +335,10 @@ img {
     min-width: 100px;
 }
 
-.subhead{
-    font-size: 18px; font-weight: bold; margin-top: 25px;
+.subhead {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
 }
 
 .form-check-input:checked {
@@ -374,24 +350,24 @@ img {
     color: #DB2423;
 }
 
-.fields{
+.fields {
     margin-top: 12px;
 }
 
 .fields p {
     width: 160px;
-    font-size: 13px; 
-    font-weight: bold; 
+    font-size: 13px;
+    font-weight: bold;
     margin-top: 10px;
 }
 
-.fields input{
-    height: 1.75rem; 
-    height: 1.75rem; 
-    margin-top: 10px; 
+.fields input {
+    height: 1.75rem;
+    height: 1.75rem;
+    margin-top: 10px;
     padding: 0 10px;
     padding: 0 10px;
-    width:40%;
+    width: 40%;
     border: solid 1px rgb(211, 206, 206);
     border-radius: 4px;
     font-size: 11px;
@@ -406,7 +382,7 @@ img {
     gap: 0.5rem;
 }
 
-.numbers button{
+.numbers button {
     height: 58px;
     min-width: 60px;
 
@@ -416,7 +392,7 @@ img {
     font-weight: 800;
 }
 
-.numbtn:hover{
+.numbtn:hover {
     border: solid 2px red;
 }
 
@@ -474,6 +450,7 @@ img {
     width: 50%;
     left: 50%
 }
+
 // .bs4-order-tracking li:last-child:after {
 //     width: 100%;
 //     right: 50%;
@@ -509,23 +486,23 @@ img {
     z-index: 0
 }
 
-.small-card{
+.small-card {
     border-radius: 5px;
     height: 120px;
     width: 250px;
     background-color: rgb(177, 177, 177);
 }
 
-.small-card img{
+.small-card img {
     height: 100%;
     overflow: hidden;
     display: inline;
     border-radius: 10px;
 }
 
-.rangerr{
-    height:26px;
-    border-radius: 1px; 
+.rangerr {
+    height: 26px;
+    border-radius: 1px;
     border: solid 1px rgb(226, 222, 222);
     background-color: #f3f3f3;
     width: 75px;
@@ -534,19 +511,20 @@ img {
     align-items: center;
     justify-content: center;
     font-size: 15px;
-    .b{
+
+    .b {
         color: #000000;
     }
 }
 
-.rangerinp{
-    height:22px;
-    padding: 0; 
+.rangerinp {
+    height: 22px;
+    padding: 0;
     font-size: 2px;
 
 }
 
-.rangerinp:focus{
+.rangerinp:focus {
     border: none;
 
 }
@@ -557,14 +535,14 @@ datalist {
     color: rgb(0, 0, 0);
     width: 100%;
 
-  }
+}
 
-datalist option{
+datalist option {
     font-size: 11px;
     font-weight: bold;
 }
 
-.checkbtn{
+.checkbtn {
     width: 150px;
     height: 40px;
     font-size: 12px;
@@ -576,7 +554,7 @@ datalist option{
     font-weight: bold;
 }
 
-.buybtn{
+.buybtn {
     width: 200px;
     height: 40px;
     border-radius: 5px;
@@ -589,5 +567,157 @@ datalist option{
     color: #000000;
 }
 
+//==================================================================================================
 
+.car-main-img {
+    border: none;
+}
 
+.car-main-img img {
+    width: 33rem;
+    height: 20rem;
+    flex-shrink: 0;
+    border-radius: 16px;
+    // border: none;
+}
+
+.car-etc-img-div img {
+    height: 9rem;
+    margin-bottom: 1.5rem;
+}
+
+.car-details h2 {
+    color: #000;
+    // text-align: center;
+    font-family: Inter;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    /* 48px */
+}
+
+.car-details p {
+    color: #000;
+    font-family: Monts;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 135.9%;
+    letter-spacing: 0.24px;
+}
+
+.radio-btn-group label {
+    color: #000;
+    font-family: Monts;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 135.9%;
+    letter-spacing: 0.22px;
+}
+
+#specifyColor {
+    border: 0px;
+    width: 1.3rem;
+    // height: 2em;
+    accent-color: red;
+}
+
+.checked-radio {
+    margin-left: 1.9rem !important;
+}
+
+.left-card {
+    border-radius: 6px;
+    background: rgba(245, 245, 245, 0.24);
+    box-shadow: 0px 2px 10px -1px rgba(0, 0, 0, 0.22);
+}
+
+.exclamation-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.label-des {
+    color: #000;
+    font-family: Monts;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.milegae-cc img {
+    margin-left: 1rem;
+}
+
+.mileage-text1 span {
+    margin-left: 3rem;
+}
+
+.mileage-text2 span {
+    margin-left: 1.3rem;
+}
+
+.mileage-text3 span {
+    margin-left: 0.7rem !important;
+}
+
+.mileage-text3 img {
+    margin-left: 0.7rem;
+}
+
+.left-card-right-side h2 {
+    color: #000;
+    // text-align: center;
+    font-family: Inter;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.color-div p {
+    color: #0F0F0F;
+    font-family: Monts;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 560;
+    line-height: 24px;
+    /* 100% */
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    // background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    // gap: 2;
+    // margin-left: 2rem;
+}
+
+.accessories {
+    color: #0F0F0F !important;
+    font-family: Montserrat !important;
+    font-size: 1.2rem !important;
+    font-style: normal !important;
+    font-weight: 660 !important;
+    line-height: 24px !important;
+    /* 100% */
+}
+
+.accessories span{
+    color: #0F0F0F;
+font-family: Montserrat;
+font-size: 0.9rem;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+
+.speedometer{
+    height: 3rem;
+    width: 3rem;
+}

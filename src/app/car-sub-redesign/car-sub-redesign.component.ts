@@ -5,19 +5,15 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 declare var $: any;
 
 @Component({
-  selector: 'app-car-subs',
-  templateUrl: './car-subs.component.html',
-  styleUrls: ['./car-subs.component.scss']
+  selector: 'app-car-sub-redesign',
+  templateUrl: './car-sub-redesign.component.html',
+  styleUrls: ['./car-sub-redesign.component.scss']
 })
-export class CarSubsComponent implements OnInit{
-
+export class CarSubRedesignComponent  implements OnInit{
   myObserver ;
   currentUrl : any;
   techDetailsParameter : any;
   specificaiton : any;
-  EMI: any;
-  colorList: string[] = [];
-  finalEMI: number = 0;
   // selectedColor: string = '45473D';
   
   
@@ -35,12 +31,10 @@ export class CarSubsComponent implements OnInit{
         }
       });
     }
-
-    
           carDetails=[
             {
               name:"2023 Toyota Glanza",
-              engine_capacity:"2.8L/213",
+              engine_capacity:"3L/213",
               transmmission_type : "Mannual",
               Fuel_Type: "Petrol",
               color_options:{
@@ -48,8 +42,7 @@ export class CarSubsComponent implements OnInit{
                   black:"Black",
                   blue:"Blue",
                   grey:"Grey"
-              },
-              emi:'811',
+              }
             },
             {
               name:"2023 Toyota Fortuner",
@@ -60,21 +53,18 @@ export class CarSubsComponent implements OnInit{
                   white:"White",
                   black:"Black",
                   grey:"Grey"
-              },
-              emi:'2,778',
-             
+              }
             },
             {
               name:"2023 Toyota Innova Crysta",
-              engine_capacity:"2.2L/213",
+              engine_capacity:"3.2L/213",
               transmmission_type : "Automatic",
               Fuel_Type: "Diesel",
               color_options:{
                   white:"White",
                   black:"Black",
                   blue:"Blue",
-              },
-              emi:'1,400'
+              }
             },
             {
               name:"2023 Toyota Vellfire ",
@@ -168,7 +158,7 @@ export class CarSubsComponent implements OnInit{
     const sliderValue = (event.target as HTMLInputElement).value;
     this.percentageValue = parseFloat(sliderValue);
   }
-  
+
   isUpperVisible=true
   isLowerVisible=false
   onClick(){
@@ -178,19 +168,9 @@ export class CarSubsComponent implements OnInit{
       this.isUpperVisible=true
     }
   }
- 
-  
- 
-
-  getColorList(spec : any){
-      let colors = Object.keys(spec.color_options).map(key=> spec.color_options[key]);
-      let flattenedColor = [].concat(...colors);
-      this.colorList.push(...flattenedColor);
-  }
 
 filterDetails(){
    this.specificaiton = this.carDetails.find((element)=> element.name == this.techDetailsParameter.name);   
-   this.getColorList(this.specificaiton);
 }
 
   onPress(){
@@ -201,59 +181,23 @@ filterDetails(){
     }
   }
 
+  inputtxt=''
   outline(event:Event){
     (<HTMLButtonElement>event.target).style.outlineColor=(<HTMLButtonElement>event.target).id
   }
 
-  
-
-// outline(event: Event, color: string) {
-//   this.selectedColor = color; // Update the selected color
-//   const buttons = document.querySelectorAll('.redbtn.btn') as NodeListOf<HTMLButtonElement>;
-//   buttons.forEach(button => {
-//     button.style.outlineColor = button.id === color ? color : '#ffffff'; // Set outline color based on selected color
-//   });
-// }
-
-
-// selectedColor: string = '45473D';
-
-// outline(color: string) {
-//   this.selectedColor = color;
-// }
-
-
-
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
   }
-
   onSubmit(){
     this.redirect('apply-now-flow-1'); 
+
 }
 
 applyNow(){
-  console.log("tec detsia",this.techDetailsParameter);
   let data = {
-    image : this.techDetailsParameter.imgUrl,
-    name : this.techDetailsParameter.name,
-    price : this.techDetailsParameter.price,
-    emi : this.finalEMI,
+    image : this.techDetailsParameter.imgUrl
   }
   this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
-}
-
-calculateEMI(Price: string) {
-  let price = Price.replace(/,/g, '');
-  let totalCarPrice : number = parseFloat(price);
-  let annualInterestRate: number = 7;
-  let  tenureInYears: number = 2;
-  const monthlyInterestRate = (annualInterestRate / 12) / 100;
-  const numberOfMonths = tenureInYears * 12;
-  
-  const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
-  const emi = Math.trunc(roughemi);
-  this.finalEMI = emi;
-  return emi;
 }
 }
