@@ -27,6 +27,8 @@ export class WorkspaceComponent {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
+          console.log("heyy", this.techDetailsParameter);
+          
         } 
         }
       });
@@ -106,6 +108,8 @@ export class WorkspaceComponent {
     
     
   }
+
+  
 
   title = 'aggridpro';
   columnDefs: ColDef[] = [

@@ -9,7 +9,9 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
   styleUrls: ['./dialog-box.component.scss']
 })
 export class DialogBoxComponent {
-  constructor(public dialogRef: DialogRef, @Inject(DIALOG_DATA) public data: any, private router:Router, private redirectMenu: RedirectMenuService) {}
+  constructor(public dialogRef: DialogRef, @Inject(DIALOG_DATA) public data: any, private router:Router, private redirectMenu: RedirectMenuService) {
+
+  }
 
   onCancel(){
     this.dialogRef.close();
@@ -23,7 +25,7 @@ export class DialogBoxComponent {
   }
   redirect(path : string){
 
-    this.redirectMenu.redirectTo(path);
+    this.redirectMenu.redirectWithdata(path,this.data.data);
 
   }
 }
