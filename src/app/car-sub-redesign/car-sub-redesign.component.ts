@@ -244,11 +244,9 @@ export class CarSubRedesignComponent implements OnInit {
 
   // selectedColor: string = '45473D';
 
-  // outline(color: string) {
-  //   this.selectedColor = color;
-  // }
-
-
+// outline(color: string) {
+//   this.selectedColor = color;
+// }
 
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
@@ -258,12 +256,16 @@ export class CarSubRedesignComponent implements OnInit {
     this.redirect('apply-now-flow-1');
   }
 
-  applyNow() {
-    let data = {
-      image: this.techDetailsParameter.imgUrl
-    }
-    this.redirectMenu.redirectWithdata('apply-now-flow-1', data);
+applyNow(){
+  let data = {
+    image : this.techDetailsParameter.imgUrl,
+    name : this.techDetailsParameter.name,
+    price : this.techDetailsParameter.price
   }
+  console.log("data->",data);
+  
+  this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
+}
 
   calculateEMI(Price: string) {
     let price = Price.replace(/,/g, '');
