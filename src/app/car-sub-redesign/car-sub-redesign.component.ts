@@ -244,11 +244,9 @@ export class CarSubRedesignComponent implements OnInit {
 
   // selectedColor: string = '45473D';
 
-  // outline(color: string) {
-  //   this.selectedColor = color;
-  // }
-
-
+// outline(color: string) {
+//   this.selectedColor = color;
+// }
 
   redirect(path: string) {
     this.redirectMenu.redirectTo(path);
@@ -258,12 +256,16 @@ export class CarSubRedesignComponent implements OnInit {
     this.redirect('apply-now-flow-1');
   }
 
-  applyNow() {
-    let data = {
-      image: this.techDetailsParameter.imgUrl
-    }
-    this.redirectMenu.redirectWithdata('apply-now-flow-1', data);
+applyNow(){
+  let data = {
+    image : this.techDetailsParameter.imgUrl,
+    name : this.techDetailsParameter.name,
+    price : this.techDetailsParameter.price
   }
+  console.log("data->",data);
+  
+  this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
+}
 
   calculateEMI(Price: string) {
     let price = Price.replace(/,/g, '');
@@ -285,7 +287,7 @@ export class CarSubRedesignComponent implements OnInit {
   addBorder() {
     let elem = document.getElementById('speedometer') as HTMLElement;
     if (this.border1 == false) {
-      elem.setAttribute("style", "border:1px solid black,height: 3rem,width: 3rem,margin-right: 20px;")
+      elem.setAttribute("style", "border:1px solid red;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem;border-radius:0.2rem")
       this.border1 = true
     }
     else {
@@ -297,7 +299,7 @@ export class CarSubRedesignComponent implements OnInit {
   addBorder2() {
     let elem = document.getElementById('engine') as HTMLElement;
     if (this.border2 == false) {
-      elem.setAttribute("style", "border:1px solid black,height: 3rem,width: 3rem,margin-right: 20px;")
+      elem.setAttribute("style", "border:1px solid red;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem; border-radius:0.2rem")
       this.border2 = true
     }
     else {

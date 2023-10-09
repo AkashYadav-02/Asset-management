@@ -229,7 +229,7 @@ filterDetails(){
   }
 
   onSubmit(){
-    this.redirect('apply-now-flow-1'); 
+    this.redirect('apply-now-flow-1');
 }
 
 applyNow(){
@@ -238,7 +238,7 @@ applyNow(){
     image : this.techDetailsParameter.imgUrl,
     name : this.techDetailsParameter.name,
     price : this.techDetailsParameter.price,
-    emi : this.finalEMI,
+    emi : this.finalEMI
   }
   this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
 }

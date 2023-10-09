@@ -20,10 +20,8 @@
 
 <div class="card" style="width: 24rem;">
 
-    <div (click)="redirect('car-sub')"  *ngFor="let car of carDetails">
-
+    <div (click)="redirect('car-sub')">
         <img class="car-card" src={{techDetailsParameter.image}}>
-
     </div>
             <h5 class="card-title" style="font-family: 'Inter'; text-align: center; font-size: 18px; color:#DB2423"><b>Application ID: {{applicationId}}</b></h5>
           <div class="d-flex pd" style="justify-content: space-between;">
@@ -42,7 +40,7 @@
             <div class="package-details">
                 <p><b>--</b> </p>
                 <p style="color: #DB2423;"><b>{{leftcard.currentInstallment}}</b></p>
-                <p ><b>{{leftcard.totalfinanceamount}}</b></p>
+                <p ><b>{{techDetailsParameter.price}}</b></p>
                 <p >{{leftcard.downpayment}}</p>
                 <p >{{leftcard.repaymentfrequency}} </p>
                 <p >{{leftcard.APR}}</p>
