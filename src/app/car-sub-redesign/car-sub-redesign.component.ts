@@ -285,7 +285,7 @@ export class CarSubRedesignComponent implements OnInit {
   addBorder() {
     let elem = document.getElementById('speedometer') as HTMLElement;
     if (this.border1 == false) {
-      elem.setAttribute("style", "border:1px solid black,height: 3rem,width: 3rem,margin-right: 20px;")
+      elem.setAttribute("style", "border:1px solid black;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem")
       this.border1 = true
     }
     else {
@@ -297,7 +297,7 @@ export class CarSubRedesignComponent implements OnInit {
   addBorder2() {
     let elem = document.getElementById('engine') as HTMLElement;
     if (this.border2 == false) {
-      elem.setAttribute("style", "border:1px solid black,height: 3rem,width: 3rem,margin-right: 20px;")
+      elem.setAttribute("style", "border:1px solid black;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem")
       this.border2 = true
     }
     else {
