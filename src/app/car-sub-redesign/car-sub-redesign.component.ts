@@ -289,10 +289,12 @@ applyNow(){
     if (this.border1 == false) {
       elem.setAttribute("style", "border:1px solid red;margin-right: 1rem;height: 3rem;width: 3rem;padding: 0.2rem;border-radius:0.2rem")
       this.border1 = true
+      // this.techDetailsParameter.price+300
     }
     else {
       elem.setAttribute("style", "border:none")
       this.border1 = false
+      // this.techDetailsParameter.price-300
     }
   }
 
