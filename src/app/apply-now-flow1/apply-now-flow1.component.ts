@@ -11,11 +11,12 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 })
 
 export class ApplyNowFlow1Component implements OnInit {
+  applicationId: string = '' ;
 
   myObserver ;
   currentUrl : any;
   techDetailsParameter : any;
-  applicationId: string = '' ;
+
   lineItem: any;
 
   constructor(private router:Router,private fb: FormBuilder,
@@ -31,8 +32,6 @@ export class ApplyNowFlow1Component implements OnInit {
         } 
         }
       });
-
-
      }
 
      ngOnInit():void{

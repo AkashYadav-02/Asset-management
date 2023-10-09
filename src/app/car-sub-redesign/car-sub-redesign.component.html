@@ -162,33 +162,39 @@
                 </div>
 
                 <div class="left-card-right-side ms-3">
-                    <div class="dropdown">
-                        <h2 class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Select Variant
-                        </h2>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+                    <div class="dropdown mt-2 d-flex select-variant" (click)="expandVariant()">
+                        <h2>Select Variant</h2>
+                        <i class="fa-solid"
+                        [class.fa-angle-down]="isVariantExpand" [class.fa-angle-up]="!isVariantExpand"></i>
                     </div>
 
-                    <div class="color-div">
-                        <p class="mt-4">Color</p>
-                        <div class="color-picker">
-                            <span class="dot" style="background-color: red;"></span>
-                            <span class="dot ms-2" style="background-color: #45473d;"></span>
-                            <span class="dot ms-2" style="background-color: black;"></span>
-                            <span class="dot ms-2" style="background-color: #dfdfdf"></span>
+                    <div [style.display]="isVariantExpand ? 'inherit' : 'none'">
+                        <div class="color-div">
+                            <p class="mt-3">Color</p>
+                            <div class="color-picker" *ngFor="let item of colorList">
+                                <!-- <span class="dot" style="background-color: red; outline: solid 2px #ffffff;"
+                                (click)="outline($event)"></span>
+                                <span class="dot ms-2" style="background-color: #45473d; outline: solid 2px #ffffff;"
+                                (click)="outline($event)"></span>
+                                <span class="dot ms-2" style="background-color: black; outline: solid 2px #ffffff;"
+                                (click)="outline($event)"></span>
+                                <span class="dot ms-2" style="background-color: #dfdfdf; outline: solid 2px #ffffff;"
+                                (click)="outline($event)"></span> -->
+                                <!-- <button class="redbtn btn color{{item}}" style="outline: solid 2px #a38c8c;" ></button> -->
+                            </div>
+                            <div style="display: flex;">
+                                <div  *ngFor="let item of colorList">
+                                    <button class="dot redbtn color{{item}}" style="outline: solid 2px #a38c8c;" (click)="outline($event)" ></button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <h2 class="mt-3 accessories">Accessories <span>(optional)</span></h2>
-                        <div class="d-flex mt-3 my-2">
-                            <img class="speedometer" src="../../assets/logos/456.png" style="margin-right: 20px;">
-                            <img src="../../assets/logos/123.png">
+                        <div>
+                            <h2 class="mt-3 accessories">Accessories <span>(optional)</span></h2>
+                            <div class="d-flex mt-3 my-2">
+                                <img class="speedometer" src="../../assets/logos/456.png" style="margin-right: 20px;">
+                                <img src="../../assets/logos/123.png">
+                            </div>
                         </div>
                     </div>
                 </div>
