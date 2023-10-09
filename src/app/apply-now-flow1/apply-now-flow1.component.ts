@@ -29,8 +29,6 @@ export class ApplyNowFlow1Component {
         } 
         }
       });
-
-
      }
   carDetails=[
     {

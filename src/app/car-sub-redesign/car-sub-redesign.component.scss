@@ -694,6 +694,7 @@ datalist option {
     // background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
+    border: 0.2rem solid white;
     // gap: 2;
     // margin-left: 2rem;
 }
@@ -708,16 +709,45 @@ datalist option {
     /* 100% */
 }
 
-.accessories span{
+.accessories span {
     color: #0F0F0F;
-font-family: Montserrat;
-font-size: 0.9rem;
-font-style: normal;
-font-weight: 500;
-line-height: 24px;
+    font-family: Montserrat;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }
 
-.speedometer{
+.speedometer {
     height: 3rem;
     width: 3rem;
+}
+
+.colorWhite {
+    background-color: #ffffff;
+
+}
+
+.colorBlack {
+    background-color: #000000 !important;
+}
+
+.colorBlue {
+    background-color: #b61e51 !important;
+}
+
+.colorGrey {
+    background-color: #9f9f9f;
+}
+
+.select-variant{
+    align-items: baseline;
+}
+
+.select-variant i{
+    margin-left: 1rem;
+}
+
+.select-variant:hover{
+    cursor: pointer;
 }
