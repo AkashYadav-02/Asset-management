@@ -207,13 +207,44 @@ img {
     width: 2rem;
 }
 
+// .redbtn {
+//     width: 2.9rem;
+//     height: 2.9rem;
+//     border-radius: 50%;
+//     margin-right: 10px;
+//     border: solid 6px #ffffff; 
+// }
+
 .redbtn {
-    width: 2.9rem;
-    height: 2.9rem;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-right: 10px;
-    border: solid 6px #ffffff; 
-}
+    margin: 5px;
+    position: relative;
+    border: 2px solid #ffffff;
+  }
+  
+  .active {
+    outline: solid 2px #ffffff;
+  }
+  
+  .colorWhite {
+    background-color: #ffffff;
+    
+  }
+  
+  .colorBlack {
+    background-color: #000000 !important;
+  }
+  
+  .colorBlue {
+    background-color: #b61e51 !important;
+  }
+  
+  .colorGrey {
+    background-color: #9f9f9f;
+  }
+  
 
 .step li{
     padding: 0;

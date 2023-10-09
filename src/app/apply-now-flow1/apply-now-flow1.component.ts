@@ -34,9 +34,9 @@ export class ApplyNowFlow1Component {
      }
   carDetails=[
     {
-      name:"Audi A8 L 2022",
-      price: 8200,
-      imgUrl: "../../assets/Cars/car1.png"
+      name:"2023 Toyota Fortuner",
+      price: "61,490",
+      imgUrl: "../../assets/Toyota-Fortuner-110120211829 2.png",
     },
   ]
   white="../../../assets/logos/heart.png";
@@ -53,17 +53,6 @@ export class ApplyNowFlow1Component {
   redirect(path : string){
     this.redirectMenu.redirectTo(path);
   }
-
-  isUpperVisible=true
-  isLowerVisible=false
-  onClick(){
-    if (this.isUpperVisible){
-      this.isUpperVisible=false
-    }else{
-      this.isUpperVisible=true
-    }
-  }
- 
 
 }
 

@@ -12,6 +12,13 @@
     color: white;
     background-color: aqua;
     background-color: white;
+    border-bottom: solid 1px rgb(196, 192, 192);
+    font-size: 17px;
+    font-family: "Montserrat";
+}
+.a1{
+    font-size: 15px;
+    font-family: "Montserrat";
 }
 .notibar, .profilebar{
     display: flex;
@@ -44,6 +51,30 @@
     margin-top: 25px;
     margin-left: -9rem;
     width: 15rem;
+}
+.notibar p{
+    width: 14rem;
+    font-size: 0.8rem !important;
+}
+
+.notification-text{
+margin-left: 1.5rem;
+}
+
+.user-names{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+}
+
+.time-ago{
+    // text-align: right;
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 0.6rem;
+    padding-right: 1rem;
+    margin-top: 0.3rem;
 }
 
 .profilebar{
