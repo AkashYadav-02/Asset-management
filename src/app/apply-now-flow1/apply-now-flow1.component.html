@@ -30,7 +30,7 @@
 
     </div>
 
-      <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: UNE0348</b></h5>
+      <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: {{applicationId}}</b></h5>
 
     <div class="package-details">
         <p style="font-family: 'Monts';"><b>Your chosen package: </b></p>
@@ -255,11 +255,11 @@
 
  
 
-    <div class="cs-footer-com">
+    <div class="cs-footer-com" (click)="saveProcceed()">
 
  
 
-        <button class="btn">SAVE & PROCEED</button>
+        <button class="btn">Submit</button>
 
     </div>
 

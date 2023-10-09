@@ -45,8 +45,10 @@
                 <p-toast></p-toast>
                 <p-fileUpload name="files[]" 
                 url="https://www.primefaces.org/cdn/api/upload.php" 
+                chooseLabel="Choose Your Files"
                 (onUpload)="onUpload($event)" 
                 [multiple]="true" 
+                [showCancelButton]="false"
                 accept="image/*" [maxFileSize]="1000000">
                         <ul *ngIf="uploadedFiles.length">
                             <li *ngFor="let file of uploadedFiles">{{ file.name }} - {{ file.size }} bytes</li>
@@ -86,4 +88,12 @@
     </div>
     
 
+</div>
+<div class="car-subs-footer">
+    <div class="cs-footer-com">
+        <button class="btn" (click)="redirect('work-space')">BACK</button>
+    </div>
+    <div class="cs-footer-com">
+        <button class="btn" (click)="redirect('work-space')">SUBMIT</button>
+    </div>
 </div>
