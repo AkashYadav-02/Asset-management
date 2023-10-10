@@ -5,6 +5,5 @@
     {"appID":"UNE9419", "customerName":"Marvin McKinney", "carSelection":"2023 Toyota Urban Cruiser", "financing":"$1,89,000", "status":"Pending"},
     {"appID":"UNE6145", "customerName":"Kathryn", "carSelection":"2023 Toyota Camry", "financing":"$1,90,000", "status":"Rejected"},
     {"appID":"UNE8796", "customerName":"Kristin Watson", "carSelection":"2023 Toyota Fortuner", "financing":"$1,90,000", "status":"Processed"},
-    {"appID":"UNE6149", "customerName":"Jonh Damson", "carSelection":"2023 Toyata WellFire", "financing":"$1,90,600", "status":"Rejected"},
-    {"appID":"UNE5549","customerName":"Jhon","carSelection":"2023 Toyota Fortuner","financing":"2","status":"Processed"}
+    {"appID":"UNE6149", "customerName":"Jonh Damson", "carSelection":"2023 Toyata WellFire", "financing":"$1,90,600", "status":"Rejected"}
 ]

@@ -19,6 +19,7 @@ import { CreditInformationComponent } from './credit-information/credit-informat
 import { ApplyNowFlow1Component } from './apply-now-flow1/apply-now-flow1.component';
 import { ApplyNowPendingComponent } from './apply-now-pending/apply-now-pending.component';
 import { ApprovedComponent } from './approved/approved.component';
+import { CarSubRedesignComponent } from './car-sub-redesign/car-sub-redesign.component';
 
 const routes: Routes = [
   // {path:'',redirectTo:'',pathMatch:'full'},
@@ -41,6 +42,8 @@ const routes: Routes = [
   {path:'apply-now-flow-1', component: ApplyNowFlow1Component},
   {path:'apply-now-pending', component: ApplyNowPendingComponent},
   {path:'apply-now-approve', component: ApprovedComponent},
+  {path:'car-sub-redesign', component: CarSubRedesignComponent},
+
 ];
 
 @NgModule({

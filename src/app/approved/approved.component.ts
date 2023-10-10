@@ -5,6 +5,7 @@ import { GridOptions,ColDef  } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-approved',
   templateUrl: './approved.component.html',
@@ -13,6 +14,9 @@ import { RedirectMenuService } from 'src/services/redirect-menu.service';
 export class ApprovedComponent {
 accountDetails = accountDetails;
 disbursmentdetails = disbursmentdetails;
+myObserver ;
+currentUrl : any;
+techDetailsParameter : any;
 public rowData$!: Observable<any[]>;
 carDetails=[
   {
@@ -50,8 +54,17 @@ customCellRenderer(params: any) {
 ngOnInit() {
     this.rowData$ = this.http.get<any[]>('../../assets/JSONfiles/approved-data.json');
 }
-  constructor(private http:HttpClient,  private redirectMenu : RedirectMenuService,
-       ) {
+  constructor(private router: Router,private http:HttpClient,  private redirectMenu : RedirectMenuService,
+       ) { this.myObserver = this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          this.currentUrl = event.url;
+        const navigation = this.router.getCurrentNavigation();
+        if (navigation?.extras.state) {
+          this.techDetailsParameter = navigation.extras.state;
+          console.log("hu")
+        } 
+        }
+      });
     // this.gridOptions = {
       
     //   columnDefs: [

@@ -17,6 +17,7 @@ export class CarSubsComponent implements OnInit{
   specificaiton : any;
   EMI: any;
   colorList: string[] = [];
+  finalEMI: number = 0;
   // selectedColor: string = '45473D';
   
   
@@ -228,12 +229,16 @@ filterDetails(){
   }
 
   onSubmit(){
-    this.redirect('apply-now-flow-1'); 
+    this.redirect('apply-now-flow-1');
 }
 
 applyNow(){
+  console.log("tec detsia",this.techDetailsParameter);
   let data = {
-    image : this.techDetailsParameter.imgUrl
+    image : this.techDetailsParameter.imgUrl,
+    name : this.techDetailsParameter.name,
+    price : this.techDetailsParameter.price,
+    emi : this.finalEMI
   }
   this.redirectMenu.redirectWithdata('apply-now-flow-1',data);
 }
@@ -247,8 +252,8 @@ calculateEMI(Price: string) {
   const numberOfMonths = tenureInYears * 12;
   
   const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
-  // console.log(emi.toFixed(0));
   const emi = Math.trunc(roughemi);
+  this.finalEMI = emi;
   return emi;
 }
 }

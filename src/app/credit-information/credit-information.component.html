@@ -1,4 +1,5 @@
-<app-nav-bar-after-home-profile [navtheme]="'whitetheme'"></app-nav-bar-after-home-profile>
+<div *ngIf="showCredit">
+    <app-nav-bar-after-home-profile [navtheme]="'whitetheme'"></app-nav-bar-after-home-profile>
 <div class="stepper">
 
     <div class="progress" aria-label="Danger example">
@@ -27,17 +28,17 @@
 <div class="cs-cred-info-main-screen">
     <div class="cs-cred-info-left-sec">
 
-        <img class="car-card" src=..\assets\car1.png>
+        <img class="car-card" src={{techDetailsParameter.specs.image}}>
 
-        <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: UNE0348</b></h5>
+        <h5 class="card-title" style="font-family: Inter;"><b>Application ID: {{techDetailsParameter.applicationId}}</b></h5>
 
         <div class="package-details">
 
             <p style="font-family: Monts;"><b>Your chosen package: </b></p>
 
-            <p style="font-family: Monts; color: #ED5434;"><b>Your current instalment is: 1,420$ per month</b></p>
+            <p style="font-family: Monts; color: #ED5434;"><b>Your current installment is: 1,420$ per month</b></p>
 
-            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Total Amount of Finance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$88,00</b></p>
+            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Total Amount of Finance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{techDetailsParameter.price}}</b></p>
 
             <p style="font-family: Monts;">Down Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12,000</p>
 
@@ -45,9 +46,9 @@
 
             <p style="font-family: Monts;">APR of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.9%</p>
 
-            <p style="font-family: Monts;">Add on (instalment)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</p>
+            <p style="font-family: Monts;">Add on (installment)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</p>
 
-            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Final Instalment is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1,420</b></p>
+            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Final Installment is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1,420</b></p>
 
             <p style="font-family: Monts;">Your first payment is&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$14,420</p>
 
@@ -78,7 +79,8 @@
             <div class="drop-one">
                 <h6 class="sub-header-two">Asset type :</h6>
                 <select name ="choose" class="Choose" id="Choose">
-                    <option value=""></option>
+                    <img src ="../../assets/arrow-circle-down.svg" style="position:absolute">
+                    <option value="choose">Choose </option> 
                     <option value="Savings Account">Savings Account</option>
                     <option value="Current Account">Current Account</option>
                     <option value="Draft Account">Draft Account</option>
@@ -99,8 +101,9 @@
             </div> -->
             <div class="drop-one">
                 <h6 class="sub-header-two">Income Type :</h6>
-                <select name ="choose" class="Choose" id="Choose">
-                    <option value=""></option>
+                <select name ="choose" class="Choose rounded-border" id="Choose">
+                
+                    <option value="choose">Choose </option> 
                     <option value="Savings Account">Savings Account</option>
                     <option value="Current Account">Current Account</option>
                     <option value="Draft Account">Draft Account</option>
@@ -123,7 +126,11 @@
             <div class="drop-one">
                 <h6 class="sub-header-two">Expense type :</h6>
                 <select name ="choose" class="Choose" id="Choose">
-                    <option value=""></option>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 18.3332C14.6024 18.3332 18.3334 14.6022 18.3334 9.99984C18.3334 5.39746 14.6024 1.6665 10 1.6665C5.39765 1.6665 1.66669 5.39746 1.66669 9.99984C1.66669 14.6022 5.39765 18.3332 10 18.3332Z" stroke="#DB2423" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                                                
+                    <option value="choose"><b>Choose</b> </option> 
                     <option value="Savings Account">Savings Account</option>
                     <option value="Current Account">Current Account</option>
                     <option value="Draft Account">Draft Account</option>
@@ -143,7 +150,34 @@
         </div>
 
         <div class="cs-footer-right">
-            <button class="btn">Submit</button>
+            <button class="btn" (click)="onSubmit()">Submit</button>
+            
         </div>
+        
 
     </div>
+</div>
+
+
+
+<div *ngIf="!showCredit" class="popup-container" (click)="onCancel()">
+    <div class="popup-box">
+        <div class="popup-header">
+            <button (click)="onCancel()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9.17004 14.8299L14.83 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14.83 14.8299L9.17004 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+        </div>
+        <h1 class="text-uppercase popup-title">Success!</h1>
+        <div class="popup-message">
+            <p>Thank you your data has been saved and you can view it on your Dashboard/My Workspace.</p>
+        </div>
+        <div>
+            <button (click)="onOk()" class="confirm-btn">OK</button>
+        </div>
+    </div>
+</div>

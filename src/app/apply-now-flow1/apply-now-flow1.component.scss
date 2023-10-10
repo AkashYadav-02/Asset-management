@@ -68,18 +68,20 @@
 
 }
 
- 
-
-.package-details{
-
-    margin-top: 0.5rem;
-
-    margin-left: 0.5rem;
-
+.package-details {
+    font-family: "Monts";
     font-size: 15px;
+    font-weight: 500;
+}
 
-    font-family: "Montserrat";
+.package-details p {
+    display: flex;
+    justify-content: space-between;
+}
 
+.pd{
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
  
