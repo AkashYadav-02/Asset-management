@@ -1,25 +1,23 @@
-// import { Component } from '@angular/core';
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { leftcard } from '../carddetails';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 // import { Router } from '@angular/router';
-
 import { Router, NavigationEnd } from '@angular/router';
-
 import { RedirectMenuService } from 'src/services/redirect-menu.service';
-
 @Component({
-
   selector: 'app-apply-now-flow1',
-
   templateUrl: './apply-now-flow1.component.html',
-
   styleUrls: ['./apply-now-flow1.component.scss']
-
 })
 
-export class ApplyNowFlow1Component {
+export class ApplyNowFlow1Component implements OnInit {
+  applicationId: string = '';
 
+  leftcard = leftcard;
+  myObserver;
   lastName: string = '';
 
   driversLicense: string = '';
@@ -51,160 +49,68 @@ export class ApplyNowFlow1Component {
   workstate: string = '';
   workzip: string = '';
 
-  myObserver ;
   currentUrl : any;
   techDetailsParameter : any;
 
-//  lastname: string = "Aurionpro";
-  // driversLicense: string = "1223@"; 
- 
 
-  // licenseClass: string = '';
 
-  // licenseNo: string = '';
+  lineItem: any;
 
-  // licenseValidity: string = '';
+  constructor(private router: Router, private fb: FormBuilder,private http: HttpClient,
+    private redirectMenu: RedirectMenuService,
+  ) {
 
-  // fname: string = '';
-
-  // lname: string = '';
-
-  // mname: string = '';
-
-  // dob: string = '';
-
-  // mobile: string = '';
-
-  // home: string = '';
-
-  // email: string = '';
-
-  // citizen: string = '';
-
-  // resident: string = '';
-
-  // yearsataddress: string = '';
-
-  // street: string = '';
-
-  // city: string = '';
-
-  // state: string = '';
-
-  // country: string = '';
-
-  // zipcode: string = '';
-
-  // employer: string = '';
-
-  // yearsatjob: string = '';
-
-  // designation: string = '';
-
-  // remotework: string = '';
-
-  // workstreet: string = '';
-
-  // workcity: string = '';
-
-  // workstate: string = '';
-
-  // workzip: string = '';
-
-  // displayStyle: string ='none';
-
-  // myObserver ;
-
-  // currentUrl : any;
-
-  // techDetailsParameter : any;
-
-  constructor(private router:Router,private fb: FormBuilder,
-
-    private redirectMenu : RedirectMenuService,
-
-     ) {
-
-      this.myObserver = this.router.events.subscribe((event) => {
-        if (event instanceof NavigationEnd) {
-          this.currentUrl = event.url;
+    this.myObserver = this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentUrl = event.url;
         const navigation = this.router.getCurrentNavigation();
-
         if (navigation?.extras.state) {
-
           this.techDetailsParameter = navigation.extras.state;
           console.log("from apply now flow 1",this.techDetailsParameter)
         }
-
-        }
-
-      });
-
- 
-
- 
-
-     }
-
-  carDetails=[
-
-    {
-
-      name:"2023 Toyota Fortuner",
-
-      price: "61,490",
-
-      imgUrl: "../../assets/Toyota-Fortuner-110120211829 2.png",
-
-    },
-
-  ]
-
-  white="../../../assets/logos/heart.png";
-
-  red="../../../assets/logos/heartred.png"
-
-  heartURL=this.white;
-
-  isLowerVisible=false
-
- 
-
-  isLowerVisible1=false
-
-  onPress() {
-
- 
-
-    // if (this.isLowerVisible) {
-
- 
-
-    //   this.isLowerVisible = false
-
- 
-
-    // } else {
-
- 
-
-    //   this.isLowerVisible = true
-
- 
-
-    // }
-
- 
-
-    // this.displayStyle = "block";
-
- 
-
+      }
+      
+      
+    });
   }
 
- 
+  ngOnInit(): void {
+    this.generateRandomApplicationId();
+  }
 
- 
+
+  // carDetails=[
+  //   {
+  //     name:"2023 Toyota Fortuner",
+  //     price: "61,490",
+  //     imgUrl: "../../assets/Toyota-Fortuner-110120211829 2.png",
+  //   },
+  // ]
+  white = "../../../assets/logos/heart.png";
+  red = "../../../assets/logos/heartred.png"
+  heartURL = this.white;
+  isLowerVisible=false
+  isLowerVisible1=false
+  turnRed() {
+    if (this.heartURL == this.white) {
+      this.heartURL = this.red
+    }
+    else if (this.heartURL == this.red) {
+      this.heartURL = this.white
+    }
+  }
+
+  generateRandomApplicationId(): void {
+    const randomPart = Math.floor(Math.random() * 10000).toString().padStart(4, '0'); // Generates a random 4-digit number
+    this.applicationId = `UNE${randomPart}`;
+    this.lineItem = this.applicationId;
+    console.log("line", this.lineItem);
+  }
+
+
+  redirect(path: string) {
+    this.redirectMenu.redirectTo(path);
+  }
 
   onPress1() {
 
@@ -232,10 +138,7 @@ export class ApplyNowFlow1Component {
 
   }
   
-  
-  // onSubmit(){
-  //   this.router.redirectto()
-  // }
+
   radioChanged(event: Event): void {
 
     const radio = event.target as HTMLInputElement;
@@ -251,9 +154,38 @@ export class ApplyNowFlow1Component {
     }
 
   }
+  saveProcceed() {
+    let data = {
+      username: "Brock",
+      specs: this.techDetailsParameter,
+      applicationId: this.applicationId,
+      carddetails: this.leftcard
+      // emiDetails : 
+    }
+    // console.log("y", data);
+    let jsonData = {
+      appID: this.applicationId,
+      customerName: "John",
+      carSelection: this.techDetailsParameter.name,
+      financing: this.techDetailsParameter.price,
+      status: "Pending"
+    }
 
- 
+    // let data = {
+    //   username: "John",
+    //   specs: this.techDetailsParameter,
+    //   applicationId: this.applicationId,
+    //   carddetails: this.leftcard,
+    //   jsonData: jsonData 
+    //   // emiDetails : 
+    // }
+    // console.log("Jason",jsonData);
+    // this.http.put('../../assets/JSONfiles/workspace.json');
 
+    
+  //  this.redirectMenu.redirectWithdata('work-space', );
+    this.redirectMenu.redirectWithdata('credit-info',data);
+  }
   datapopulate(event: Event): void {
 
     const button = event.target as HTMLButtonElement;
@@ -319,33 +251,31 @@ export class ApplyNowFlow1Component {
     }
 
   }
+  // Duplicate code from khushi 
+  // turnRed(){
 
- 
+  //   if (this.heartURL==this.white){
 
-  turnRed(){
+  //     this.heartURL=this.red
+  //   }
+  //   else if (this.heartURL==this.red){
+  //     this.heartURL=this.white
+  //   }
 
-    if (this.heartURL==this.white){
+  // }
+  // redirect(path : string){
+  //   this.redirectMenu.redirectTo(path);
 
-      this.heartURL=this.red
-    }
-    else if (this.heartURL==this.red){
-      this.heartURL=this.white
-    }
-
-  }
-  redirect(path : string){
-    this.redirectMenu.redirectTo(path);
-
-  }
+  // }
 
   redirectToForgotPassPage(){
     this.router.navigate(['credit-info']);
   
   }
+
 }
 
- 
 
- 
 
- 
+
+

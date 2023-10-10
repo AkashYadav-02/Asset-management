@@ -209,8 +209,6 @@ let data = {
   financing : '$' + ipData.specs.price.toString(),
   status : "Pending"
 }
-console.log("The Data iss", data);
-
 
     this.jsonOperation.pushData(data).subscribe(
       print => {

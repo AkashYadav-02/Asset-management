@@ -21,7 +21,7 @@ export class ApplyNowPendingComponent {
   myObserver ;
   currentUrl : any;
   techDetailsParameter : any;
-  showCredit : boolean = true;
+showCredit : boolean = true;
   
   constructor(private messageService: MessageService, private router: Router, private redirectMenu: RedirectMenuService) {
     this.myObserver = this.router.events.subscribe((event) => {
@@ -45,7 +45,7 @@ export class ApplyNowPendingComponent {
     this.techDetailsParameter.comp = "apply";
     this.techDetailsParameter.status = "Processed";
       //this.redirectMenu.redirectWithdata('work-space',this.techDetailsParameter);
-      this.showCredit = false;
+this.showCredit = false;
   }
 
   onUpload(event: any) {
