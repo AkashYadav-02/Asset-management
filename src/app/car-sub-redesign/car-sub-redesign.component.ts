@@ -275,6 +275,15 @@ export class CarSubRedesignComponent implements OnInit {
   }
 
   applyNow() {
+
+    //prev
+    // applyNow(){
+      // let data = {
+      //   image : this.techDetailsParameter.imgUrl,
+      //   name : this.techDetailsParameter.name,
+      //   price : this.techDetailsParameter.price,
+      //   emi : this.techDetailsParameter.emi
+      // }
     let data = {
       image: this.techDetailsParameter.imgUrl,
       name: this.techDetailsParameter.name,

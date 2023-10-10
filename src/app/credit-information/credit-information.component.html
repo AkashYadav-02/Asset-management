@@ -1,4 +1,5 @@
-<app-nav-bar-after-home-profile [navtheme]="'whitetheme'"></app-nav-bar-after-home-profile>
+<div *ngIf="showCredit">
+    <app-nav-bar-after-home-profile [navtheme]="'whitetheme'"></app-nav-bar-after-home-profile>
 <div class="stepper">
 
     <div class="progress" aria-label="Danger example">
@@ -27,9 +28,9 @@
 <div class="cs-cred-info-main-screen">
     <div class="cs-cred-info-left-sec">
 
-        <img class="car-card" src=..\assets\car1.png>
+        <img class="car-card" src={{techDetailsParameter.specs.image}}>
 
-        <h5 class="card-title" style="font-family: Inter;"><b>Application ID: UNE0348</b></h5>
+        <h5 class="card-title" style="font-family: Inter;"><b>Application ID: {{techDetailsParameter.applicationId}}</b></h5>
 
         <div class="package-details">
 
@@ -37,7 +38,7 @@
 
             <p style="font-family: Monts; color: #ED5434;"><b>Your current installment is: 1,420$ per month</b></p>
 
-            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Total Amount of Finance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$88,00</b></p>
+            <p style="font-family: Monts; font-family: 'Inter';"><b>Your Total Amount of Finance&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{techDetailsParameter.price}}</b></p>
 
             <p style="font-family: Monts;">Down Payment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$12,000</p>
 
@@ -155,3 +156,28 @@
         
 
     </div>
+</div>
+
+
+
+<div *ngIf="!showCredit" class="popup-container" (click)="onCancel()">
+    <div class="popup-box">
+        <div class="popup-header">
+            <button (click)="onCancel()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9.17004 14.8299L14.83 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14.83 14.8299L9.17004 9.16992" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg></button>
+        </div>
+        <h1 class="text-uppercase popup-title">Success!</h1>
+        <div class="popup-message">
+            <p>Thank you your data has been saved and you can view it on your Dashboard/My Workspace.</p>
+        </div>
+        <div>
+            <button (click)="onOk()" class="confirm-btn">OK</button>
+        </div>
+    </div>
+</div>

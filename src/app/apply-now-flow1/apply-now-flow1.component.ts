@@ -33,7 +33,6 @@ export class ApplyNowFlow1Component implements OnInit {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
-          // console.log("Hello",this.techDetailsParameter);
         }
       }
       
@@ -78,7 +77,13 @@ export class ApplyNowFlow1Component implements OnInit {
   }
 
   saveProcceed() {
-    
+    let data = {
+      username: "Brock",
+      specs: this.techDetailsParameter,
+      applicationId: this.applicationId,
+      carddetails: this.leftcard
+      // emiDetails : 
+    }
     // console.log("y", data);
     let jsonData = {
       appID: this.applicationId,
@@ -88,14 +93,14 @@ export class ApplyNowFlow1Component implements OnInit {
       status: "Pending"
     }
 
-    let data = {
-      username: "John",
-      specs: this.techDetailsParameter,
-      applicationId: this.applicationId,
-      carddetails: this.leftcard,
-      jsonData: jsonData 
-      // emiDetails : 
-    }
+    // let data = {
+    //   username: "John",
+    //   specs: this.techDetailsParameter,
+    //   applicationId: this.applicationId,
+    //   carddetails: this.leftcard,
+    //   jsonData: jsonData 
+    //   // emiDetails : 
+    // }
     // console.log("Jason",jsonData);
     // this.http.put('../../assets/JSONfiles/workspace.json');
 
