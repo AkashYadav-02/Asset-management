@@ -28,6 +28,8 @@ export class WorkspaceComponent {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
+          console.log(this.techDetailsParameter);
+          
           if(this.techDetailsParameter.comp =="credit"){
             this.default = "No";
                 this.pushData(this.techDetailsParameter);
@@ -204,6 +206,8 @@ let data = {
   financing : ipData.specs.price,
   status : "Pending"
 }
+console.log("The Data iss", data);
+
 
     this.jsonOperation.pushData(data).subscribe(
       print => {

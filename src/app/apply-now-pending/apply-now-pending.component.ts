@@ -21,6 +21,7 @@ export class ApplyNowPendingComponent {
   myObserver ;
   currentUrl : any;
   techDetailsParameter : any;
+  showCredit : boolean = true;
   
   constructor(private messageService: MessageService, private router: Router, private redirectMenu: RedirectMenuService) {
     this.myObserver = this.router.events.subscribe((event) => {
@@ -29,6 +30,7 @@ export class ApplyNowPendingComponent {
       const navigation = this.router.getCurrentNavigation();
       if (navigation?.extras.state) {
         this.techDetailsParameter = navigation.extras.state;
+        console.log("parm credig",this.techDetailsParameter);
       } 
       }
     });
@@ -42,7 +44,8 @@ export class ApplyNowPendingComponent {
   onSubmit(){
     this.techDetailsParameter.comp = "apply";
     this.techDetailsParameter.status = "Processed";
-      this.redirectMenu.redirectWithdata('work-space',this.techDetailsParameter);
+      //this.redirectMenu.redirectWithdata('work-space',this.techDetailsParameter);
+      this.showCredit = false;
   }
 
   onUpload(event: any) {
@@ -50,6 +53,19 @@ export class ApplyNowPendingComponent {
       this.uploadedFiles.push(file)
     }
     this.messageService.add({ severity: 'success', summary: 'Success', detail: 'File Uploaded successfully' });
+  }
+
+  onOk(){
+    this.techDetailsParameter.comp = 'credit';
+    this.showCredit = true;
+    this.redirectMenu.redirectWithdata('work-space',this.techDetailsParameter);
+    
+  }
+  
+  onCancel(){
+    this.techDetailsParameter.comp = 'credit';
+    this.showCredit = true;
+    this.redirectMenu.redirectWithdata('work-space',this.techDetailsParameter);
   }
 
   carDetails=[
