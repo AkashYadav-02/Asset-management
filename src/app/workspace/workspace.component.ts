@@ -28,7 +28,7 @@ export class WorkspaceComponent {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
-          console.log(this.techDetailsParameter);
+          console.log("fro workspace",this.techDetailsParameter);
           
           if(this.techDetailsParameter.comp =="credit"){
             this.default = "No";
@@ -189,11 +189,14 @@ export class WorkspaceComponent {
   }
 
   onCellClicked(data: any){
+    let transferData = {
+      tableData: data.data,
+      pramData : this.techDetailsParameter
+    }
     if (data.data.status == "Pending") {
-      
-      this.redirectMenu.redirectWithdata("apply-now-pending",data.data);
+      this.redirectMenu.redirectWithdata("apply-now-pending",transferData);
     }else if(data.data.status == "Processed" ){
-      this.redirectMenu.redirectWithdata("apply-now-approve",data.data);
+      this.redirectMenu.redirectWithdata("apply-now-approve",transferData);
     }
   }
 
@@ -203,7 +206,7 @@ let data = {
   appID : ipData.applicationId,
   customerName : ipData.username,
   carSelection : ipData.specs.name,
-  financing : ipData.specs.price,
+  financing : '$' + ipData.specs.price.toString(),
   status : "Pending"
 }
 console.log("The Data iss", data);
@@ -216,13 +219,15 @@ console.log("The Data iss", data);
     )
   }
   updateData(ipData: any){
+
+    console.log("updating data",ipData);
     
     // {"appID":"UNE8783", "customerName":"Jane Cooper", "carSelection":"2023 Toyota Glanza", "financing":"$1,40,000", "status":"Pending"},
 let data = {
-  appID : ipData.appID,
-  customerName : ipData.customerName,
-  carSelection : ipData.carSelection,
-  financing : ipData.financing,
+  appID : ipData.tableData.appID,
+  customerName : ipData.tableData.appID,
+  carSelection : ipData.tableData.carSelection,
+  financing : ipData.tableData.financing,
   status : ipData.status
 }
 

@@ -31,7 +31,7 @@ export class CarSubRedesignComponent implements OnInit {
           this.techDetailsParameter = navigation.extras.state;
           this.amountCalc=Math.ceil(this.techDetailsParameter.price * (35/100));
           this.maxDownPayment=Math.ceil(this.techDetailsParameter.price * (20/100));
-          console.log("tech param", this.techDetailsParameter);
+          console.log("from car sub redesizn", this.techDetailsParameter);
         }
       }
     });
@@ -287,7 +287,7 @@ export class CarSubRedesignComponent implements OnInit {
     let data = {
       image: this.techDetailsParameter.imgUrl,
       name: this.techDetailsParameter.name,
-      price: this.techDetailsParameter.price
+      price: this.techDetailsParameter.price,
     }
     console.log("data->", data);
 
@@ -307,7 +307,6 @@ export class CarSubRedesignComponent implements OnInit {
       const roughemi = (totalCarPrice * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfMonths)) / (Math.pow(1 + monthlyInterestRate, numberOfMonths) - 1);
       // console.log(emi.toFixed(0));
       const emi = Math.trunc(roughemi);
-      console.log("EMI is" + emi);
       return emi;
     }
     else {

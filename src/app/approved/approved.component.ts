@@ -61,7 +61,7 @@ ngOnInit() {
         const navigation = this.router.getCurrentNavigation();
         if (navigation?.extras.state) {
           this.techDetailsParameter = navigation.extras.state;
-          console.log("hu")
+          console.log("approve component",this.techDetailsParameter);
         } 
         }
       });

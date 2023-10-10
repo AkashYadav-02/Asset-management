@@ -28,7 +28,7 @@ export class CreditInformationComponent {
       const navigation = this.router.getCurrentNavigation();
       if (navigation?.extras.state) {
         this.techDetailsParameter = navigation.extras.state;
-        console.log("parm credig",this.techDetailsParameter);
+        console.log("from credig comp",this.techDetailsParameter);
       } 
       }
     });

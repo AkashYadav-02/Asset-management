@@ -133,7 +133,7 @@ export class ApplyNowFlow1Component {
         if (navigation?.extras.state) {
 
           this.techDetailsParameter = navigation.extras.state;
-
+          console.log("from apply now flow 1",this.techDetailsParameter)
         }
 
         }

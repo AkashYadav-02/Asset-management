@@ -30,7 +30,7 @@ export class ApplyNowPendingComponent {
       const navigation = this.router.getCurrentNavigation();
       if (navigation?.extras.state) {
         this.techDetailsParameter = navigation.extras.state;
-        console.log("parm credig",this.techDetailsParameter);
+        console.log("apply now pending ",this.techDetailsParameter)
       } 
       }
     });
