@@ -1,73 +1,88 @@
-
-
 <div class="navbar">
 
     <app-navbar-after-home-page [navtheme]="'whitetheme'"></app-navbar-after-home-page>
 
 </div>
 <div class="stepper">
+
     <div class="progress" aria-label="Danger example">
+
+        <div class="progress-bar bg-success" style="width: 33.33%"></div>
         <div class="progress-bar bg-danger" style="width: 33.33%"></div>
-      </div>
+
+    </div>
+    <div class="stepper-label">
+
+        <p style="font-family: Monts;">Choose Plan</p>
+
+        <p style="font-family: Monts;">Enter Details</p>
+
+        <p style="font-family: Monts;">Upload Documents</p>
+
+    </div>
+
 </div>
-<div class="stepper-label">
 
-    <p style="font-family: 'Monts';">Choose Plan</p>
 
-    <p style="font-family: 'Monts';">Enter Details</p>
-
-    <p style="font-family: 'Monts';">Upload Documents</p>
-
-</div>
-
- 
 
 <div class="card" style="width: 24rem;">
 
-    <div (click)="redirect('car-sub')"  *ngFor="let car of carDetails">
+    <div (click)="redirect('car-sub')" *ngFor="let car of carDetails">
 
         <img class="car-card" src={{techDetailsParameter.image}}>
 
     </div>
 
-      <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: UNE0348</b></h5>
+    <h5 class="card-title" style="font-family: 'Inter';"><b>Application ID: UNE0348</b></h5>
 
     <div class="package-details">
         <p style="font-family: 'Monts';"><b>Your chosen package: </b></p>
 
         <p style="font-family: 'Monts'; color: #ED5434;"><b>Your current instalment is: $1,420 per month</b></p>
 
-        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Total Amount of Finance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $88,00</b></p>
+        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Total Amount of Finance
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $88,00</b></p>
 
-        <p style="font-family: 'Monts';">Down Payment &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p style="font-family: 'Monts';">Down Payment
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $12,000</p>
 
-        <p style="font-family: 'Monts';">Repayment Frequency &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monthly</p>
+        <p style="font-family: 'Monts';">Repayment Frequency
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Monthly</p>
 
         <p style="font-family: 'Monts';">APR of &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.9%</p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.9%
+        </p>
 
-        <p style="font-family: 'Monts';">Add on (instalment) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0</p>
+        <p style="font-family: 'Monts';">Add on (instalment)
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$0
+        </p>
 
-        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Final Instalment is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1,420</b></p>
+        <p style="font-family: 'Monts'; font-family: 'Inter';"><b>Your Final Instalment is
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$1,420</b>
+        </p>
 
-        <p style="font-family: 'Monts';">Your first payment is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$14,420</p>
+        <p style="font-family: 'Monts';">Your first payment is
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$14,420
+        </p>
 
-        <p style="font-family: 'Monts'; color: #236AF2;"><b>Your monthly deduction starts from November 2023, every 1st of the month</b></p>
+        <p style="font-family: 'Monts'; color: #236AF2;"><b>Your monthly deduction starts from November 2023, every 1st
+                of the month</b></p>
 
     </div>
 
 </div>
 
- 
+
 
 <div class="card" id="right-panel">
 
@@ -105,7 +120,7 @@
 
     </div>
 
-    <hr class="hr-1"/>
+    <hr class="hr-1" />
 
     <div class="existing-customer">
 
@@ -115,13 +130,22 @@
 
             <div class="form-check form-check-inline">
 
-                <input type="radio" id="specifyColor" name="radio2" value="Individual">
+                <input type="radio" id="specifyColor" name="radio2" value="Individual" (change)="radioChanged($event)">
 
-                <label for="specifyColor" class="label1">&nbsp; Last Name: </label>
 
-                <label for="specifyColor" class="label2"><b>&nbsp; Drivers License: </b></label>
+                <label for="specifyColor" class="label1"><b>&nbsp; Last Name: </b></label>
+                <input type="text"
+                    style="width: 6rem; margin-left: -1.5rem; border-radius: 2px; border: 1px; color: #DB2423;"
+                    id="lastName" [(ngModel)]="lastName">
 
-                <button class="retrieve-btn">Retrieve Details</button>
+                <label for="specifyColor" class="label2"><b>&nbsp; Driver's License: </b></label>
+                <input type="text"
+                    style="width: 7.5rem; margin-left: -2.5rem; border-radius: 2px; border: 1px; color: #DB2423;"
+                    id="driversLicense" [(ngModel)]="driversLicense">
+
+                <button class="retrieve-btn" (click)="datapopulate($event)">Retrieve Details</button>
+
+
 
             </div>
 
@@ -129,31 +153,30 @@
 
     </div>
 
-    <hr class="hr-2"/>
-
+    <hr class="hr-2" />
     <div class="license-details">
-
         <label class="text-label"><b>License Details</b></label>
-
         <div class="content1">
-
-            <div class="form-check form-check-inline">
-
-                <label for="specifyColor" class="label3"><b>&nbsp; Driving License Class: 1L</b></label>
-
-                <label for="specifyColor" class="label3"><b>&nbsp; License No: DM123456</b></label>
-
-                <label for="specifyColor" class="label3"><b>&nbsp; License Validity: 01/01/2026</b></label>
-
+            <div class="form-check1 form-check-inline">
+                <div class="did-floating-label-content label-input w-full">
+                    <input class="did-floating-input" type="text" id="licenseClass" [(ngModel)]="licenseClass">
+                    <label class="did-floating-label" style="font-size: -0.3rem;">Driving Licence CLass</label>
+                </div>
+                <div class="did-floating-label-content label-input w-full">
+                    <input class="did-floating-input" type="text" id="licenseNo" [(ngModel)]="licenseNo">
+                    <label class="did-floating-label" style="font-size: -0.3rem;">License No</label>
+                </div>
+                <div class="did-floating-label-content label-input w-full">
+                    <input class="did-floating-input" type="text" id="licenseValidity" [(ngModel)]="licenseValidity">
+                    <label class="did-floating-label" style="font-size: -0.3rem;">License Validity</label>
+                </div>
             </div>
-
         </div>
 
     </div>
-
 </div>
 
-<div class="customer-details-dropdown">
+<!-- <div class="customer-details-dropdown">
 
     <div class="collapsible">
 
@@ -229,13 +252,145 @@
                 <p class="work-country">Country: New Zealand</p>
             </div>
         </div>
+    </div>
+</div> -->
 
+<div class="card1" id="right-panel1">
+
+    <p class="lc-header" (click)="onPress()" style="font-family: 'Inter'; color: #DB2423;"><b>CUSTOMER DETAILS</b>
+
+        <i class="fa-solid" [class.fa-angle-down]="isLowerVisible" [class.fa-angle-up]="!isLowerVisible"></i>
+    </p>
+    <div [style.display]="isLowerVisible ? 'inherit' : 'none'" [style.height]="isLowerVisible ? 'fit-content' : '0'">
+        <div class="form-check1 form-check-inline custom-class-form" style="font-family: 'Montserrat';">
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="fname" [(ngModel)]="fname">
+                <label class="did-floating-label" style="font-size: -0.3rem;">First Name</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="lname" [(ngModel)]="lname">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Last Name</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="mname" [(ngModel)]="mname">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Middle Name</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="dob" [(ngModel)]="dob">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Date of Birth</label>
+            </div>
+        </div>
+
+        <h6 style="font-family: 'Montserrat'; color: #DB2423;"><b>Contact Details</b></h6>
+
+        <div class="form-check2 form-check-inline" style="font-family: 'Montserrat';     margin-top: 2rem;
+        margin-left: 0rem;">
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="mobile" [(ngModel)]="mobile">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Mobile</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="home" [(ngModel)]="home">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Home</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input style="width: 20rem;" class="did-floating-input" type="text" id="email" [(ngModel)]="email">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Email</label>
+            </div>
+        </div>
+        <div class="form-check3 form-check-inline" style="font-family: 'Montserrat'; margin-left: 0REM;">
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="citizen" [(ngModel)]="citizen">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Citizenship</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full" style="margin-right: 23.5rem;">
+                <input class="did-floating-input" type="text" id="resident" [(ngModel)]="resident">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Resident Status</label>
+            </div>
+        </div>
+
+        <h6 style="font-family: 'Montserrat'; color: #DB2423;"><b>Address Details</b></h6>
+
+        <div class="form-check4 form-check-inline" style="font-family: 'Montserrat';    margin-left: 0rem;
+        font-family: 'Montserrat';
+        margin-top: 2rem;">
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="yearsataddress" [(ngModel)]="yearsataddress">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Years at Address</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="street" [(ngModel)]="street">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Street</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="city" [(ngModel)]="city">
+                <label class="did-floating-label" style="font-size: -0.3rem;">City</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="state" [(ngModel)]="state">
+                <label class="did-floating-label" style="font-size: -0.3rem;">State/Province/Area</label>
+            </div>
+        </div>
+        <div class="form-check5 form-check-inline" style="font-family: 'Montserrat'; margin-left: 0rem;">
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="country" [(ngModel)]="country">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Country</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full" style="margin-right: 25.7rem;">
+                <input class="did-floating-input" type="text" id="zipcode" [(ngModel)]="zipcode">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Zip Code</label>
+            </div>
+        </div>
     </div>
 </div>
 
- 
+<div class="card2" id="right-panel2">
+    <p class="lc-header" (click)="onPress1()" style="font-family: 'Inter'; color: #DB2423;"><b>WORK DETAILS</b>
 
- 
+        <i class="fa-solid" style="padding-right: 1rem;" [class.fa-angle-down]="isLowerVisible1" [class.fa-angle-up]="!isLowerVisible1"></i>
+    </p>
+    <div [style.display]="isLowerVisible1 ? 'inherit' : 'none'" [style.height]="isLowerVisible1 ? 'fit-content' : '0'">
+        <div class="form-check6 form-check-inline" style="font-family: 'Montserrat'; margin-top: 2rem; margin-left: 1.5rem;">
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="employer" [(ngModel)]="employer">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Current Employer</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="yearsatjob" [(ngModel)]="yearsatjob">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Years at Job</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="designation" [(ngModel)]="designation">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Designation</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="remotework" [(ngModel)]="remotework">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Remote Work</label>
+            </div>
+        </div>
+
+        <h6 style="font-family: 'Montserrat'; color: #DB2423; padding: 2rem; margin-top: -2rem;"><b>Work Address</b></h6>
+
+        <div class="form-check7 form-check-inline" style="font-family: 'Montserrat'; margin-left: 2rem;">
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="workstate" [(ngModel)]="workstate">
+                <label class="did-floating-label" style="font-size: -0.3rem;">State</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="workcity" [(ngModel)]="workcity">
+                <label class="did-floating-label" style="font-size: -0.3rem;">City</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="workstate" [(ngModel)]="workstate">
+                <label class="did-floating-label" style="font-size: -0.3rem;">State</label>
+            </div>
+            <div class="did-floating-label-content label-input w-full">
+                <input class="did-floating-input" type="text" id="workzip" [(ngModel)]="workzip">
+                <label class="did-floating-label" style="font-size: -0.3rem;">Zip Code</label>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="car-subs-footer">
 
@@ -245,7 +400,7 @@
 
     </div>
 
- 
+
 
     <div class="cs-footer-com">
 
@@ -253,20 +408,13 @@
 
     </div>
 
- 
+
 
     <div class="cs-footer-com">
+        <!-- <button class="btn">CLEAR</button> -->
+        <!-- <button class="btn btn-danger">Clear</button> -->
+        <button class="btn">SAVE & PROCEED</button> 
 
- 
-
-        <button class="btn">SAVE & PROCEED</button>
-
-    </div>
+    </div>  
 
 </div>
-
- 
-
- 
-
- 
